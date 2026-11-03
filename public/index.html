@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sixpoint</title>
+  <meta name="description" content="Practice the GRE Issue essay on the official ETS topic pool. Drills, timed writing and 0-6 scoring powered by Meta Muse.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231f6f5c'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='white' font-family='Georgia'>6</text></svg>">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#/"><span class="mark">6</span> Sixpoint</a>
+    <nav>
+      <a href="#/">Insights</a>
+      <a href="#/topics">Topics</a>
+      <a href="#/progress">Progress</a>
+      <button id="settings-btn" class="ghost" type="button">Settings</button>
+    </nav>
+  </header>
+  <main id="app" aria-live="polite"></main>
+  <footer>
+    Topics quoted from the <a href="https://www.ets.org/pdfs/gre/issue-pool.pdf" target="_blank" rel="noopener">official GRE Issue topic pool</a> published by ETS for test preparation.
+    GRE® and ETS® are registered trademarks of ETS. Sixpoint is not affiliated with or endorsed by ETS. Scores are practice estimates, not official scores.
+  </footer>
+
+  <dialog id="settings">
+    <form method="dialog" class="settings">
+      <h2>Settings</h2>
+      <p class="muted">Sixpoint calls the Meta Model API. Without a key you get a small free daily demo allowance. Your key stays in this browser and is sent only with your own requests.</p>
+      <label>Meta Model API key
+        <input id="api-key" type="password" autocomplete="off" placeholder="Optional">
+      </label>
+      <label>Model
+        <select id="model"></select>
+      </label>
+      <p id="demo-status" class="muted"></p>
+      <div class="row">
+        <button value="save" class="primary">Save</button>
+        <button value="cancel" class="ghost" formnovalidate>Close</button>
+      </div>
+    </form>
+  </dialog>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
