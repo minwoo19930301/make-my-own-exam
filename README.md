@@ -38,7 +38,7 @@ The 0–6 scale is our own wording, modeled on the structure of the public GRE s
 
 ## UI
 
-The interface borrows Instagram's visual language: a profile header with your average score, concept "stories", and a feed where each topic is a post. It uses components from [Astryx](https://github.com/meta/astryx), Meta's open-source React design system. It uses no Meta logos or brand marks.
+Three sections: Write (pick a topic, read the task demand, write against a 30-minute timer, get scored), Topics (search and filter the pool), and Insights (what to write next, pool weight by concept and task type, the smallest covering set). Components follow Facebook and Instagram web UI conventions: a gray canvas with white cards, a blue primary button with gray secondary buttons, pill chips, and light-filled inputs. Dialogs use [Astryx](https://github.com/meta/astryx), Meta's open-source React design system. The app uses no Meta logos or brand marks.
 
 ## API key
 
