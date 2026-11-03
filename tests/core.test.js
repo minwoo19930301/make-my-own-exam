@@ -4,7 +4,7 @@ import kb from "../public/data/kb.json" with { type: "json" };
 import { finalizeGrade, gradeEssay } from "../functions/_lib/grade.js";
 import { finalizeDrill } from "../functions/_lib/drill.js";
 import { chat, resolveKey } from "../functions/_lib/muse.js";
-import { coveragePlan, nextTopics, readiness, weakestDimension } from "../public/js/predict.js";
+import { coveragePlan, nextTopics, readiness, weakestDimension } from "../src/predict.js";
 
 const essay = "I largely agree that governments should fund research, but only with oversight. ".repeat(6) +
   "For example, the Human Genome Project produced shared data that private firms would not have released.";

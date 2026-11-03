@@ -1,7 +1,7 @@
 {
   "name": "sixpoint",
   "compatibility_date": "2026-09-01",
-  "pages_build_output_dir": "public",
+  "pages_build_output_dir": "dist",
   "kv_namespaces": [{ "binding": "LIMITS", "id": "0f4fca9b8a284fc1a0cc494dc8cb3c6e" }],
   "vars": { "DAILY_LIMIT": "30" }
 }

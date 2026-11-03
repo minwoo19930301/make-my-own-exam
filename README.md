@@ -39,6 +39,10 @@ The 0–6 scale is our own wording, modeled on the structure of the public GRE s
 |---|---|---|---|---|
 | muse-spark-1.3 | 12 | — | — | — |
 
+## UI
+
+The interface is built with [Astryx](https://github.com/meta/astryx), Meta's open-source React design system, using the neutral theme. The layout follows one topic at a time: pick a topic, then move through the Prompt, Multiple choice, Short answer and Essay tabs. The Topic bank and Predicted tabs pick the next topic.
+
 ## API key
 
 - With no key, the site uses a server key, capped at `DAILY_LIMIT` calls per day per IP. The count is kept in KV.
@@ -52,7 +56,7 @@ npm test
 ```
 
 ```bash
-echo "MODEL_API_KEY=your-key" > .dev.vars && npx wrangler pages dev public
+echo "MODEL_API_KEY=your-key" > .dev.vars && npm run dev
 ```
 
 Deploy:
