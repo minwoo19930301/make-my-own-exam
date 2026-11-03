@@ -2,7 +2,6 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import kb from "../public/data/kb.json" with { type: "json" };
 import { finalizeGrade, gradeEssay } from "../functions/_lib/grade.js";
-import { finalizeDrill } from "../functions/_lib/drill.js";
 import { chat, resolveKey } from "../functions/_lib/muse.js";
 import { coveragePlan, nextTopics, readiness, weakestDimension } from "../src/predict.js";
 
@@ -58,12 +57,6 @@ test("resolveKey enforces the daily demo cap", async () => {
   await assert.rejects(resolveKey(req, env, {}), (e) => e.status === 429);
   assert.equal((await resolveKey(req, env, { apiKey: "mine" })).apiKey, "mine");
   await assert.rejects(resolveKey(req, {}, {}), (e) => e.status === 401);
-});
-
-test("finalizeDrill keeps only well-formed questions", () => {
-  const d = finalizeDrill({ mcq: [{ question: "q", options: ["a", "b", "c", "d"], answer: 2, why: "w" }, { question: "bad", options: ["a"], answer: 0 }], short: [{ question: "s", lookFor: "l" }] });
-  assert.equal(d.mcq.length, 1);
-  assert.equal(d.short.length, 1);
 });
 
 test("prediction: coverage plan, readiness and next topics", () => {

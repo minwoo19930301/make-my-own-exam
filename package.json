@@ -1,5 +1,5 @@
 {
-  "name": "sixpoint",
+  "name": "gre-issue",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "vite build",
     "test": "node --test tests/*.test.js",
     "kb": "uv run --with pypdf python tools/build_kb.py",
-    "deploy": "vite build && wrangler pages deploy dist --project-name sixpoint --branch main",
+    "deploy": "vite build && wrangler pages deploy dist --project-name gre-issue --branch main",
     "astryx": "node node_modules/@astryxdesign/cli/clients/cli/bin/astryx.mjs"
   },
   "devDependencies": {
