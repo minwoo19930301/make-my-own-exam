@@ -35,6 +35,7 @@ if (!muxOnly) {
     localStorage.setItem("mmoe.exams", JSON.stringify(Object.fromEntries(seed.map((e) => [e.id, e]))));
   }, others);
   const page = await ctx.newPage();
+  page.setDefaultTimeout(30000);
   const at = () => (Date.now() - t0) / 1000;
   const sleep = (s) => page.waitForTimeout(Math.max(0, s) * 1000);
   const scrollTo = (sel, block = "start") => page.evaluate(([s, b]) => document.querySelector(s)?.scrollIntoView({ behavior: "smooth", block: b }), [sel, block]);
@@ -75,12 +76,12 @@ if (!muxOnly) {
     t.innerHTML = "<div><h1>Make My Own Exam</h1><p>Any public exam, turned into a practice coach · powered by Meta Muse</p></div>";
     document.body.append(t);
   });
-  marks.title = at();
+  marks.title = at(); console.log("scene title", marks.title.toFixed(1));
   await sleep(TITLE - 0.7);
   await page.evaluate(() => { const t = document.getElementById("demo-title"); t.style.opacity = 0; setTimeout(() => t.remove(), 800); });
   await sleep(0.7);
 
-  marks.intro = at();
+  marks.intro = at(); console.log("scene intro", marks.intro.toFixed(1));
   await say(caption.intro);
   await zoom(".hero", 1.25);
   await sleep(dur.intro * 0.4);
@@ -90,25 +91,25 @@ if (!muxOnly) {
   await zoom("textarea.area", 1.35);
   await sleep(dur.intro * 0.6 - 0.2);
 
-  marks.build = at();
+  marks.build = at(); console.log("scene build", marks.build.toFixed(1));
   await say(caption.build);
   await sleep(0.8);
   await unzoom();
   await sleep(0.6);
   await page.getByRole("button", { name: "Build knowledge base" }).click();
-  marks.buildClick = at();
+  marks.buildClick = at(); console.log("scene buildClick", marks.buildClick.toFixed(1));
   await sleep(1.2);
   await scrollTo(".steps", "start");
   await page.getByRole("button", { name: "Start practicing" }).waitFor({ timeout: 15 * 60000 });
-  marks.buildDone = at();
-  const built = await page.evaluate(() => Object.values(JSON.parse(localStorage.getItem("mmoe.exams")))[0]);
+  marks.buildDone = at(); console.log("scene buildDone", marks.buildDone.toFixed(1));
+  const built = await page.evaluate(() => JSON.parse(localStorage.getItem("mmoe.exams"))[JSON.parse(localStorage.getItem("mmoe.current"))]);
   if (built.questions.length < 100 || !built.questions.some((q) => q.prompt.includes("human mind will always be superior"))) {
     await browser.close();
     throw new Error(`Live build found only ${built.questions.length} questions or missed the demo topic; record again.`);
   }
   await sleep(0.8);
 
-  marks.kb = at();
+  marks.kb = at(); console.log("scene kb", marks.kb.toFixed(1));
   await say(caption.kb);
   await page.evaluate(() => [...document.querySelectorAll(".card")].find((c) => c.textContent.includes("Start practicing"))?.scrollIntoView({ behavior: "smooth", block: "start" }));
   await sleep(1.2);
@@ -124,7 +125,7 @@ if (!muxOnly) {
   await unzoom();
   await sleep(0.4);
 
-  marks.others = at();
+  marks.others = at(); console.log("scene others", marks.others.toFixed(1));
   await say(caption.others);
   await page.evaluate(() => { const c = [...document.querySelectorAll(".card")].find((x) => x.textContent.startsWith("Your exams")); c.id = "demo-exams"; c.scrollIntoView({ behavior: "smooth", block: "center" }); });
   await sleep(1);
@@ -133,7 +134,7 @@ if (!muxOnly) {
   await unzoom();
   await sleep(0.3);
 
-  marks.write = at();
+  marks.write = at(); console.log("scene write", marks.write.toFixed(1));
   await say(caption.write);
   await page.getByRole("button", { name: "Start practicing" }).click();
   await page.locator(".prompt").waitFor();
@@ -151,11 +152,11 @@ if (!muxOnly) {
   await page.evaluate(() => { const t = document.querySelector("textarea.essay"); t.scrollTop = t.scrollHeight; });
   await sleep(Math.max(0.6, dur.write - 3.6));
 
-  marks.score = at();
+  marks.score = at(); console.log("scene score", marks.score.toFixed(1));
   await say(caption.score);
   await page.getByRole("button", { name: "Score my answer" }).click();
   await page.locator("#result").waitFor({ timeout: 120000 });
-  marks.resultShown = at();
+  marks.resultShown = at(); console.log("scene resultShown", marks.resultShown.toFixed(1));
   await sleep(0.6);
   await scrollTo("#result");
   await sleep(1);
@@ -168,7 +169,7 @@ if (!muxOnly) {
   if (left > 0) await sleep(left);
   await sleep(0.3);
 
-  marks.result = at();
+  marks.result = at(); console.log("scene result", marks.result.toFixed(1));
   await say(caption.result);
   await page.evaluate(() => { const d = [...document.querySelectorAll(".dim")].find((x) => x.textContent.startsWith("Revise")); if (d) { d.id = "demo-rev"; d.scrollIntoView({ behavior: "smooth", block: "center" }); } });
   await sleep(0.8);
@@ -176,14 +177,14 @@ if (!muxOnly) {
   await sleep(dur.result + 0.6);
   await unzoom();
 
-  marks.insights = at();
+  marks.insights = at(); console.log("scene insights", marks.insights.toFixed(1));
   await say(caption.insights);
   await page.getByRole("button", { name: "Insights" }).click();
   await sleep(dur.insights * 0.45);
   await page.evaluate(() => window.scrollTo({ top: 420, behavior: "smooth" }));
   await sleep(dur.insights * 0.55 + 0.3);
 
-  marks.agent = at();
+  marks.agent = at(); console.log("scene agent", marks.agent.toFixed(1));
   await say(caption.agent);
   await page.getByRole("button", { name: "Build" }).click();
   await sleep(0.4);
@@ -196,7 +197,7 @@ if (!muxOnly) {
   await unzoom();
   await sleep(0.3);
 
-  marks.close = at();
+  marks.close = at(); console.log("scene close", marks.close.toFixed(1));
   await say(caption.close);
   await page.locator(".round[aria-label=Settings]").click();
   await sleep(1.4);
@@ -211,7 +212,7 @@ if (!muxOnly) {
     document.body.append(t);
   });
   await sleep(dur.close * 0.65 + 1.5);
-  marks.end = at();
+  marks.end = at(); console.log("scene end", marks.end.toFixed(1));
 
   await ctx.close();
   await browser.close();
