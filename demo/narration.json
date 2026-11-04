@@ -1,9 +1,10 @@
 [
- {"id":"intro","text":"This is GRE Issue, a practice coach for the GRE Analyze an Issue essay. It's scored by Meta's Muse model."},
- {"id":"prompt","text":"All one hundred fifty nine official ETS topics are built in, tagged by concept and task type. Each prompt spells out what that task type demands, because that's where most essays lose points."},
- {"id":"write","text":"You write against a thirty minute timer, just like the real test."},
- {"id":"score","text":"Then Muse grades the essay on the six point scale. It checks the task demand, and rates four dimensions. Every comment quotes a sentence from your own essay, so you can see exactly what it's reacting to."},
- {"id":"result","text":"It ends with concrete revisions: the line you wrote, and how to make it stronger."},
- {"id":"insights","text":"The topic pool is public, so nobody can tell you your exact topic. Instead, Insights shows where the pool's weight sits, and ranks what to write next, based on your weakest scores."},
- {"id":"close","text":"On twelve official ETS sample essays, it landed within one point of the official score ten times. Try it at gre issue dot pages dot dev."}
+ {"id":"intro","caption":"Any public exam → your practice coach","text":"This is Make My Own Exam. Give it any public exam, and it builds you a practice coach. Here's the GRE essay."},
+ {"id":"build","caption":"Step 1 · Muse builds the knowledge base","text":"You paste the official links. Meta's Muse model reads every page and PDF, collects the questions, restates the scoring rules, and looks for research by the test makers."},
+ {"id":"kb","caption":"Questions · Scoring rules · Research","text":"For the GRE, it found all one hundred fifty nine official topics and the zero to six rubric. Every paper it suggests is checked against Crossref, so you can see which ones are real."},
+ {"id":"write","caption":"Step 2 · Practice","text":"Then you practice. Pick a question, start the timer, and write."},
+ {"id":"score","caption":"Scored on the exam's own rubric","text":"Muse grades the answer on the exam's own rubric. Every comment quotes a sentence from your answer, so you can see exactly what it's reacting to."},
+ {"id":"result","caption":"Concrete revisions","text":"And it ends with concrete revisions."},
+ {"id":"insights","caption":"What to practice next","text":"Nobody can predict your exact question. Insights shows where the pool's weight sits, and what to practice next."},
+ {"id":"close","caption":"Muse by default · any provider · your own agent","text":"Muse is the default. You can plug in another provider, or build the knowledge base with your own agent. Make My Own Exam. Bring any exam."}
 ]

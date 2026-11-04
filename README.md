@@ -1,83 +1,69 @@
-# GRE Issue
+# Make My Own Exam
 
-Practice the GRE "Analyze an Issue" essay on the official topic pool. It scores your essay from 0 to 6 with Meta Muse, ties every comment to a sentence you actually wrote, and tells you which topic to write next.
+Turn any public exam into a practice coach. You describe the exam and paste the official links. Meta Muse builds a knowledge base from them, then serves questions and scores your answers on that exam's own rubric.
 
-Live: https://gre-issue.pages.dev
+Live: https://make-my-own-exam.pages.dev
 
-## What it does
+## How it works
 
-the app works in three layers.
+### Step 1: build the knowledge base
 
-1. **Knowledge base.** ETS publishes the whole Issue pool, and every test topic comes from it. `tools/build_kb.py` parses the 159 topics into `public/data/kb.json`. It tags each topic with its task type (6 in total), its themes and a recurring concept (21), and it links topics that reuse a statement under a different task.
-2. **Practice.** The GRE Issue task is a single 30-minute essay, so that is the only format here. Each topic opens with its instructions and the specific demand of its task type, then a timed editor.
-3. **Prediction.** The pool is public and finite, so the app does not claim to guess your exact topic. It shows three things instead:
-   - where the pool's weight sits by concept and task type;
-   - the smallest set of essays that covers every concept and all six task types;
-   - your next topics, ranked by the concepts and task types you score lowest on, weighted by how often the pool returns to them.
+You give a short description and up to 8 public links (web pages or PDFs). The app collects three things.
 
-## Scoring
+1. **Questions.** Every question that appears in the sources, copied exactly. Each question is tagged with a concept (a subject area the questions are about).
+2. **Scoring rules.** If the sources include an official scoring guide, its levels are restated in our own words and marked "From the official guide". Otherwise a rubric is derived and marked as such.
+3. **Research behind the exam.** Papers, reports and books by the test makers, or on how the exam is designed and scored. Muse suggests them from memory, so each one is looked up in [Crossref](https://www.crossref.org/). Only entries found there are marked "Confirmed" with a DOI link.
 
-`functions/_lib/grade.js` sends the topic, the instructions for its task type, and the essay to the Meta Model API (`muse-spark-1.3`, OpenAI-compatible `/v1/chat/completions`). Muse returns:
+The pipeline:
 
-- a holistic score from 0 to 6;
-- four dimension scores: position and task fit, reasons and examples, organization, language;
-- a check on the task-specific demand: met, partly, or missed;
-- revision suggestions.
+- `functions/api/fetch.js` relays the link (CORS only). Text is extracted in the browser: pdf.js for PDFs, DOMParser for pages. Parsing PDFs on the client keeps the server under Workers CPU limits.
+- `src/sources.js` splits long text into sections on paragraph boundaries.
+- `functions/_lib/build.js` makes one outline call (name, concepts, rubric), one references call, and one question-extraction call per section, four at a time.
+- The server keeps an extracted question only if its opening words really occur in that section, so a question the model invented is dropped.
 
-The server keeps a quote only if it really appears in the essay. A comment the model cannot anchor to your own words is shown without a quote.
+The **Try the GRE example** button fills in the GRE "Analyze an Issue" task and three ETS links. A live build reads the 159-topic PDF and two scoring pages in about three minutes. It collects all 159 official topics, the 0–6 scale and its four dimensions, and six research papers, two of them confirmed. `public/data/example-gre.json` is the saved result of that same build (`node tools/save-example.mjs`). The app offers it only if a live build fails.
 
-The 0–6 scale is our own wording, modeled on the structure of the public GRE scoring guide.
+### Step 2: practice
 
-### Calibration
+- Pick a question, or let **Recommend for me** choose. **New question like this** asks Muse for a fresh question in the same style, labeled "Written by the model".
+- Answer against the exam's time limit. Essay and short-answer questions are scored by Muse on the knowledge base's rubric. Multiple-choice questions with an answer key are checked locally.
+- The result has a score on the exam's scale, one score per rubric dimension, a check on whether the answer does what this question asks, and 2–3 revisions. The server keeps a quoted phrase only if it really appears in your answer.
+- **Insights** never claims to predict your exact question. It shows where the pool's weight sits by concept, and ranks what to practice next by concept frequency and your lowest scores.
 
-`node tools/calibrate.mjs` grades the 12 official scored sample essays from two ETS practice tests and compares the results with the official scores. The samples are copy-restricted, so they are not in this repository. Only the agreement numbers are published here.
+## Model providers
 
-| run | model | essays | exact | within 1 | mean abs. error |
-|---|---|---|---|---|---|
-| first prompt | muse-spark-1.3 | 12 | 3 | 9 | 1.08 |
-| current prompt | muse-spark-1.3 | 12 | 5 | 10 | 0.75 |
+- **Meta Muse (default).** OpenAI-compatible `POST https://api.meta.ai/v1/chat/completions`, `muse-spark-1.3`. With no key, the site uses a server key capped at `DAILY_LIMIT` calls per IP per day (KV `LIMITS`).
+- **Any OpenAI-compatible API.** In Settings, set a base URL, key and model. The visitor's own key is used, and the server only forwards it.
+- **Your own agent.** "Build it with your own agent" gives a prompt and a JSON schema. An agent with web search or MCP tools can build the knowledge base, and you paste the JSON back in. Any exam you build can be exported as the same JSON.
 
-Both runs are from 2026-11-04. The first prompt ran harsh at the top, scoring the official 5 and 6 essays as 3 or 4. The current prompt tells the grader that official raters are generous at the top. It still scores top essays about one level low.
+Keys stay in the browser (localStorage) and are sent only with the visitor's own requests.
 
-Both runs grade the same 12 essays the prompt was adjusted against, so these are in-sample numbers. Repeat runs also vary: the same essay can move by a point between runs.
+## Calibration
 
-## UI
+`node tools/calibrate.mjs` grades the 12 scored sample essays from two ETS GRE practice tests, using the rubric the app built from the ETS links, and compares the results with the official scores. The samples are copy-restricted, so they are not in this repository. Only the agreement numbers are published.
 
-Three sections: Write (pick a topic, read the task demand, write against a 30-minute timer, get scored), Topics (search and filter the pool), and Insights (what to write next, pool weight by concept and task type, the smallest covering set). Components follow Facebook and Instagram web UI conventions: a gray canvas with white cards, a blue primary button with gray secondary buttons, pill chips, and light-filled inputs. Dialogs use [Astryx](https://github.com/meta/astryx), Meta's open-source React design system. The app uses no Meta logos or brand marks.
+| grader | essays | exact | within 1 | mean abs. error |
+|---|---|---|---|---|
+| fixed GRE rubric, first prompt | 12 | 3 | 9 | 1.08 |
+| fixed GRE rubric, current prompt | 12 | 5 | 10 | 0.75 |
+| rubric built from the ETS links | 12 | — | — | — |
 
-## API key
+The grader runs about one level low on the strongest essays. These are in-sample numbers: the prompt was adjusted against the same 12 essays. Repeat runs also vary by a point on some essays.
 
-- With no key, the site uses a server key, capped at `DAILY_LIMIT` calls per day per IP. The count is kept in KV.
-- A visitor can add their own Meta Model API key in Settings to lift the cap. The key stays in the browser and is sent only with that visitor's own requests.
-
-## Run
+## Run it
 
 ```bash
+npm install
 npm test
-```
-
-```bash
-echo "MODEL_API_KEY=your-key" > .dev.vars && npm run dev
-```
-
-Deploy:
-
-```bash
 npm run deploy
 ```
 
-Set the server key once:
+Set the server key with `npx wrangler pages secret put MODEL_API_KEY --project-name make-my-own-exam`.
 
-```bash
-npx wrangler pages secret put MODEL_API_KEY --project-name gre-issue
-```
+The demo video is scripted: `node demo/record.mjs` drives the live site in Chrome, adds the title card, captions and zooms in the page, and muxes narration from `demo/audio/`.
 
-Rebuild the knowledge base from the ETS PDF:
+## Notes
 
-```bash
-npm run kb
-```
-
-## Attribution
-
-Topic text is quoted from the [GRE Issue topic pool](https://www.ets.org/pdfs/gre/issue-pool.pdf) that ETS publishes for test preparation. GRE® and ETS® are registered trademarks of ETS. the app is not affiliated with or endorsed by ETS. Scores are practice estimates, not official GRE scores.
+- Questions are quoted from the sources the user supplies, for personal study. Check each source's terms before sharing what you build.
+- Exam names belong to their owners. GRE® and ETS® are registered trademarks of ETS. This project is not affiliated with or endorsed by ETS or any test maker, and it uses no Meta logos.
+- Scores are practice estimates.

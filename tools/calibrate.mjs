@@ -1,27 +1,23 @@
-// Compare GRE Issue scores with the official ETS sample scores.
+// Compare scores with the official ETS sample scores, grading on the rubric the app built from the ETS links.
 // The samples are copy-restricted, so they stay in private/ (gitignored); only the agreement numbers are published.
-// Usage: node tools/calibrate.mjs [site] [model]   (default site https://gre-issue.pages.dev, uses its demo key)
+// Usage: node tools/calibrate.mjs [site] [model]
 import { readFileSync, writeFileSync } from "node:fs";
-import kb from "../public/data/kb.json" with { type: "json" };
 
-const site = process.argv[2] || "https://gre-issue.pages.dev";
+const site = process.argv[2] || "https://make-my-own-exam.pages.dev";
 const model = process.argv[3] || "muse-spark-1.3";
+const exam = JSON.parse(readFileSync(new URL("../public/data/example-gre.json", import.meta.url)));
 const samples = JSON.parse(readFileSync(new URL("../private/ets-samples.json", import.meta.url)));
 const norm = (s) => s.toLowerCase().replace(/[^a-z]/g, "");
-
-const grade = async (s) => {
-  const topic = kb.topics.find((t) => norm(t.statement) === norm(s.statement) && t.variant === "statement") ||
-    kb.topics.find((t) => norm(t.statement) === norm(s.statement));
-  const body = { essay: s.essay, model, ...(topic ? { topicId: topic.id } : { statement: s.statement }) };
-  const r = await fetch(`${site}/api/grade`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
-  const g = await r.json();
-  if (!r.ok) throw new Error(`${r.status} ${g.error || JSON.stringify(g)}`);
-  return g;
-};
+const statementTask = exam.questions.find((q) => /statement might or might not hold true/.test(q.instructions));
 
 const rows = [];
 for (const s of samples) {
-  const g = await grade(s);
+  // Practice-test topics retired from the pool are graded with the standard statement instructions.
+  const q = exam.questions.find((x) => norm(x.prompt) === norm(s.statement) && x.instructions === statementTask.instructions) ||
+    exam.questions.find((x) => norm(x.prompt) === norm(s.statement)) || { prompt: s.statement, instructions: statementTask.instructions };
+  const r = await fetch(`${site}/api/grade`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ exam: exam.name, question: q, rubric: exam.rubric, answer: s.essay, model }) });
+  const g = await r.json();
+  if (!r.ok) throw new Error(`${r.status} ${g.error}`);
   rows.push({ source: s.source, official: s.score, app: g.score, task: g.task.status });
   console.log(`${s.source} official ${s.score} -> app ${g.score}`);
 }

@@ -136,3 +136,42 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .navtab { min-width: 0; flex: 1; }
   .navtab.on::after { bottom: -4px; }
 }
+
+/* Build and practice additions */
+.hero { background: linear-gradient(135deg, var(--blue-soft), var(--card) 70%); }
+.hero-title { margin: 0; font-size: 24px; line-height: 1.25; }
+.area { height: auto; min-height: 84px; padding: 10px 12px; resize: vertical; line-height: 1.5; }
+.links { display: grid; gap: 8px; }
+.row .field.grow { flex: 1; width: auto; min-width: 0; }
+.steps { display: grid; gap: 10px; margin-top: 8px; }
+.step { display: flex; gap: 10px; align-items: flex-start; }
+.step b { font-weight: 600; word-break: break-all; }
+.step .dot { flex: none; width: 12px; height: 12px; margin-top: 5px; border-radius: 50%; background: var(--gray-btn); }
+.step.run .dot { background: var(--blue); animation: pulse 1s ease-in-out infinite; }
+.step.done .dot { background: #31a24c; }
+.step.fail .dot { background: #e4a11b; }
+@keyframes pulse { 50% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .step.run .dot { animation: none; } }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center; }
+.stats b { display: block; font-size: 20px; }
+.levels { display: grid; gap: 6px; }
+.level { display: flex; gap: 10px; align-items: baseline; }
+.level b { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--blue-soft); color: var(--blue); font-size: 13px; }
+.chip.static { cursor: default; display: inline-flex; align-items: center; }
+.list-row.static { cursor: default; align-items: center; }
+.list-row.static:hover { background: none; }
+.list-row.on { background: var(--blue-soft); }
+.list-row .body .sub { display: block; }
+a.list-row { color: inherit; text-decoration: none; }
+a.badge { text-decoration: none; flex: none; }
+.code { white-space: pre-wrap; font-size: 12px; background: var(--bg); border-radius: 6px; padding: 10px; max-height: 260px; overflow: auto; }
+.essay.short { min-height: 140px; }
+.choices { display: grid; gap: 8px; }
+.choice { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--field-line); cursor: pointer; }
+.choice.on { border-color: var(--blue); background: var(--blue-soft); }
+.navtab:disabled { opacity: .45; cursor: default; }
+@media (max-width: 640px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .hero-title { font-size: 20px; }
+  .list-row.static { flex-wrap: wrap; }
+}
