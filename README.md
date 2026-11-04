@@ -32,13 +32,14 @@ The 0–6 scale is our own wording, modeled on the structure of the public GRE s
 
 `node tools/calibrate.mjs` grades the 12 official scored sample essays from two ETS practice tests and compares the results with the official scores. The samples are copy-restricted, so they are not in this repository. Only the agreement numbers are published here.
 
-| model | essays | exact | within 1 | mean abs. error |
-|---|---|---|---|---|
-| muse-spark-1.3 | 12 | 3 | 9 | 1.08 |
+| run | model | essays | exact | within 1 | mean abs. error |
+|---|---|---|---|---|---|
+| first prompt | muse-spark-1.3 | 12 | 3 | 9 | 1.08 |
+| current prompt | muse-spark-1.3 | 12 | 5 | 10 | 0.75 |
 
-First run, 2026-11-04. The grader runs harsh at the top: the official 5 and 6 essays came back as 3 or 4. It ranks essays in roughly the right order, but squeezes them toward the middle. Treat a 4 here as a likely 4–5 on the real test.
+Both runs are from 2026-11-04. The first prompt ran harsh at the top, scoring the official 5 and 6 essays as 3 or 4. The current prompt tells the grader that official raters are generous at the top. It still scores top essays about one level low.
 
-A second prompt (telling the grader that official raters are generous at the top) moved two top essays up by one level: on the first 8 essays, mean error fell from 1.25 to 1.00. The run stopped at the daily demo cap, so the full 12 are not re-measured yet. Both runs score the same 12 essays the prompt was adjusted against, so they are in-sample numbers.
+Both runs grade the same 12 essays the prompt was adjusted against, so these are in-sample numbers. Repeat runs also vary: the same essay can move by a point between runs.
 
 ## UI
 

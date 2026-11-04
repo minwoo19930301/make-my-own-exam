@@ -1,0 +1,9 @@
+[
+ {"id":"intro","text":"This is GRE Issue, a practice coach for the GRE Analyze an Issue essay. It's scored by Meta's Muse model."},
+ {"id":"prompt","text":"All one hundred fifty nine official ETS topics are built in, tagged by concept and task type. Each prompt spells out what that task type demands, because that's where most essays lose points."},
+ {"id":"write","text":"You write against a thirty minute timer, just like the real test."},
+ {"id":"score","text":"Then Muse grades the essay on the six point scale. It checks the task demand, and rates four dimensions. Every comment quotes a sentence from your own essay, so you can see exactly what it's reacting to."},
+ {"id":"result","text":"It ends with concrete revisions: the line you wrote, and how to make it stronger."},
+ {"id":"insights","text":"The topic pool is public, so nobody can tell you your exact topic. Instead, Insights shows where the pool's weight sits, and ranks what to write next, based on your weakest scores."},
+ {"id":"close","text":"On twelve official ETS sample essays, it landed within one point of the official score ten times. Try it at gre issue dot pages dot dev."}
+]
