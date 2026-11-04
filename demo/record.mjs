@@ -180,6 +180,14 @@ if (!muxOnly) {
 
 // Video timeline: drop page load, fast-forward the live build to fit its narration, cut the scoring wait.
 const raw = `${out}raw/${readdirSync(`${out}raw`)[0]}`;
+// The video file starts a little after our clock does. Find the title card's first frame (a hard cut to white)
+// and shift every mark onto the video's own clock.
+// Sample one background pixel 20 times a second: the app's canvas is gray (242), the title card is white.
+const px = execFileSync("ffmpeg", ["-loglevel", "error", "-t", "12", "-i", raw, "-vf", "fps=20,crop=4:4:60:400,scale=1:1", "-f", "rawvideo", "-pix_fmt", "gray", "-"]);
+let seenGray = false, offset = marks.title;
+for (let i = 0; i < px.length; i++) { if (px[i] < 248) seenGray = true; else if (seenGray) { offset = i / 20; break; } }
+const shiftBy = offset - marks.title;
+marks = Object.fromEntries(Object.entries(marks).map(([k, v]) => [k, v + shiftBy]));
 const lead = Math.max(0, marks.title - 0.1);
 const fastFrom = marks.buildClick + 1.5;
 const buildShown = Math.max(2, marks.build + dur.build + 0.6 - fastFrom);
@@ -200,4 +208,4 @@ const mix = `${scenes.map((_, i) => `[s${i}]`).join("")}amix=inputs=${scenes.len
 const file = `${out}make-my-own-exam-demo.mp4`;
 execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-i", raw, ...inputs, "-filter_complex", [vf, ...delays, mix].join(";"),
   "-map", "[v]", "-map", "[aout]", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-r", "30", "-c:a", "aac", "-b:a", "160k", file]);
-console.log({ length: Number(probe(file).toFixed(1)), buildSpeedup: Number(fastSpeed.toFixed(1)), scoringCut: Number(Math.max(0, cutTo - cutFrom).toFixed(1)), file });
+console.log({ clockShift: Number(shiftBy.toFixed(2)), length: Number(probe(file).toFixed(1)), buildSpeedup: Number(fastSpeed.toFixed(1)), scoringCut: Number(Math.max(0, cutTo - cutFrom).toFixed(1)), file });

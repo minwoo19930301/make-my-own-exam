@@ -27,21 +27,41 @@ async function pdfText(buf) {
   return { title, text: tidy(pages.join("\n\n")), pages: doc.numPages };
 }
 
-function htmlText(html) {
+// Links on an official page that may lead to questions, scoring guides or samples (same site, PDFs or likely pages).
+function pageLinks(doc, base) {
+  const host = new URL(base).hostname.split(".").slice(-2).join(".");
+  const seen = new Set();
+  const out = [];
+  for (const a of doc.querySelectorAll("a[href]")) {
+    let u;
+    try { u = new URL(a.getAttribute("href"), base); } catch { continue; }
+    u.hash = "";
+    if (!/^https?:$/.test(u.protocol) || !u.hostname.endsWith(host) || seen.has(u.href) || u.href === base) continue;
+    const text = (a.textContent || a.getAttribute("aria-label") || "").trim().replace(/\s+/g, " ");
+    if (!/\.pdf$/i.test(u.pathname) && !/pool|topic|question|scor|rubric|sample|practice|guide|prompt|essay|writing|test/i.test(u.pathname + " " + text)) continue;
+    seen.add(u.href);
+    out.push({ url: u.href, text: text.slice(0, 120) });
+  }
+  return out.slice(0, 60);
+}
+
+function htmlText(html, base) {
   const doc = new DOMParser().parseFromString(html, "text/html");
+  const links = pageLinks(doc, base);
   doc.querySelectorAll("script,style,noscript,svg,nav,footer,header,form,iframe,[aria-hidden=true]").forEach((n) => n.remove());
   const root = doc.querySelector("main,article,[role=main]") || doc.body;
   const blocks = [...root.querySelectorAll("h1,h2,h3,h4,p,li,td,th,blockquote,pre,dd,dt")].map((n) => n.textContent.trim()).filter(Boolean);
-  return { title: doc.title.trim(), text: tidy(blocks.length > 5 ? blocks.join("\n") : root.textContent) };
+  return { title: doc.title.trim(), text: tidy(blocks.length > 5 ? blocks.join("\n") : root.textContent), links };
 }
 
 export async function loadSource(url) {
   const r = await fetch(`/api/fetch?url=${encodeURIComponent(url)}`);
   if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || `Could not load ${url}`);
   const type = r.headers.get("content-type") || "";
-  const got = type.includes("pdf") ? { kind: "pdf", ...(await pdfText(await r.arrayBuffer())) } : { kind: "web", ...htmlText(await r.text()) };
+  const got = type.includes("pdf") ? { kind: "pdf", ...(await pdfText(await r.arrayBuffer())) } : { kind: "web", ...htmlText(await r.text(), r.headers.get("x-final-url") || url) };
   if (got.text.length < 200) throw new Error(`Found almost no text at ${url}. If it is a scanned PDF or a page built by scripts, try another link.`);
-  return { url, title: got.title || url, kind: got.kind, text: got.text, chars: got.text.length };
+  const title = got.title || decodeURIComponent(new URL(url).pathname.split("/").pop() || url);
+  return { url, title, kind: got.kind, text: got.text, chars: got.text.length, links: got.links || [] };
 }
 
 // Splits on paragraph boundaries so a question is rarely cut in half.

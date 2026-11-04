@@ -68,6 +68,25 @@ export async function resolveKey(request, env, body) {
   return { apiKey: env.MODEL_API_KEY, model: body.model, shared: true };
 }
 
+// Muse with its own web search tool (Responses API). Returns the final JSON plus the searches it ran.
+export async function searchJSON({ apiKey, model, instructions, input, fetchImpl = fetch }) {
+  const r = await fetchImpl(`${MUSE_BASE}/responses`, {
+    method: "POST",
+    signal: AbortSignal.timeout(170000),
+    headers: { authorization: `Bearer ${apiKey}`, "content-type": "application/json" },
+    body: JSON.stringify({ model: MODELS.includes(model) ? model : DEFAULT_MODEL, reasoning: { effort: "low" }, instructions, input, tools: [{ type: "web_search" }] }),
+  });
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    const status = r.status === 401 || r.status === 403 ? 401 : r.status === 429 ? 429 : 502;
+    throw new HttpError(status, data.error?.message || `Meta Model API error (${r.status})`);
+  }
+  const out = data.output || [];
+  const searches = out.filter((o) => o.type === "web_search_call").map((o) => o.action?.query || o.action?.url).filter(Boolean);
+  const final = out.filter((o) => o.type === "message" && o.phase !== "commentary").flatMap((o) => o.content || []).map((c) => c.text || "").join("");
+  return { json: extractJSON(final), searches };
+}
+
 // Ask for JSON, retrying once with a larger budget when the reply is cut off or malformed.
 export async function chatJSON({ maxTokens = 3500, ...opts }) {
   for (let attempt = 0; ; attempt++) {

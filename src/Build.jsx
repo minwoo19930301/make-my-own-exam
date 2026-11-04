@@ -2,20 +2,14 @@ import { useState } from "react";
 import { AGENT_PROMPT, buildExam, finalize, importExam } from "./build.js";
 import { providerLabel } from "./store.js";
 
-export const GRE_EXAMPLE = {
-  prompt: "GRE Analytical Writing, the \"Analyze an Issue\" task. I want to practice timed essays scored on the official 0-6 scale.",
-  urls: [
-    "https://www.ets.org/pdfs/gre/issue-pool.pdf",
-    "https://www.ets.org/gre/test-takers/general-test/prepare/content/analytical-writing/scoring.html",
-    "https://www.ets.org/gre/test-takers/general-test/prepare/content/analytical-writing.html",
-  ],
-};
+export const GRE_EXAMPLE = "GRE Analytical Writing, the \"Analyze an Issue\" essay. I want to practice timed essays scored on the official 0-6 scale.";
 
 const STATE = { run: "Working", done: "Done", fail: "Skipped" };
 
 export function Build({ exams, exam, onSave, onOpen, onRemove, onPractice, health }) {
   const [prompt, setPrompt] = useState("");
   const [urls, setUrls] = useState([""]);
+  const [ownLinks, setOwnLinks] = useState(false);
   const [steps, setSteps] = useState({});
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
@@ -27,7 +21,7 @@ export function Build({ exams, exam, onSave, onOpen, onRemove, onPractice, healt
   const run = async () => {
     setBusy(true); setErr(""); setSteps({});
     try {
-      onSave(await buildExam({ prompt, urls: clean }, setSteps));
+      onSave(await buildExam({ prompt, urls: ownLinks ? clean : [] }, setSteps));
     } catch (e) {
       setErr(e.message);
     } finally {
@@ -51,7 +45,7 @@ export function Build({ exams, exam, onSave, onOpen, onRemove, onPractice, healt
       <section className="card hero">
         <h1 className="hero-title">Turn any public exam into a practice coach</h1>
         <p className="sub" style={{ margin: "6px 0 0" }}>
-          1. Give it the official links. It collects the questions, the scoring rules, and what the test makers have published about the exam.
+          1. Name the exam. Muse finds the official materials, then collects the questions, the scoring rules, and research by the test makers.
           2. Practice: it serves questions and scores your answers on that exam's own rubric.
         </p>
       </section>
@@ -59,23 +53,28 @@ export function Build({ exams, exam, onSave, onOpen, onRemove, onPractice, healt
       <section className="card">
         <div className="card-head">
           <h2 className="card-title">Describe the exam</h2>
-          <button type="button" className="btn btn-soft" disabled={busy} onClick={() => { setPrompt(GRE_EXAMPLE.prompt); setUrls(GRE_EXAMPLE.urls); }}>Try the GRE example</button>
+          <button type="button" className="btn btn-soft" disabled={busy} onClick={() => { setPrompt(GRE_EXAMPLE); setOwnLinks(false); }}>Try the GRE example</button>
         </div>
-        <textarea className="field area" aria-label="Describe the exam" value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder="For example: GRE Analyze an Issue essays, scored 0-6. Or: AP World History long essay question." />
-        <div className="sub" style={{ margin: "12px 0 6px" }}>Public links: official question pools, scoring guides, sample tests (web pages or PDFs)</div>
-        <div className="links">
-          {urls.map((u, i) => (
-            <div className="row" key={i}>
-              <input className="field grow" type="url" inputMode="url" aria-label={`Link ${i + 1}`} placeholder="https://..." value={u} onChange={(e) => setUrls(urls.map((x, k) => (k === i ? e.target.value : x)))} />
-              {urls.length > 1 && <button type="button" className="btn btn-secondary" aria-label={`Remove link ${i + 1}`} onClick={() => setUrls(urls.filter((_, k) => k !== i))}>Remove</button>}
+        <textarea className="field area" aria-label="Describe the exam" value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder="Name the exam and what you want to practice. For example: GRE Analyze an Issue essays, scored 0-6. Or: AP World History long essay question." />
+        {ownLinks && (
+          <>
+            <div className="sub" style={{ margin: "12px 0 6px" }}>Your links: official question pools, scoring guides, sample tests (web pages or PDFs)</div>
+            <div className="links">
+              {urls.map((u, i) => (
+                <div className="row" key={i}>
+                  <input className="field grow" type="url" inputMode="url" aria-label={`Link ${i + 1}`} placeholder="https://..." value={u} onChange={(e) => setUrls(urls.map((x, k) => (k === i ? e.target.value : x)))} />
+                  {urls.length > 1 && <button type="button" className="btn btn-secondary" aria-label={`Remove link ${i + 1}`} onClick={() => setUrls(urls.filter((_, k) => k !== i))}>Remove</button>}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        )}
         <div className="row" style={{ marginTop: 8 }}>
-          <button type="button" className="btn btn-secondary" disabled={urls.length >= 8} onClick={() => setUrls([...urls, ""])}>Add link</button>
+          <button type="button" className="btn btn-secondary" onClick={() => setOwnLinks(!ownLinks)}>{ownLinks ? "Find sources for me" : "Use my own links"}</button>
+          {ownLinks && <button type="button" className="btn btn-secondary" disabled={urls.length >= 8} onClick={() => setUrls([...urls, ""])}>Add link</button>}
           <span className="grow" />
           <span className="sub">Uses {providerLabel()}</span>
-          <button type="button" className="btn btn-primary" disabled={busy || !clean.length || !prompt.trim()} onClick={run}>{busy ? "Building…" : "Build knowledge base"}</button>
+          <button type="button" className="btn btn-primary" disabled={busy || !prompt.trim() || (ownLinks && !clean.length)} onClick={run}>{busy ? "Building…" : "Build knowledge base"}</button>
         </div>
         {!health?.demoKey && <p className="sub">Add a Meta Model API key in Settings to build.</p>}
         {err && <p className="error">{err}</p>}
@@ -92,7 +91,7 @@ export function Build({ exams, exam, onSave, onOpen, onRemove, onPractice, healt
               </div>
             ))}
           </div>
-          {busy && <p className="sub">A large PDF takes a few minutes. You can keep this tab open and wait.</p>}
+          {busy && <p className="sub">Finding and reading the sources takes a few minutes. Keep this tab open.</p>}
           {err && <button type="button" className="btn btn-secondary" onClick={loadSaved}>Load the saved GRE result instead</button>}
         </section>
       )}
@@ -181,7 +180,7 @@ function ExamSummary({ exam, onPractice }) {
 
       <section className="card">
         <div className="card-head"><h2 className="card-title">3 · Research behind the exam</h2></div>
-        <p className="sub" style={{ marginTop: 0 }}>Papers and books by the test makers, or on how the exam is designed and scored. The model suggests them from memory, then each one is looked up in Crossref. Only "Confirmed" entries were found there.</p>
+        <p className="sub" style={{ marginTop: 0 }}>Papers and books by the test makers, or on how the exam is designed and scored. Muse finds them with web search, and each one is then looked up in Crossref. "Confirmed" entries have a matching DOI there.</p>
         <div className="list">
           {(exam.references || []).map((x, i) => (
             <div className="list-row static" key={i}>
@@ -192,7 +191,7 @@ function ExamSummary({ exam, onPractice }) {
               </span>
               {x.verified
                 ? <a className="badge" href={x.url} target="_blank" rel="noopener noreferrer">Confirmed · DOI</a>
-                : <a className="badge gray" href={`https://scholar.google.com/scholar?q=${encodeURIComponent(`${x.title} ${x.authors}`)}`} target="_blank" rel="noopener noreferrer">Not confirmed · search</a>}
+                : <a className="badge gray" href={x.url || `https://scholar.google.com/scholar?q=${encodeURIComponent(`${x.title} ${x.authors}`)}`} target="_blank" rel="noopener noreferrer">{x.url ? "Found by search · not in Crossref" : "Not confirmed · search"}</a>}
             </div>
           ))}
           {!(exam.references || []).length && <p className="sub">None found.</p>}

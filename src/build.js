@@ -12,32 +12,68 @@ async function pool(items, n, fn) {
   return out;
 }
 
-// Step 1 of the app: links -> text -> outline (concepts, rubric, references) -> questions from every chunk.
-export async function buildExam({ prompt, urls }, onStep) {
+// Step 1 of the app: find official sources (or use the links given) -> text -> outline -> questions, references.
+export async function buildExam({ prompt, urls = [] }, onStep) {
   const step = (id, patch) => onStep((s) => ({ ...s, [id]: { ...(s[id] || {}), ...patch } }));
   const sources = [];
-  for (const [k, url] of urls.entries()) {
-    step(`src${k}`, { label: `Read ${url}`, state: "run" });
+  const tried = new Set();
+  const read = async (url, why) => {
+    if (tried.has(url) || sources.length >= 8) return null;
+    tried.add(url);
+    const id = `src${tried.size}`;
+    step(id, { label: `Read ${url}`, state: "run", detail: why });
     try {
       const s = await loadSource(url);
+      const sig = s.text.slice(0, 3000);
+      if (sources.some((x) => x.text.slice(0, 3000) === sig)) { step(id, { state: "fail", detail: "Same content as a page already read" }); return null; }
       sources.push(s);
-      step(`src${k}`, { state: "done", detail: `${s.kind === "pdf" ? "PDF" : "Web page"}, ${s.chars.toLocaleString()} characters` });
+      step(id, { state: "done", detail: `${s.kind === "pdf" ? "PDF" : "Web page"}, ${s.chars.toLocaleString()} characters${why ? ` · ${why}` : ""}` });
+      return s;
     } catch (e) {
-      step(`src${k}`, { state: "fail", detail: e.message });
+      step(id, { state: "fail", detail: e.message });
+      return null;
+    }
+  };
+
+  if (urls.length) {
+    for (const u of urls) await read(u, "your link");
+  } else {
+    step("discover", { label: "Search the web for the exam's official materials", state: "run" });
+    const found = await api("/api/build", { stage: "discover", prompt });
+    step("discover", { state: "done", detail: `${found.candidates.length} candidate links${found.maker ? ` from ${found.maker}` : ""}${found.museSearches?.length ? ` · Muse searched: ${found.museSearches.slice(0, 4).map((q) => `"${q}"`).join(", ")}` : ""}` });
+    await pool(found.candidates, 4, (c) => read(c.url, c.why));
+    // Follow links on the official pages while something is still missing, at most two rounds.
+    for (let round = 1; round <= 2 && sources.length < 8; round++) {
+      const need = missingKinds(sources);
+      if (!need.length) break;
+      const links = rankLinks(sources.flatMap((s) => s.links).filter((l) => !tried.has(l.url)));
+      if (!links.length) break;
+      // Same-site PDFs whose name matches what is missing are opened directly, without asking the model.
+      const direct = links.filter((l) => /\.pdf$/i.test(new URL(l.url).pathname) && need.some((n) => KIND_RE[n].test(l.url + " " + l.text))).slice(0, 3);
+      if (direct.length) {
+        await pool(direct.map((l) => l.url), 3, (u) => read(u, "PDF linked from an official page"));
+        if (!missingKinds(sources).length) break;
+      }
+      const id = `follow${round}`;
+      step(id, { label: `Follow links on the official pages (still missing: ${need.join(", ")})`, state: "run", detail: `${links.length} links found` });
+      const { urls: next } = await api("/api/build", { stage: "pick", prompt, links, missing: need, read: [...tried] }).catch(() => ({ urls: [] }));
+      step(id, { state: "done", detail: `${links.length} links found, ${next.length} worth opening` });
+      if (!next.length) break;
+      await pool(next, 3, (u) => read(u, `looking for ${need.join(", ")}`));
     }
   }
-  if (!sources.length) throw new Error("None of the links could be read.");
+  if (!sources.length) throw new Error("Could not read any official source. Add a link yourself under \"Use my own links\".");
 
   step("outline", { label: "Find concepts and scoring rules", state: "run" });
-  const exam = await api("/api/build", { stage: "outline", prompt, sources });
+  const exam = await api("/api/build", { stage: "outline", prompt, sources: sources.map(({ links, ...s }) => s) });
   step("outline", { state: "done", detail: `${exam.concepts.length} concepts, ${exam.rubric.dimensions.length} rubric dimensions` });
 
-  step("refs", { label: "Find research by the test makers, then check it in Crossref", state: "run" });
+  step("refs", { label: "Search for research by the test makers, then check it in Crossref", state: "run" });
   const refsDone = api("/api/build", { stage: "references", examName: exam.name, description: exam.description, sourceTitles: sources.map((x) => x.title) })
-    .then(async ({ references }) => {
-      const checked = await Promise.all(references.map(verifyReference));
-      step("refs", { state: "done", detail: `${checked.length} found, ${checked.filter((r) => r.verified).length} confirmed in Crossref` });
-      return checked;
+    .then(async ({ references, searches }) => {
+      const all = await Promise.all(references.map(verifyReference));
+      step("refs", { state: "done", detail: `${all.length} works, ${all.filter((r) => r.verified).length} confirmed in Crossref${searches?.length ? ` · Muse searched ${searches.length} times` : ""}` });
+      return all;
     })
     .catch((e) => { step("refs", { state: "fail", detail: e.message }); return []; });
 
@@ -56,7 +92,7 @@ export async function buildExam({ prompt, urls }, onStep) {
   step("questions", { state: questions.length ? "done" : "fail", detail: questions.length ? `${questions.length} questions` : "No questions found in the sources. You can still generate new ones." });
 
   const references = await refsDone;
-  return finalize({ ...exam, references, prompt, sources: sources.map(({ text, ...s }) => s), questions, builtAt: new Date().toISOString(), builtWith: "live" });
+  return finalize({ ...exam, references, prompt, sources: sources.map(({ text, links, ...s }) => s), questions, builtAt: new Date().toISOString(), builtWith: "live" });
 }
 
 const words = (t) => new Set(String(t).toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length > 2));
@@ -76,7 +112,26 @@ export async function verifyReference(ref) {
       return { ...ref, verified: true, url: `https://doi.org/${it.DOI}`, foundTitle: it.title?.[0], year: String(it.issued?.["date-parts"]?.[0]?.[0] || ref.year) };
     }
   } catch { /* Crossref unreachable: leave unconfirmed */ }
-  return { ...ref, verified: false, url: null };
+  return { ...ref, verified: false, url: ref.foundUrl || null };
+}
+
+const KIND_RE = { "official scoring guide": /scor|rubric|level/i, "scored sample answers": /sample|response|essay/i, "question pool": /pool|topic|prompt|question/i };
+
+// What the sources read so far still lack. Checked by simple text signals; Muse decides which links to open.
+function missingKinds(sources) {
+  const all = sources.map((s) => s.text).join("\n");
+  const need = [];
+  if (!/(scoring guide|score level|holistic|scored on a|rubric|score of \d)/i.test(all)) need.push("official scoring guide");
+  if (!/(sample (response|essay|answer)s?|scored sample)/i.test(all)) need.push("scored sample answers");
+  if (!sources.some((s) => s.chars > 20000)) need.push("question pool");
+  return need;
+}
+
+// Put likely scoring, sample and pool links first so they survive the cap.
+function rankLinks(links) {
+  const seen = new Set();
+  const score = (l) => (/scor|rubric/i.test(l.url + l.text) ? 3 : 0) + (/sample|response/i.test(l.url + l.text) ? 2 : 0) + (/pool|topic|\.pdf/i.test(l.url + l.text) ? 1 : 0);
+  return links.filter((l) => !seen.has(l.url) && seen.add(l.url)).sort((a, b) => score(b) - score(a)).slice(0, 60);
 }
 
 // Recount how often each concept appears, which drives "what to practice next".
