@@ -1,82 +1,94 @@
 {
- "name": "GRE Analytical Writing — Analyze an Issue",
- "description": "Timed practice for the GRE General Test Analytical Writing Analyze an Issue task: 30-minute essay evaluating an issue, scored on the official 0-6 scale.",
+ "name": "GRE Analytical Writing - Analyze an Issue",
+ "description": "Timed practice for the GRE General Test Analytical Writing Analyze an Issue task: evaluate an issue, develop a position with reasons and examples, and write a focused coherent essay in 30 minutes.",
  "timeLimitMinutes": 30,
  "questionTypes": [
   "essay"
  ],
  "concepts": [
   {
-   "key": "education-and-curriculum",
-   "label": "Education and Curriculum",
-   "description": "National curricula, college access and cost, field of study choice, and goals of schooling.",
-   "count": 37
+   "key": "education-and-schooling",
+   "label": "Education and Schooling",
+   "description": "National curricula, free college, educational institutions and access to schooling",
+   "count": 29
   },
   {
-   "key": "ethics-society-and-culture",
-   "label": "Ethics, Society and Culture",
-   "description": "Luxuries and self-reliance, contrasting viewpoints and discussion, and moral evaluation of social claims.",
-   "count": 21
-  },
-  {
-   "key": "government-policy-and-welfare",
-   "label": "Government Policy and Welfare",
-   "description": "Role of government, public funding, regulation, and measuring national greatness by general welfare.",
-   "count": 20
-  },
-  {
-   "key": "knowledge-inquiry-and-progress",
-   "label": "Knowledge, Inquiry and Progress",
-   "description": "Whether more knowledge brings clarity or complexity, and how inquiry advances in any field.",
+   "key": "leadership-and-cooperation",
+   "label": "Leadership and Cooperation",
+   "description": "Preparing youth for leadership, cooperation versus competition in government and industry",
    "count": 17
   },
   {
-   "key": "leadership-cooperation-competition",
-   "label": "Leadership, Cooperation and Competition",
-   "description": "Preparing young people for leadership in government and industry through cooperation versus competition.",
-   "count": 13
+   "key": "knowledge-and-inquiry",
+   "label": "Knowledge and Inquiry",
+   "description": "Growth of knowledge, complexity and mystery, beginners versus experts in inquiry",
+   "count": 17
   },
   {
-   "key": "individual-character-and-independence",
-   "label": "Individual Character and Independence",
-   "description": "What makes strong independent individuals and how comfort, praise, and competition shape character.",
-   "count": 12
+   "key": "teaching-and-learning",
+   "label": "Teaching and Learning",
+   "description": "Teaching methods, praise versus correction, teacher evaluation, learning styles",
+   "count": 15
   },
   {
-   "key": "science-research-and-technology",
-   "label": "Science, Research and Technology",
-   "description": "Freedom and limits on scientific research and development, and effects of modern conveniences.",
+   "key": "society-and-progress",
+   "label": "Society and Progress",
+   "description": "Indicators of a great nation, social progress, contrasting viewpoints and discussion",
+   "count": 14
+  },
+  {
+   "key": "ethics-and-social-values",
+   "label": "Ethics and Social Values",
+   "description": "General welfare, moral judgments, values shaping evaluation of issues",
    "count": 11
   },
   {
-   "key": "teaching-and-mentorship",
-   "label": "Teaching and Mentorship",
-   "description": "How best to teach, praise vs correction, teacher evaluation and pay, and preparing youth.",
+   "key": "government-and-policy",
+   "label": "Government and Policy",
+   "description": "Role of governments, recommendations, policies and their advantages and consequences",
+   "count": 10
+  },
+  {
+   "key": "work-and-fields-of-study",
+   "label": "Work and Fields of Study",
+   "description": "Choice of college major, interest versus job availability, career preparation",
+   "count": 10
+  },
+  {
+   "key": "technology-and-modern-life",
+   "label": "Technology and Modern Life",
+   "description": "Luxuries, conveniences, and contemporary life effects on independence and character",
+   "count": 8
+  },
+  {
+   "key": "science-and-research",
+   "label": "Science and Research",
+   "description": "Scientific research funding, restrictions on research, consequences of discovery",
    "count": 7
   },
   {
-   "key": "work-jobs-and-industry",
-   "label": "Work, Jobs and Industry",
-   "description": "Career choice based on job availability, workplace organization, and industry leadership.",
+   "key": "arts-and-creativity",
+   "label": "Arts and Creativity",
+   "description": "Fine arts, humanities, creativity, innovation and cultural achievement",
    "count": 7
   },
   {
-   "key": "environment-and-endangered-species",
-   "label": "Environment and Endangered Species",
-   "description": "When society should save endangered species and consequences of conservation policies.",
+   "key": "environment-and-species",
+   "label": "Environment and Species",
+   "description": "Endangered species, human-caused extinction, environmental policy consequences",
    "count": 7
   },
   {
-   "key": "arts-sciences-and-achievement",
-   "label": "Arts, Sciences and Achievement",
-   "description": "Contributions of rulers, artists and scientists versus broad social well-being and innovation.",
+   "key": "identity-and-social-groups",
+   "label": "Identity and Social Groups",
+   "description": "Identification with social groups and definition of self",
    "count": 5
   },
   {
-   "key": "expertise-and-beginners",
-   "label": "Expertise and Beginners",
-   "description": "Relative contributions of beginners versus experts and the value of fresh perspectives.",
-   "count": 4
+   "key": "youth-and-talent-development",
+   "label": "Youth and Talent Development",
+   "description": "Identifying talented children, early training, encouragement and success",
+   "count": 5
   }
  ],
  "rubric": {
@@ -86,126 +98,148 @@
   "levels": [
    {
     "score": 6,
-    "descriptor": "Outstanding: insightful, fully developed position with compelling reasons and persuasive examples; tightly focused and logically organized; fluent precise language with varied sentences; strong command of English with only minor slips."
+    "descriptor": "Outstanding: cogent insightful analysis, clear position, compelling reasons and persuasive examples, well-focused and logically organized, fluent precise language with superior control, only minor errors"
    },
    {
     "score": 5,
-    "descriptor": "Strong: thoughtful and well-developed position with sound reasons and well-chosen examples; focused and well organized; clear language with appropriate vocabulary and variety; good control of English with minor errors."
+    "descriptor": "Strong: thoughtful well-developed analysis, clear well-considered position, sound reasons and well-chosen examples, focused and generally organized, clear language with good control, minor errors only"
    },
    {
     "score": 4,
-    "descriptor": "Adequate: competent analysis with clear position and relevant reasons or examples; adequately focused and organized; meaning conveyed with acceptable clarity despite some errors."
+    "descriptor": "Adequate: competent analysis addressing task directions, clear position, relevant reasons and examples, adequately focused and organized, acceptable clarity and sufficient language control"
    },
    {
     "score": 3,
-    "descriptor": "Limited: some competence but obviously flawed; vague or thin position, weak or unsupported reasons, limited focus or organization, and language problems that reduce clarity."
+    "descriptor": "Limited: some competence but obviously flawed, vague or limited position or development, weak reasons or unsupported claims, limited focus or organization, language problems reducing clarity"
    },
    {
     "score": 2,
-    "descriptor": "Seriously flawed: largely misses task directions or shows major weaknesses; unclear position, few relevant reasons, poor organization, and frequent errors that obscure meaning."
+    "descriptor": "Seriously flawed: largely disregards directions, unclear or very limited position, few relevant reasons, poor focus and organization, serious language errors obscuring meaning"
    },
    {
     "score": 1,
-    "descriptor": "Fundamentally deficient: extremely confusing or mostly irrelevant content, little or no development, and severe pervasive errors causing incoherence."
+    "descriptor": "Fundamentally deficient: little understanding of issue or organized response, extremely brief or disorganized, severe persistent language problems causing incoherence"
    },
    {
     "score": 0,
-    "descriptor": "Unscorable: does not address the assigned task, merely copies the prompt, is in another language, or is indecipherable; no text is NS."
+    "descriptor": "No scoreable response: off-topic, copies topic only, foreign language, keystrokes only, or blank"
    }
   ],
   "dimensions": [
    {
-    "id": "task-and-position",
-    "label": "Task Response and Position",
-    "ask": "Does the essay address the specific instructions and take a clear, insightful position on the issue, considering its complexities?"
+    "id": "issue-analysis",
+    "label": "Analysis of the Issue",
+    "ask": "Does the essay present a clear insightful position that addresses the specific instructions and considers complexity, conditions, and challenges to the position?"
    },
    {
-    "id": "reasoning-and-evidence",
-    "label": "Reasoning and Evidence",
-    "ask": "Are main points fully developed with logically compelling reasons and persuasive, well-chosen examples, including counterviews where required?"
+    "id": "development-support",
+    "label": "Development and Support",
+    "ask": "Are main points fully developed with logically compelling reasons and persuasive well-chosen examples, including circumstances where the claim holds or fails?"
    },
    {
-    "id": "focus-and-organization",
-    "label": "Focus and Organization",
-    "ask": "Is the analysis well focused and well organized, connecting ideas logically and sustaining coherent discussion?"
+    "id": "organization-focus",
+    "label": "Organization and Focus",
+    "ask": "Is the analysis well-focused, well-organized, and logically connected with effective transitions?"
    },
    {
-    "id": "language-and-conventions",
+    "id": "language-control",
     "label": "Language and Conventions",
-    "ask": "Does the writer convey meaning fluently and precisely with sentence variety, effective vocabulary, and control of grammar, usage and mechanics?"
+    "ask": "Does the writer convey meaning fluently and precisely with sentence variety, effective vocabulary, and control of grammar, usage, and mechanics?"
    }
   ],
-  "notes": "Official ETS 0-6 scale in half-point increments, restated in own words. Raters look for no single correct position but for skill in addressing instructions and building an argument for an academic audience. 30-minute limit using basic word processor without spellcheck or grammar check; save time to plan and proofread as serious persistent errors lower score."
+  "notes": "Official ETS 0-6 Analyze an Issue scale restated in own words; half-point increments reflect borderline performances between levels. Serious persistent errors lower score even with good ideas."
  },
  "references": [
   {
-   "title": "Automated Essay Scoring With e-rater V.2",
-   "authors": "Yigal Attali; Jill Burstein",
+   "title": "Automated Essay Scoring With e-rater® V.2",
+   "authors": "Yigal Attali, Jill Burstein",
    "year": "2004",
    "kind": "paper",
-   "venue": "Journal of Technology, Learning, and Assessment",
-   "why": "Describes e-rater V.2 scoring engine used operationally for GRE essays, features and validity/reliability evidence.",
-   "foundUrl": "https://eric.ed.gov/?id=EJ843852",
+   "venue": "Journal of Technology, Learning, and Assessment, 4(3)",
+   "why": "Describes the e-rater V.2 automated scoring engine used to score GRE Analytical Writing essays alongside a human rater.",
+   "foundUrl": "https://ejournals.bc.edu/index.php/jtla/article/download/1650/1492/0",
    "verified": true,
    "url": "https://doi.org/10.1002/j.2333-8504.2004.tb01972.x",
    "foundTitle": "AUTOMATED ESSAY SCORING WITH E‐RATER® V.2.0"
   },
   {
-   "title": "Stumping e-rater: Challenging the Validity of Automated Essay Scoring",
-   "authors": "Donald E. Powers; Jill C. Burstein; Martin Chodorow; Mary E. Fowles; Karen Kukich",
-   "year": "2001",
-   "kind": "paper",
-   "venue": "Computers in Human Behavior",
-   "why": "Adversarial validity study inviting writers to trick e-rater on GRE Writing Assessment prompts.",
-   "foundUrl": "https://doi.org/10.1016/S0747-5632(01)00038-8",
-   "verified": true,
-   "url": "https://doi.org/10.1002/j.2333-8504.2001.tb01845.x",
-   "foundTitle": "STUMPING <i>E‐RATER</i>: CHALLENGING THE VALIDITY OF AUTOMATED ESSAY SCORING"
+   "title": "Comparing the Validity of Automated and Human Essay Scoring",
+   "authors": "Donald E. Powers, Jill C. Burstein, Martin Chodorow, Mary E. Fowles, Karen Kukich",
+   "year": "2000",
+   "kind": "report",
+   "venue": "ETS Research Report RR-00-10, GRE Board Report No. 98-08aR",
+   "why": "Validity study relating GRE Writing Assessment human and e-rater scores to independent nontest indicators of writing skill.",
+   "foundUrl": "https://www.ets.org/Media/Research/pdf/RR-00-10.pdf",
+   "verified": false,
+   "url": "https://www.ets.org/Media/Research/pdf/RR-00-10.pdf"
   },
   {
    "title": "Comparing the Validity of Automated and Human Scoring of Essays",
-   "authors": "Donald E. Powers; Jill C. Burstein; Martin Chodorow; Mary E. Fowles; Karen Kukich",
+   "authors": "Donald E. Powers, Jill Burstein, Martin Chodorow, Mary E. Fowles, Karen Kukich",
    "year": "2002",
    "kind": "paper",
-   "venue": "Journal of Educational Computing Research",
-   "why": "Compares correlations of e-rater vs human GRE essay scores with independent writing-skill indicators.",
+   "venue": "Journal of Educational Computing Research, 26(4)",
+   "why": "Journal version of GRE e-rater validity study comparing automated and human essay scores against writing grades and self-reports.",
    "foundUrl": "https://doi.org/10.2190/CX92-7WKV-N7WC-JL0A",
    "verified": true,
    "url": "https://doi.org/10.1092/up3h-m3te-q290-qj2t",
    "foundTitle": "COMPARING THE VALIDITY OF AUTOMATED AND HUMAN SCORING OF ESSAYS"
   },
   {
-   "title": "Comparing the Validity of Automated and Human Essay Scoring",
-   "authors": "Donald E. Powers; Jill C. Burstein; Martin Chodorow; Mary E. Fowles; Karen Kukich",
-   "year": "2000",
-   "kind": "report",
-   "venue": "ETS Research Report RR-00-10, GRE Board Report No. 98-08aR",
-   "why": "Full ETS research report version of GRE Writing Assessment automated vs human validity study.",
-   "foundUrl": "https://www.ets.org/Media/Research/pdf/RR-00-10.pdf",
-   "verified": false,
-   "url": "https://www.ets.org/Media/Research/pdf/RR-00-10.pdf"
+   "title": "Stumping e-rater: Challenging the validity of automated essay scoring",
+   "authors": "Donald E. Powers, Jill C. Burstein, Martin Chodorow, Mary E. Fowles, Karen Kukich",
+   "year": "2001",
+   "kind": "paper",
+   "venue": "Computers in Human Behavior, 18(2)",
+   "why": "Tests whether GRE Writing Assessment prompts can be gamed to fool e-rater, probing limits of automated scoring validity.",
+   "foundUrl": "https://doi.org/10.1016/S0747-5632(01)00052-8",
+   "verified": true,
+   "url": "https://doi.org/10.1002/j.2333-8504.2001.tb01845.x",
+   "foundTitle": "STUMPING <i>E‐RATER</i>: CHALLENGING THE VALIDITY OF AUTOMATED ESSAY SCORING"
   },
   {
-   "title": "A Study of the Use of the \"e-rater\" Scoring Engine for the Analytical Writing Measure of the \"GRE\" revised General Test",
-   "authors": "Chaitanya Ramineni; Catherine Trapani; David Williamson; Tenaha Davey; Michael Rosenfeld",
+   "title": "Evaluation of the e-rater® Scoring Engine for the GRE® Issue and Argument Prompts",
+   "authors": "Chaitanya Ramineni, Catherine S. Trapani, David M. Williamson, Tim Davey, Brent Bridgeman",
+   "year": "2012",
+   "kind": "report",
+   "venue": "ETS Research Report RR-12-02",
+   "why": "Builds and evaluates prompt-specific and generic e-rater models specifically for GRE Issue and Argument tasks.",
+   "foundUrl": "https://eric.ed.gov/?id=EJ1109825",
+   "verified": false,
+   "url": "https://eric.ed.gov/?id=EJ1109825"
+  },
+  {
+   "title": "Effects of Preexamination Disclosure of Essay Prompts for the GRE® Analytical Writing Assessment",
+   "authors": "Donald E. Powers",
+   "year": "2005",
+   "kind": "report",
+   "venue": "ETS Research Report RR-05-01, GRE Board Report No. 01-07R",
+   "why": "Studies how prepublishing the Issue/Argument pools affects preparation, performance, validity and perceptions.",
+   "foundUrl": "https://eric.ed.gov/?id=EJ1111331",
+   "verified": false,
+   "url": "https://eric.ed.gov/?id=EJ1111331"
+  },
+  {
+   "title": "Identifying the Writing Tasks Important for Academic Success at the Undergraduate and Graduate Levels",
+   "authors": "Michael Rosenfeld, Rosalea Courtney, Mary E. Fowles",
+   "year": "2004",
+   "kind": "report",
+   "venue": "ETS Research Report RR-04-42, GRE Board Report No. 00-04R",
+   "why": "Large faculty survey providing content-validity evidence linking GRE Analytical Writing skills to important graduate writing tasks.",
+   "foundUrl": "https://eric.ed.gov/?id=EJ1111057",
+   "verified": false,
+   "url": "https://eric.ed.gov/?id=EJ1111057"
+  },
+  {
+   "title": "Comparison of Human and Machine Scoring of Essays: Differences by Gender, Ethnicity, and Country",
+   "authors": "Brent Bridgeman, Catherine S. Trapani, Yigal Attali",
    "year": "2014",
-   "kind": "report",
-   "venue": "ETS Research Report Series RR-14-24",
-   "why": "Feasibility and validity study of e-rater generic models for GRE revised General Test Issue and Argument tasks.",
-   "foundUrl": "https://eric.ed.gov/?id=EJ1109327",
+   "kind": "paper",
+   "venue": "The Research Foundation for the GRE revised General Test: A Compendium of Studies, Chapter 4.8",
+   "why": "Compares human vs e-rater GRE Analytical Writing scores by demographic group to support check-score rather than averaging model.",
+   "foundUrl": "https://www.ets.org/s/research/pdf/gre_compendium.pdf",
    "verified": false,
-   "url": "https://eric.ed.gov/?id=EJ1109327"
-  },
-  {
-   "title": "Automated Trait Scores for \"GRE\" Writing Tasks",
-   "authors": "Chaitanya Ramineni; David Williamson",
-   "year": "2015",
-   "kind": "report",
-   "venue": "ETS Research Report Series RR-15-15",
-   "why": "Develops automated trait scores for GRE Issue and Argument essays from e-rater features.",
-   "foundUrl": "https://eric.ed.gov/?id=EJ1109723",
-   "verified": false,
-   "url": "https://eric.ed.gov/?id=EJ1109723"
+   "url": "https://www.ets.org/s/research/pdf/gre_compendium.pdf"
   }
  ],
  "prompt": "GRE Analytical Writing, the \"Analyze an Issue\" essay. I want to practice timed essays scored on the official 0-6 scale.",
@@ -223,16 +257,10 @@
    "chars": 11594
   },
   {
-   "url": "https://www.ets.org/gre/test-takers/general-test/prepare/content/analytical-writing/issue.html",
+   "url": "https://www.ets.org/gre/revised_general/prepare/analytical_writing/issue/",
    "title": "GRE General Test Analytical Writing Analyze an Issue Task",
    "kind": "web",
    "chars": 10332
-  },
-  {
-   "url": "https://www.ets.org/gre/test-takers/general-test/prepare/powerprep.html",
-   "title": "POWERPREP",
-   "kind": "web",
-   "chars": 2043
   },
   {
    "url": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
@@ -251,12 +279,6 @@
    "title": "aw-sample-essays",
    "kind": "pdf",
    "chars": 24119
-  },
-  {
-   "url": "https://www.de.ets.org/pdfs/gre/gre-practice-test-3-writing-responses-18-point.pdf",
-   "title": "gre-practice-test-3-writing-responses-18-point",
-   "kind": "pdf",
-   "chars": 29652
   }
  ],
  "questions": [
@@ -266,7 +288,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "science-and-research",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q001",
    "n": 1
@@ -277,7 +299,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "teaching-and-mentorship",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q002",
    "n": 2
@@ -288,7 +310,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q003",
    "n": 3
@@ -299,7 +321,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "technology-and-modern-life",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q004",
    "n": 4
@@ -310,7 +332,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "expertise-and-beginners",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q005",
    "n": 5
@@ -321,7 +343,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q006",
    "n": 6
@@ -332,7 +354,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "teaching-and-mentorship",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q007",
    "n": 7
@@ -343,7 +365,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "teaching-and-mentorship",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q008",
    "n": 8
@@ -354,7 +376,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "environment-and-endangered-species",
+   "concept": "environment-and-species",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q009",
    "n": 9
@@ -365,7 +387,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "work-jobs-and-industry",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q010",
    "n": 10
@@ -376,7 +398,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q011",
    "n": 11
@@ -387,7 +409,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q012",
    "n": 12
@@ -398,7 +420,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q013",
    "n": 13
@@ -409,7 +431,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "science-and-research",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q014",
    "n": 14
@@ -420,7 +442,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "youth-and-talent-development",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q015",
    "n": 15
@@ -431,7 +453,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "identity-and-social-groups",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q016",
    "n": 16
@@ -442,7 +464,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "work-jobs-and-industry",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q017",
    "n": 17
@@ -453,7 +475,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q018",
    "n": 18
@@ -464,7 +486,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "arts-sciences-and-achievement",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q019",
    "n": 19
@@ -475,7 +497,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q020",
    "n": 20
@@ -486,7 +508,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "technology-and-modern-life",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q021",
    "n": 21
@@ -497,7 +519,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q022",
    "n": 22
@@ -508,7 +530,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q023",
    "n": 23
@@ -519,7 +541,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q024",
    "n": 24
@@ -530,7 +552,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q025",
    "n": 25
@@ -541,18 +563,18 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "teaching-and-mentorship",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q026",
    "n": 26
   },
   {
    "type": "essay",
-   "prompt": "Claim: We can usually learn much more from people whose views we share than from those whose views contradict our own.\nReason: Disagreement can cause stress and inhibit learning.",
+   "prompt": "Claim: We can usually learn much more from people whose views we share than from those whose views contradict our own. Reason: Disagreement can cause stress and inhibit learning.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q027",
    "n": 27
@@ -563,7 +585,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q028",
    "n": 28
@@ -574,7 +596,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "youth-and-talent-development",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q029",
    "n": 29
@@ -585,7 +607,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "teaching-and-mentorship",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q030",
    "n": 30
@@ -596,7 +618,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q031",
    "n": 31
@@ -607,7 +629,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "arts-and-creativity",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q032",
    "n": 32
@@ -618,7 +640,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "arts-sciences-and-achievement",
+   "concept": "arts-and-creativity",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q033",
    "n": 33
@@ -629,7 +651,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "science-and-research",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q034",
    "n": 34
@@ -640,7 +662,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q035",
    "n": 35
@@ -651,7 +673,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q036",
    "n": 36
@@ -662,7 +684,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "science-and-research",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q037",
    "n": 37
@@ -673,7 +695,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q038",
    "n": 38
@@ -684,7 +706,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q039",
    "n": 39
@@ -695,7 +717,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q040",
    "n": 40
@@ -706,7 +728,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "environment-and-endangered-species",
+   "concept": "environment-and-species",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q041",
    "n": 41
@@ -717,7 +739,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "technology-and-modern-life",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q042",
    "n": 42
@@ -728,7 +750,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q043",
    "n": 43
@@ -739,7 +761,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "environment-and-endangered-species",
+   "concept": "environment-and-species",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q044",
    "n": 44
@@ -750,7 +772,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q045",
    "n": 45
@@ -761,18 +783,18 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q046",
    "n": 46
   },
   {
    "type": "essay",
-   "prompt": "Claim: Universities should require every student to take a variety of courses outside the student's major field of study.\nReason: Acquiring knowledge of various academic disciplines is the best way to become truly educated.",
+   "prompt": "Claim: Universities should require every student to take a variety of courses outside the student's major field of study. Reason: Acquiring knowledge of various academic disciplines is the best way to become truly educated.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q047",
    "n": 47
@@ -783,7 +805,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "youth-and-talent-development",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q048",
    "n": 48
@@ -794,7 +816,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "science-and-research",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q049",
    "n": 49
@@ -805,7 +827,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q050",
    "n": 50
@@ -816,7 +838,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "technology-and-modern-life",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q051",
    "n": 51
@@ -827,7 +849,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q052",
    "n": 52
@@ -838,7 +860,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "youth-and-talent-development",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q053",
    "n": 53
@@ -849,7 +871,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "identity-and-social-groups",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q054",
    "n": 54
@@ -860,7 +882,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "arts-and-creativity",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q055",
    "n": 55
@@ -871,7 +893,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q056",
    "n": 56
@@ -882,7 +904,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q057",
    "n": 57
@@ -893,7 +915,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "teaching-and-mentorship",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q058",
    "n": 58
@@ -904,7 +926,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q059",
    "n": 59
@@ -915,40 +937,40 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q060",
    "n": 60
   },
   {
    "type": "essay",
-   "prompt": "Claim: Any piece of information referred to as a fact should be mistrusted, since it may well be proven false in the future.\nReason: Much of the information that people assume is factual actually turns out to be inaccurate.",
+   "prompt": "Claim: Any piece of information referred to as a fact should be mistrusted, since it may well be proven false in the future. Reason: Much of the information that people assume is factual actually turns out to be inaccurate.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q061",
    "n": 61
   },
   {
    "type": "essay",
-   "prompt": "Claim: Nations should suspend government funding for the arts when significant numbers of their citizens are hungry or unemployed.\nReason: It is inappropriate — and, perhaps, even cruel — to use public resources to fund the arts when people's basic needs are not being met.",
+   "prompt": "Claim: Nations should suspend government funding for the arts when significant numbers of their citizens are hungry or unemployed. Reason: It is inappropriate — and, perhaps, even cruel — to use public resources to fund the arts when people's basic needs are not being met.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "arts-and-creativity",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q062",
    "n": 62
   },
   {
    "type": "essay",
-   "prompt": "Claim: Many problems of modern society cannot be solved by laws and the legal system.\nReason: Laws cannot change what is in people's hearts or minds.",
+   "prompt": "Claim: Many problems of modern society cannot be solved by laws and the legal system. Reason: Laws cannot change what is in people's hearts or minds.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q063",
    "n": 63
@@ -959,7 +981,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q064",
    "n": 64
@@ -970,7 +992,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "technology-and-modern-life",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q065",
    "n": 65
@@ -981,7 +1003,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q066",
    "n": 66
@@ -992,7 +1014,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q067",
    "n": 67
@@ -1003,7 +1025,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q068",
    "n": 68
@@ -1014,7 +1036,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q069",
    "n": 69
@@ -1025,7 +1047,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q070",
    "n": 70
@@ -1036,7 +1058,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q071",
    "n": 71
@@ -1047,7 +1069,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "work-jobs-and-industry",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q072",
    "n": 72
@@ -1058,7 +1080,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q073",
    "n": 73
@@ -1069,7 +1091,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q074",
    "n": 74
@@ -1080,7 +1102,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q075",
    "n": 75
@@ -1091,7 +1113,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q076",
    "n": 76
@@ -1102,7 +1124,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "arts-and-creativity",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q077",
    "n": 77
@@ -1113,7 +1135,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q078",
    "n": 78
@@ -1124,7 +1146,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "expertise-and-beginners",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q079",
    "n": 79
@@ -1135,7 +1157,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q080",
    "n": 80
@@ -1146,7 +1168,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q081",
    "n": 81
@@ -1157,7 +1179,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "expertise-and-beginners",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q082",
    "n": 82
@@ -1168,7 +1190,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "science-and-research",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q083",
    "n": 83
@@ -1179,7 +1201,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "expertise-and-beginners",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q084",
    "n": 84
@@ -1190,7 +1212,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q085",
    "n": 85
@@ -1201,7 +1223,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q086",
    "n": 86
@@ -1212,7 +1234,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q087",
    "n": 87
@@ -1223,7 +1245,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q088",
    "n": 88
@@ -1234,7 +1256,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q089",
    "n": 89
@@ -1245,7 +1267,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q090",
    "n": 90
@@ -1256,7 +1278,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q091",
    "n": 91
@@ -1267,7 +1289,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q092",
    "n": 92
@@ -1278,7 +1300,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q093",
    "n": 93
@@ -1289,7 +1311,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q094",
    "n": 94
@@ -1300,7 +1322,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q095",
    "n": 95
@@ -1311,7 +1333,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q096",
    "n": 96
@@ -1322,7 +1344,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q097",
    "n": 97
@@ -1333,7 +1355,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "environment-and-endangered-species",
+   "concept": "environment-and-species",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q098",
    "n": 98
@@ -1344,7 +1366,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q099",
    "n": 99
@@ -1355,7 +1377,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q100",
    "n": 100
@@ -1366,7 +1388,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q101",
    "n": 101
@@ -1377,7 +1399,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "work-jobs-and-industry",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q102",
    "n": 102
@@ -1388,7 +1410,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q103",
    "n": 103
@@ -1399,7 +1421,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "science-and-research",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q104",
    "n": 104
@@ -1410,7 +1432,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "technology-and-modern-life",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q105",
    "n": 105
@@ -1421,7 +1443,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q106",
    "n": 106
@@ -1432,7 +1454,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q107",
    "n": 107
@@ -1443,7 +1465,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "work-jobs-and-industry",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q108",
    "n": 108
@@ -1454,7 +1476,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "work-jobs-and-industry",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q109",
    "n": 109
@@ -1465,7 +1487,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q110",
    "n": 110
@@ -1476,7 +1498,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q111",
    "n": 111
@@ -1487,7 +1509,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q112",
    "n": 112
@@ -1498,7 +1520,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q113",
    "n": 113
@@ -1509,7 +1531,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q114",
    "n": 114
@@ -1520,7 +1542,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q115",
    "n": 115
@@ -1531,7 +1553,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q116",
    "n": 116
@@ -1542,7 +1564,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q117",
    "n": 117
@@ -1553,7 +1575,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q118",
    "n": 118
@@ -1564,7 +1586,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q119",
    "n": 119
@@ -1575,7 +1597,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q120",
    "n": 120
@@ -1586,7 +1608,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "environment-and-endangered-species",
+   "concept": "environment-and-species",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q121",
    "n": 121
@@ -1597,7 +1619,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q122",
    "n": 122
@@ -1608,7 +1630,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q123",
    "n": 123
@@ -1619,7 +1641,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "environment-and-endangered-species",
+   "concept": "environment-and-species",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q124",
    "n": 124
@@ -1630,18 +1652,18 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q125",
    "n": 125
   },
   {
    "type": "essay",
-   "prompt": "Claim: While boredom is often expressed with a sense of self-satisfaction, it should really be a source of embarrassment.\nReason: Boredom arises from a lack of imagination and self-motivation.",
+   "prompt": "Claim: While boredom is often expressed with a sense of self-satisfaction, it should really be a source of embarrassment. Reason: Boredom arises from a lack of imagination and self-motivation.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q126",
    "n": 126
@@ -1652,29 +1674,29 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "teaching-and-mentorship",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q127",
    "n": 127
   },
   {
    "type": "essay",
-   "prompt": "Claim: Though often considered an objective pursuit, learning about the historical past requires creativity.\nReason: Because we can never know the past directly, we must reconstruct it by imaginatively interpreting historical accounts, documents, and artifacts.",
+   "prompt": "Claim: Though often considered an objective pursuit, learning about the historical past requires creativity. Reason: Because we can never know the past directly, we must reconstruct it by imaginatively interpreting historical accounts, documents, and artifacts.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which the claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q128",
    "n": 128
   },
   {
    "type": "essay",
-   "prompt": "Claim: No act is done purely for the benefit of others.\nReason: All actions — even those that seem to be done for other people — are based on self-interest.",
+   "prompt": "Claim: No act is done purely for the benefit of others. Reason: All actions — even those that seem to be done for other people — are based on self-interest.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "ethics-and-social-values",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q129",
    "n": 129
@@ -1685,7 +1707,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q130",
    "n": 130
@@ -1696,7 +1718,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q131",
    "n": 131
@@ -1707,18 +1729,18 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q132",
    "n": 132
   },
   {
    "type": "essay",
-   "prompt": "Claim: Governments must ensure that their major cities receive the financial support they need in order to thrive.\nReason: It is primarily in cities that a nation's cultural traditions are preserved and generated.",
+   "prompt": "Claim: Governments must ensure that their major cities receive the financial support they need in order to thrive. Reason: It is primarily in cities that a nation's cultural traditions are preserved and generated.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q133",
    "n": 133
@@ -1729,18 +1751,18 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "arts-sciences-and-achievement",
+   "concept": "arts-and-creativity",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q134",
    "n": 134
   },
   {
    "type": "essay",
-   "prompt": "Claim: In any field — business, politics, education, government — those in power should step down after five years.\nReason: The surest path to success for any enterprise is revitalization through new leadership.",
+   "prompt": "Claim: In any field — business, politics, education, government — those in power should step down after five years. Reason: The surest path to success for any enterprise is revitalization through new leadership.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q135",
    "n": 135
@@ -1751,7 +1773,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "arts-sciences-and-achievement",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q136",
    "n": 136
@@ -1762,7 +1784,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "environment-and-endangered-species",
+   "concept": "environment-and-species",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q137",
    "n": 137
@@ -1773,7 +1795,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "identity-and-social-groups",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q138",
    "n": 138
@@ -1784,18 +1806,18 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q139",
    "n": 139
   },
   {
    "type": "essay",
-   "prompt": "Claim: In any situation, the best way to persuade other people is to present them with facts and statistics rather than with emotional arguments.\nReason: Facts are objective, so they are more persuasive than subjective appeals.",
+   "prompt": "Claim: In any situation, the best way to persuade other people is to present them with facts and statistics rather than with emotional arguments. Reason: Facts are objective, so they are more persuasive than subjective appeals.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q140",
    "n": 140
@@ -1806,7 +1828,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "arts-sciences-and-achievement",
+   "concept": "arts-and-creativity",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q141",
    "n": 141
@@ -1817,18 +1839,18 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q142",
    "n": 142
   },
   {
    "type": "essay",
-   "prompt": "Claim: Group assignments that students must work together to complete should replace a substantial amount of traditional lecture-based instruction in college and university courses.\nReason: It is vital for students to gain experience collaborating with peers to study a topic and to achieve a common goal.",
+   "prompt": "Claim: Group assignments that students must work together to complete should replace a substantial amount of traditional lecture-based instruction in college and university courses. Reason: It is vital for students to gain experience collaborating with peers to study a topic and to achieve a common goal.",
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "teaching-and-learning",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q143",
    "n": 143
@@ -1839,7 +1861,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q144",
    "n": 144
@@ -1850,7 +1872,7 @@
    "instructions": "Write a response in which you discuss your views on the policy and explain your reasoning for the position you take. In developing and supporting your position, you should consider the possible consequences of implementing the policy and explain how these consequences shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q145",
    "n": 145
@@ -1861,7 +1883,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "work-jobs-and-industry",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q146",
    "n": 146
@@ -1872,7 +1894,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q147",
    "n": 147
@@ -1883,7 +1905,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q148",
    "n": 148
@@ -1894,7 +1916,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q149",
    "n": 149
@@ -1905,7 +1927,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q150",
    "n": 150
@@ -1916,7 +1938,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "work-and-fields-of-study",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q151",
    "n": 151
@@ -1927,7 +1949,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the statement and explain your reasoning for the position you take. In developing and supporting your position, you should consider ways in which the statement might or might not hold true and explain how these considerations shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "government-policy-and-welfare",
+   "concept": "government-and-policy",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q152",
    "n": 152
@@ -1938,7 +1960,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "identity-and-social-groups",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q153",
    "n": 153
@@ -1949,7 +1971,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "individual-character-and-independence",
+   "concept": "youth-and-talent-development",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q154",
    "n": 154
@@ -1960,7 +1982,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "identity-and-social-groups",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q155",
    "n": 155
@@ -1971,7 +1993,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "science-research-and-technology",
+   "concept": "technology-and-modern-life",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q156",
    "n": 156
@@ -1982,7 +2004,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim and the reason on which that claim is based.",
    "choices": [],
    "answer": "",
-   "concept": "knowledge-inquiry-and-progress",
+   "concept": "knowledge-and-inquiry",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q157",
    "n": 157
@@ -1993,7 +2015,7 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons and/or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "technology-and-modern-life",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q158",
    "n": 158
@@ -2004,7 +2026,7 @@
    "instructions": "Write a response in which you discuss which view more closely aligns with your own position and explain your reasoning for the position you take. In developing and supporting your position, you should address both of the views presented.",
    "choices": [],
    "answer": "",
-   "concept": "ethics-society-and-culture",
+   "concept": "society-and-progress",
    "source": "https://www.ets.org/pdfs/gre/issue-pool.pdf",
    "id": "q159",
    "n": 159
@@ -2015,10 +2037,21 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the claim. In developing and supporting your position, be sure to address the most compelling reasons or examples that could be used to challenge your position.",
    "choices": [],
    "answer": "",
-   "concept": "leadership-cooperation-competition",
+   "concept": "leadership-and-cooperation",
    "source": "https://www.ets.org/pdfs/gre/pponline-test2-sample-essays.pdf",
    "id": "q160",
    "n": 160
+  },
+  {
+   "type": "essay",
+   "prompt": "Best way for a socity to prepare it’s young people for leadership in government, industry, or other fields is by instilling in them a sense of coopertion, not competition.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "leadership-and-cooperation",
+   "source": "https://www.ets.org/pdfs/gre/pponline-test2-sample-essays.pdf",
+   "id": "q161",
+   "n": 161
   },
   {
    "type": "essay",
@@ -2026,12 +2059,12 @@
    "instructions": "Write a response in which you discuss the extent to which you agree or disagree with the recommendation and explain your reasoning for the position you take. In developing and supporting your position, describe specific circumstances in which adopting the recommendation would or would not be advantageous and explain how these examples shape your position.",
    "choices": [],
    "answer": "",
-   "concept": "education-and-curriculum",
+   "concept": "education-and-schooling",
    "source": "https://www.ets.org/pdfs/gre/aw-sample-essays.pdf",
-   "id": "q161",
-   "n": 161
+   "id": "q162",
+   "n": 162
   }
  ],
- "builtAt": "2026-11-04T15:37:27.318Z",
+ "builtAt": "2026-11-04T16:03:42.972Z",
  "builtWith": "saved example"
 }

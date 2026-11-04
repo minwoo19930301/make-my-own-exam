@@ -18,7 +18,7 @@ export async function buildExam({ prompt, urls = [] }, onStep) {
   const sources = [];
   const tried = new Set();
   const read = async (url, why) => {
-    if (tried.has(url) || sources.length >= 8) return null;
+    if (tried.has(url) || sources.length >= 10) return null;
     tried.add(url);
     const id = `src${tried.size}`;
     step(id, { label: `Read ${url}`, state: "run", detail: why });
@@ -60,6 +60,15 @@ export async function buildExam({ prompt, urls = [] }, onStep) {
       step(id, { state: "done", detail: `${links.length} links found, ${next.length} worth opening` });
       if (!next.length) break;
       await pool(next, 3, (u) => read(u, `looking for ${need.join(", ")}`));
+    }
+    // Still missing something: one more web search aimed only at it.
+    const still = missingKinds(sources);
+    if (still.length && sources.length < 10) {
+      step("research", { label: `Search again for: ${still.join(", ")}`, state: "run" });
+      const again = await api("/api/build", { stage: "discover", prompt, missing: still, read: [...tried] }).catch(() => ({ candidates: [] }));
+      const fresh = again.candidates.filter((c) => !tried.has(c.url));
+      step("research", { state: "done", detail: `${fresh.length} new links` });
+      await pool(fresh, 4, (c) => read(c.url, c.why));
     }
   }
   if (!sources.length) throw new Error("Could not read any official source. Add a link yourself under \"Use my own links\".");
@@ -117,13 +126,21 @@ export async function verifyReference(ref) {
 
 const KIND_RE = { "official scoring guide": /scor|rubric|level/i, "scored sample answers": /sample|response|essay/i, "question pool": /pool|topic|prompt|question/i };
 
+// A question pool repeats its task instructions many times, or is named as a pool or bank of questions.
+function looksLikePool(s) {
+  if (s.chars > 15000 && /pool|topic|question|bank|prompts/i.test(`${s.url} ${s.title}`) && !/sample|response|essays/i.test(s.url)) return true;
+  const counts = {};
+  for (const line of s.text.split(/(?<=[.?!])\s+/)) if (line.length > 40) counts[line] = (counts[line] || 0) + 1;
+  return Math.max(0, ...Object.values(counts)) >= 15;
+}
+
 // What the sources read so far still lack. Checked by simple text signals; Muse decides which links to open.
 function missingKinds(sources) {
   const all = sources.map((s) => s.text).join("\n");
   const need = [];
   if (!/(scoring guide|score level|holistic|scored on a|rubric|score of \d)/i.test(all)) need.push("official scoring guide");
   if (!/(sample (response|essay|answer)s?|scored sample)/i.test(all)) need.push("scored sample answers");
-  if (!sources.some((s) => s.chars > 20000)) need.push("question pool");
+  if (!sources.some(looksLikePool)) need.push("question pool");
   return need;
 }
 

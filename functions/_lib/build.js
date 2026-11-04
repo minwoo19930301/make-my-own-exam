@@ -57,12 +57,14 @@ async function webSearch(env, queries, domains) {
   return hits.flat();
 }
 
-export async function discover({ prompt, env, ...key }) {
+export async function discover({ prompt, missing = [], read = [], env, ...key }) {
   if (!String(prompt || "").trim()) throw new HttpError(400, "Describe the exam first.");
   let raw, museSearches = [];
+  // A second pass searches only for what is still missing, and skips what was already read.
+  const focus = missing.length ? `\nThese are still missing: ${missing.slice(0, 3).join(", ")}. Search specifically for them. Do not list these already-read URLs: ${read.slice(0, 15).join(" ")}` : "";
   if (!key.baseUrl) {
     // Muse searches the web itself; a custom provider falls back to recalling URLs.
-    const r = await searchJSON({ ...key, instructions: `${discoverSystem}\nSearch the web to find and confirm each URL. Only list URLs you found in search results.`, input: JSON.stringify({ request: cap(prompt, 1000) }) }).catch(() => null);
+    const r = await searchJSON({ ...key, instructions: `${discoverSystem}\nSearch the web to find and confirm each URL. Only list URLs you found in search results.${focus}`, input: JSON.stringify({ request: cap(prompt, 1000) }) }).catch(() => null);
     if (r) { raw = r.json; museSearches = r.searches; }
   }
   raw ||= await chatJSON({ ...key, system: discoverSystem, user: JSON.stringify({ request: cap(prompt, 1000) }), maxTokens: 2500 });

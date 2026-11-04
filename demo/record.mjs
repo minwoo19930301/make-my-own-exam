@@ -22,7 +22,7 @@ let marks = {};
 if (!muxOnly) {
   rmSync(`${out}raw`, { recursive: true, force: true });
   mkdirSync(`${out}raw`, { recursive: true });
-  const browser = await chromium.launch({ channel: "chrome" });
+  const browser = await chromium.launch({ channel: "chrome", headless: false }) // headless Chrome screencasts only 713 of 800 rows;
   const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1, recordVideo: { dir: `${out}raw`, size: { width: 1280, height: 800 } }, colorScheme: "light" });
   const t0 = Date.now();
   await ctx.addInitScript(() => { if (!sessionStorage.getItem("demo")) { sessionStorage.setItem("demo", "1"); localStorage.clear(); } });
@@ -75,22 +75,29 @@ if (!muxOnly) {
   marks.intro = at();
   await say(caption.intro);
   await zoom(".hero", 1.25);
-  await sleep(dur.intro * 0.55);
+  await sleep(dur.intro * 0.4);
   await unzoom();
+  await sleep(0.5);
   await page.getByRole("button", { name: "Try the GRE example" }).click();
-  await sleep(dur.intro * 0.45 + 0.3);
+  await zoom("textarea.area", 1.35);
+  await sleep(dur.intro * 0.6 - 0.2);
 
   marks.build = at();
   await say(caption.build);
-  await zoom(".links", 1.3);
-  await sleep(1.6);
+  await sleep(0.8);
   await unzoom();
+  await sleep(0.6);
   await page.getByRole("button", { name: "Build knowledge base" }).click();
   marks.buildClick = at();
   await sleep(1.2);
-  await scrollTo(".steps", "center");
+  await scrollTo(".steps", "start");
   await page.getByRole("button", { name: "Start practicing" }).waitFor({ timeout: 15 * 60000 });
   marks.buildDone = at();
+  const built = await page.evaluate(() => Object.values(JSON.parse(localStorage.getItem("mmoe.exams")))[0]);
+  if (built.questions.length < 100 || !built.questions.some((q) => q.prompt.includes("human mind will always be superior"))) {
+    await browser.close();
+    throw new Error(`Live build found only ${built.questions.length} questions or missed the demo topic; record again.`);
+  }
   await sleep(0.8);
 
   marks.kb = at();
@@ -100,10 +107,11 @@ if (!muxOnly) {
   await zoom(".stats", 1.35);
   await sleep(dur.kb * 0.3);
   await unzoom();
-  await page.evaluate(() => [...document.querySelectorAll(".card")].find((c) => c.textContent.startsWith("3 · Research"))?.scrollIntoView({ behavior: "smooth", block: "center" }));
+  await page.evaluate(() => [...document.querySelectorAll(".card")].find((c) => c.textContent.startsWith("3 · Research"))?.scrollIntoView({ behavior: "smooth", block: "start" }));
   await sleep(1);
-  await page.evaluate(() => { const c = [...document.querySelectorAll(".card")].find((x) => x.textContent.startsWith("3 · Research")); c.id = "demo-refs"; });
-  await zoom("#demo-refs", 1.2);
+  // Zoom on the first confirmed reference so the Crossref badge is in view.
+  await page.evaluate(() => { const c = [...document.querySelectorAll(".card")].find((x) => x.textContent.startsWith("3 · Research")); const row = [...c.querySelectorAll(".list-row")].find((r) => r.textContent.includes("Confirmed")) || c; row.id = "demo-refs"; });
+  await zoom("#demo-refs", 1.45);
   await sleep(dur.kb * 0.7 - 2.2);
   await unzoom();
   await sleep(0.4);
@@ -161,14 +169,14 @@ if (!muxOnly) {
   marks.close = at();
   await say(caption.close);
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "smooth" }));
-  await sleep(dur.close * 0.6);
+  await sleep(dur.close * 0.35);
   await page.evaluate(() => {
     const t = document.createElement("div");
     t.id = "demo-title";
     t.innerHTML = "<div><h1>Make My Own Exam</h1><p>make-my-own-exam.pages.dev</p></div>";
     document.body.append(t);
   });
-  await sleep(dur.close * 0.4 + 2);
+  await sleep(dur.close * 0.65 + 1.5);
   marks.end = at();
 
   await ctx.close();
