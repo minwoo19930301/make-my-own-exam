@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { api, useStored } from "./store.js";
 import { finalize, generateQuestion } from "./build.js";
 import { nextQuestions } from "./plan.js";
+import { gradePrompt } from "./agent.js";
 
 const fmt = (ms) => `${String(Math.floor(ms / 60000)).padStart(2, "0")}:${String(Math.floor(ms / 1000) % 60).padStart(2, "0")}`;
 const TYPE = { essay: "Essay", short: "Short answer", mc: "Multiple choice" };
 const label = (exam, key) => exam.concepts.find((c) => c.key === key)?.label || key;
 
-export function Practice({ exam, questionId, history, onPick, onSaveExam, onScored }) {
+export function Practice({ exam, imported, questionId, history, onPick, onSaveExam, onScored }) {
   const qs = exam.questions;
   const question = qs.find((q) => q.id === questionId) || nextQuestions(exam, history, 1)[0]?.question || qs[0];
   const [genBusy, setGenBusy] = useState(false);
@@ -45,14 +46,15 @@ export function Practice({ exam, questionId, history, onPick, onSaveExam, onScor
         </div>
         {err && <p className="error">{err}</p>}
       </section>
-      {question ? <Answer key={question.id} exam={exam} question={question} onScored={onScored} /> : <section className="card"><p className="sub">No questions yet. Use "New question like this" to write one in the exam's style.</p></section>}
+      {question ? <Answer key={question.id} exam={exam} question={question} onScored={onScored} onSaveExam={onSaveExam} imported={imported?.questionId === question.id ? imported : null} /> : <section className="card"><p className="sub">No questions yet. Use "New question like this" to write one in the exam's style.</p></section>}
     </>
   );
 }
 
-function Answer({ exam, question, onScored }) {
-  const [answer, setAnswer] = useStored(`mmoe.draft.${exam.id}.${question.id}`, "");
-  const [result, setResult] = useState(null);
+function Answer({ exam, question, onScored, onSaveExam, imported }) {
+  const [answer, setAnswer] = useStored(`mmoe.draft.${exam.id}.${question.id}`, imported?.answer || "");
+  const [result, setResult] = useState(imported ? { ...imported.grade, gradedBy: imported.gradedBy } : null);
+  const [agentText, setAgentText] = useState("");
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const [end, setEnd] = useState(null);
@@ -66,6 +68,23 @@ function Answer({ exam, question, onScored }) {
   const words = (answer.trim().match(/\S+/g) || []).length;
   const left = end ? Math.max(0, end - now) : minutes * 60000;
   const mc = question.type === "mc";
+
+  // The agent needs the exam on the server, so it is shared first (once per exam).
+  const gradeWithAgent = async () => {
+    setErr("");
+    try {
+      let shared = exam.sharedId;
+      if (!shared) {
+        const r = await fetch("/api/share", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ exam }) }).then((x) => x.json());
+        if (!r.examId) throw new Error(r.error || "Could not share the exam.");
+        shared = r.examId;
+        onSaveExam({ ...exam, sharedId: shared });
+      }
+      const text = gradePrompt(shared, question, answer);
+      setAgentText(text);
+      navigator.clipboard?.writeText(text).catch(() => {});
+    } catch (e) { setErr(e.message); }
+  };
 
   const score = async () => {
     setBusy(true); setErr("");
@@ -113,9 +132,16 @@ function Answer({ exam, question, onScored }) {
           <textarea className={`essay ${question.type === "short" ? "short" : ""}`} aria-label="Your answer" value={answer} onChange={(e) => setAnswer(e.target.value)} placeholder="Answer the question as you would on the real exam." />
         )}
         {err && <p className="error">{err}</p>}
+        {agentText && (
+          <div className="note" style={{ marginTop: 8 }}>
+            <div><b>Prompt copied. Paste it into your agent.</b>It saves the grade through this site's MCP server and gives you a link back here.
+              <pre className="code" style={{ marginTop: 8 }}>{agentText}</pre></div>
+          </div>
+        )}
         <div className="row" style={{ marginTop: 8 }}>
           {!mc && <button type="button" className="btn btn-secondary" onClick={() => { setEnd(Date.now() + minutes * 60000); setNow(Date.now()); }}>{end ? "Restart timer" : `Start ${minutes}-minute timer`}</button>}
           <span className="grow" />
+          {!mc && <button type="button" className="btn btn-secondary" disabled={words < 5} onClick={gradeWithAgent}>Grade with my agent</button>}
           <button type="button" className="btn btn-primary" disabled={busy || (mc ? !answer : words < 5)} onClick={score}>{busy ? "Scoring…" : "Score my answer"}</button>
         </div>
       </section>
@@ -130,7 +156,7 @@ function Result({ g }) {
     <section className="card" id="result" aria-label="Score">
       <div className="score-head">
         <div className="score-num">{g.score}</div>
-        <div><h2 className="card-title">Practice score {g.score} / {g.max}</h2><p style={{ margin: "4px 0 0" }}>{g.summary}</p></div>
+        <div><h2 className="card-title">Practice score {g.score} / {g.max}</h2><p style={{ margin: "4px 0 0" }}>{g.summary}</p>{g.gradedBy && <span className="sub">Graded by {g.gradedBy}</span>}</div>
       </div>
       {g.task.reason && (
         <div className="dim" style={{ marginTop: 12 }}>

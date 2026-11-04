@@ -36,7 +36,9 @@ Return only JSON: {"queries":[string],"references":[{"title":string,"authors":st
 
 export const questionsSystem = `You extract exam questions from one excerpt of a source document. ${DATA}
 Copy every question or prompt that appears in the excerpt, with its text exactly as written. Never invent or reword questions.
-If the excerpt states instructions that apply to a question, put them in "instructions". For multiple choice, list the choices and give "answer" only if the excerpt states it.
+If the excerpt states instructions that apply to a question, put them in "instructions". For multiple choice, list the choices.
+If the excerpt gives the official answer or acceptable answers (for any question type), copy them into "answer"; otherwise leave it empty.
+Copy each question's full text, from its first word to its end, even when it spans several lines.
 Tag each question with the single best concept key from the list given.
 Return only JSON: {"questions":[{"type":"essay"|"short"|"mc","prompt":string,"instructions":string,"choices":[string],"answer":string,"concept":string}]}. If there are no questions, return {"questions":[]}.`;
 

@@ -4,6 +4,7 @@ import { Build } from "./Build.jsx";
 import { Practice } from "./Practice.jsx";
 import { Insights } from "./Insights.jsx";
 import { HistoryDialog, SettingsDialog } from "./Dialogs.jsx";
+import { finalize } from "./build.js";
 
 const TABS = [
   { value: "build", label: "Build" },
@@ -21,6 +22,27 @@ export default function App() {
   const [tab, setTab] = useStored("mmoe.view", "build");
   const [questionId, setQuestionId] = useStored("mmoe.question", "");
   const [dialog, setDialog] = useState(null);
+
+  const [imported, setImported] = useState(null);
+  // Links made by the MCP server or a share: ?exam=ID adds the exam, ?grade=ID also shows that graded answer.
+  useEffect(() => {
+    const q = new URLSearchParams(location.search);
+    const examId = q.get("exam"), gradeId = q.get("grade");
+    if (!examId && !gradeId) return;
+    window.history.replaceState(null, "", "/");
+    fetch(`/api/share?${examId ? `exam=${examId}` : `grade=${gradeId}`}`).then((r) => r.json()).then((d) => {
+      if (!d.exam) return;
+      const e = finalize({ ...d.exam, id: `shared-${examId || d.examId}` });
+      setExams((all) => ({ ...all, [e.id]: all[e.id] || e }));
+      setCurrentId(e.id);
+      if (gradeId && d.grade) {
+        setHistory((h) => (h.some((x) => x.gradeId === gradeId) ? h : [...h, { examId: e.id, gradeId, questionId: d.questionId, score: d.grade.score, min: d.grade.min, max: d.grade.max, dimensions: d.grade.dimensions, task: d.grade.task.status, at: d.at, gradedBy: d.gradedBy }]));
+        setImported({ examId: e.id, questionId: d.questionId, answer: d.answer, grade: d.grade, gradedBy: d.gradedBy });
+        setQuestionId(d.questionId);
+        setTab("practice");
+      } else setTab("build");
+    }).catch(() => {});
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     fetch("/api/health").then((r) => r.json()).then(setHealth).catch(() => setHealth({ demoKey: false, models: ["muse-spark-1.3"], defaultModel: "muse-spark-1.3" }));
@@ -54,7 +76,7 @@ export default function App() {
       </header>
       <main className="wrap">
         {view === "build" && <Build exams={exams} exam={exam} onSave={(e) => save(e)} onOpen={(id) => { setCurrentId(id); }} onRemove={remove} onPractice={() => go("practice")} health={health} />}
-        {view === "practice" && exam && <Practice key={exam.id} exam={exam} questionId={questionId} history={examHistory} onPick={setQuestionId} onSaveExam={save} onScored={(row) => setHistory((h) => [...h, { ...row, examId: exam.id }])} />}
+        {view === "practice" && exam && <Practice key={exam.id} exam={exam} imported={imported?.examId === exam.id ? imported : null} questionId={questionId} history={examHistory} onPick={setQuestionId} onSaveExam={save} onScored={(row) => setHistory((h) => [...h, { ...row, examId: exam.id }])} />}
         {view === "insights" && exam && <Insights exam={exam} history={examHistory} onPick={pick} />}
       </main>
       <footer className="foot">

@@ -1,0 +1,2628 @@
+{
+ "name": "US Citizenship Naturalization Civics Test",
+ "description": "Study knowledge base for the official USCIS naturalization civics test covering American government, U.S. history, and integrated civics with short oral answers, including 2008 100-question and 2025 128-question versions.",
+ "timeLimitMinutes": null,
+ "questionTypes": [
+  "short"
+ ],
+ "concepts": [
+  {
+   "key": "congress-legislative",
+   "label": "Congress and Legislative Branch",
+   "description": "Senate and House, terms, numbers, representation, powers and current members.",
+   "count": 29
+  },
+  {
+   "key": "1900s-modern-history",
+   "label": "1900s and Modern History",
+   "description": "World Wars, Great Depression, civil rights movement, recent wars and modern presidents.",
+   "count": 24
+  },
+  {
+   "key": "presidency-executive",
+   "label": "Presidency and Executive Branch",
+   "description": "President, Vice President, succession, Cabinet, powers and current officeholders.",
+   "count": 23
+  },
+  {
+   "key": "colonial-independence-era",
+   "label": "Colonial Period and Independence",
+   "description": "Colonies, founders, Revolution, Constitution Convention and early nation documents.",
+   "count": 21
+  },
+  {
+   "key": "geography-government",
+   "label": "Geography and Levels of Government",
+   "description": "States, capitals, territories, federal vs state powers, governors and local government.",
+   "count": 20
+  },
+  {
+   "key": "constitution-bill-rights",
+   "label": "Constitution and Bill of Rights",
+   "description": "Amendments, Bill of Rights, First Amendment freedoms and other constitutional protections.",
+   "count": 15
+  },
+  {
+   "key": "rights-responsibilities",
+   "label": "Rights and Responsibilities of Citizens",
+   "description": "Citizen rights, duties, oath, pledge, participation and service to the nation.",
+   "count": 15
+  },
+  {
+   "key": "courts-judicial",
+   "label": "Courts and Judicial Branch",
+   "description": "Supreme Court, judicial review, justices, Chief Justice and court functions.",
+   "count": 12
+  },
+  {
+   "key": "elections-voting",
+   "label": "Elections and Voting",
+   "description": "Voting rights, elections timing, political parties, Speaker and state and federal officials.",
+   "count": 12
+  },
+  {
+   "key": "1800s-history",
+   "label": "1800s and Civil War History",
+   "description": "Territorial expansion, Civil War, slavery, Lincoln, amendments 13-15 and industrial era.",
+   "count": 12
+  },
+  {
+   "key": "symbols-holidays",
+   "label": "National Symbols and Holidays",
+   "description": "Flag, anthem, monuments, federal holidays and meaning of national symbols.",
+   "count": 12
+  },
+  {
+   "key": "declaration-independence",
+   "label": "Declaration of Independence",
+   "description": "Independence from Great Britain, life liberty pursuit of happiness and founding documents.",
+   "count": 8
+  },
+  {
+   "key": "principles-democracy",
+   "label": "Principles of American Democracy",
+   "description": "Supreme law, self-government, rule of law, Constitution purpose, market economy and founding ideals.",
+   "count": 5
+  },
+  {
+   "key": "separation-powers",
+   "label": "Separation of Powers",
+   "description": "Three branches, checks and balances and prevention of concentrated power.",
+   "count": 4
+  }
+ ],
+ "rubric": {
+  "min": 0,
+  "max": 20,
+  "fromSource": true,
+  "levels": [
+   {
+    "score": 20,
+    "descriptor": "Perfect score; all 20 questions answered correctly."
+   },
+   {
+    "score": 12,
+    "descriptor": "Passing for 2025 test; 12 correct answers stops the test as passed."
+   },
+   {
+    "score": 8,
+    "descriptor": "Below passing; one more incorrect answer (9 incorrect) results in failure."
+   },
+   {
+    "score": 0,
+    "descriptor": "No correct answers; does not demonstrate required civics knowledge."
+   }
+  ],
+  "dimensions": [
+   {
+    "id": "civics-accuracy",
+    "label": "Civics Accuracy",
+    "ask": "Did the response give an accepted USCIS answer for history and government?"
+   },
+   {
+    "id": "answer-currency",
+    "label": "Currency of Officeholders",
+    "ask": "For changeable answers, is the official serving at interview time named?"
+   },
+   {
+    "id": "oral-completeness",
+    "label": "Oral Completeness",
+    "ask": "Is the short oral answer complete and intelligible without extra incorrect content?"
+   },
+   {
+    "id": "test-procedure",
+    "label": "Test Procedure Knowledge",
+    "ask": "Does preparation reflect up-to-10-question 2008 or 20-question 2025 oral rules and 65/20 special consideration?"
+   }
+  ],
+  "notes": "2008 test: officer asks up to 10 of 100 questions, pass with 6 correct, fail with 5 incorrect. 2025 test based on 2020 128 questions: officer asks 20 questions, pass with 12 correct, fail with 9 incorrect, stopping early when threshold reached. Age 65+ with 20+ years as LPR studies 20 starred questions and takes test in language of choice. For senators, representative, president, vice president, chief justice, speaker, governor and party, answer with officeholder serving at interview; USCIS accepts listed variants."
+ },
+ "references": [
+  {
+   "title": "Investigating the Reliability of the Civics Component of the U.S. Naturalization Test",
+   "authors": "Paula Winke",
+   "year": "2011",
+   "kind": "paper",
+   "venue": "Language Assessment Quarterly",
+   "why": "First empirical reliability/validity study of the civics test; tests item difficulty, cutoff accuracy and construct-irrelevant variance.",
+   "foundUrl": "https://eric.ed.gov/?id=EJ948456",
+   "verified": true,
+   "url": "https://doi.org/10.1080/15434303.2011.614031",
+   "foundTitle": "Investigating the Reliability of the Civics Component of the U.S. Naturalization Test"
+  },
+  {
+   "title": "Memory Test: A History of U.S. Citizenship Education and Examination",
+   "authors": "Jack Schneider",
+   "year": "2010",
+   "kind": "paper",
+   "venue": "Teachers College Record",
+   "why": "Historical study of how U.S. citizenship education and examination, including the naturalization test, was designed over time.",
+   "foundUrl": "https://eric.ed.gov/?id=EJ902160",
+   "verified": true,
+   "url": "https://doi.org/10.1177/016146811011200904",
+   "foundTitle": "Memory Test: A History of U.S. Citizenship Education and Examination"
+  },
+  {
+   "title": "High Stakes, More Meaning: An Overview of the Process of Redesigning the U.S. Citizenship Test",
+   "authors": "Laureen Laglagaron and Bhavna Devani",
+   "year": "2008",
+   "kind": "report",
+   "venue": "Migration Policy Institute",
+   "why": "Documents USCIS goals, pilot process and administration changes for the 2008 redesigned 100-question civics test.",
+   "foundUrl": "https://www.migrationpolicy.org/research/high-stakes-more-meaning-overview-process-redesigning-us-citizenship-test",
+   "verified": false,
+   "url": "https://www.migrationpolicy.org/research/high-stakes-more-meaning-overview-process-redesigning-us-citizenship-test"
+  },
+  {
+   "title": "Creating New Americans: The Essence of Americanism Under the Citizenship Test",
+   "authors": "Liav Orgad",
+   "year": "2011",
+   "kind": "paper",
+   "venue": "Houston Law Review",
+   "why": "Analyzes purpose, subject matter, format and ideology of the 2008 redesigned citizenship test.",
+   "foundUrl": "https://houstonlawreview.org/",
+   "verified": false,
+   "url": "https://houstonlawreview.org/"
+  },
+  {
+   "title": "What Does It Mean to Be Civic-Ready? Uncovering Citizenship Conceptualizations in US States That Require the 'Citizenship Test'",
+   "authors": "Aaron Paul Johnson",
+   "year": "2021",
+   "kind": "paper",
+   "venue": "Education, Citizenship and Social Justice",
+   "why": "Studies adoption of the USCIS naturalization civics exam to measure civic readiness and what construct it measures.",
+   "foundUrl": "https://eric.ed.gov/?id=EJ1314339",
+   "verified": false,
+   "url": "https://eric.ed.gov/?id=EJ1314339"
+  },
+  {
+   "title": "DECODING CITIZENSHIP IN USCIS NATURALIZATION TEST MATERIALS: A CRITICAL SOCIAL SEMIOTIC ANALYSIS",
+   "authors": "Jenna Ann Altherr Flores",
+   "year": "2018",
+   "kind": "paper",
+   "venue": "Critical Multilingualism Studies",
+   "why": "Analyzes USCIS civics flash cards and revised naturalization test materials for literacies and validity demands.",
+   "foundUrl": "https://journals.librarypublishing.arizona.edu/cms/",
+   "verified": true,
+   "url": "https://doi.org/10.2458/cms.6615",
+   "foundTitle": "Decoding Citizenship in USCIS Naturalization Test Materials: A Critical Social Semiotic Analysis"
+  }
+ ],
+ "prompt": "US citizenship naturalization civics test: the official USCIS civics questions and answers, short answers.",
+ "sources": [
+  {
+   "url": "https://www.uscis.gov/citizenship/find-study-materials-and-resources/study-for-the-test",
+   "title": "Study for the Test | USCIS",
+   "kind": "web",
+   "chars": 4602
+  },
+  {
+   "url": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "title": "100q.txt",
+   "kind": "web",
+   "chars": 15196
+  },
+  {
+   "url": "https://www.uscis.gov/policy-manual/volume-12-part-e-chapter-2",
+   "title": "Chapter 2 - English and Civics Testing | USCIS",
+   "kind": "web",
+   "chars": 30261
+  },
+  {
+   "url": "https://www.uscis.gov/node/70983",
+   "title": "Check for Test Updates | USCIS",
+   "kind": "web",
+   "chars": 5682
+  },
+  {
+   "url": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "title": "M-1778LG, 128 Civics Questions and Answers for the Naturalization Test (2020 version)",
+   "kind": "pdf",
+   "chars": 23388
+  },
+  {
+   "url": "https://www.uscis.gov/citizenship/learn-about-citizenship/the-naturalization-interview-and-test",
+   "title": "The Naturalization Interview and Test | USCIS",
+   "kind": "web",
+   "chars": 3559
+  },
+  {
+   "url": "https://www.uscis.gov/policy-manual/volume-12-part-e",
+   "title": "Part E - English and Civics Testing and Exceptions | USCIS",
+   "kind": "web",
+   "chars": 14632
+  },
+  {
+   "url": "https://www.uscis.gov/citizenship-resource-center/naturalization-test-and-study-resources/2025-civics-test",
+   "title": "2025 Civics Test | USCIS",
+   "kind": "web",
+   "chars": 758
+  },
+  {
+   "url": "https://www.uscis.gov/sites/default/files/document/policy-manual-updates/20251020-CivicsTest.pdf",
+   "title": "20251020-CivicsTest.pdf",
+   "kind": "pdf",
+   "chars": 8066
+  },
+  {
+   "url": "https://www.uscis.gov/sites/default/files/document/guides/Test_Scoring_Guidelines.pdf",
+   "title": "Scoring Guidelines for the U.S. Naturalization Test",
+   "kind": "pdf",
+   "chars": 4406
+  },
+  {
+   "url": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/OoC_100_Questions_2008_Civics_Test_V1.pdf",
+   "title": "Civics Questions and Answers (2008 version)",
+   "kind": "pdf",
+   "chars": 17009
+  },
+  {
+   "url": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/OoC_100_Questions_2008_Civics_Test_Large_V1.pdf",
+   "title": "Civics Questions and Answers (2008 version)",
+   "kind": "pdf",
+   "chars": 15616
+  },
+  {
+   "url": "https://www.uscis.gov/sites/default/files/document/flash-cards/OoC_Civics-Flash-Cards_2008_Civics_Test_WEB_V1_508.pdf",
+   "title": "Civics Flash Cards for the Naturalization Test (2008 version)",
+   "kind": "pdf",
+   "chars": 31767
+  }
+ ],
+ "questions": [
+  {
+   "type": "short",
+   "prompt": "What is the supreme law of the land?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the Constitution",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q001",
+   "n": 1
+  },
+  {
+   "type": "short",
+   "prompt": "What does the Constitution do?",
+   "instructions": "",
+   "choices": [],
+   "answer": "sets up the government; defines the government; protects basic rights of Americans",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q002",
+   "n": 2
+  },
+  {
+   "type": "short",
+   "prompt": "The idea of self-government is in the first three words of the Constitution. What are these words?",
+   "instructions": "",
+   "choices": [],
+   "answer": "We the People",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q003",
+   "n": 3
+  },
+  {
+   "type": "short",
+   "prompt": "What is an amendment?",
+   "instructions": "",
+   "choices": [],
+   "answer": "a change (to the Constitution); an addition (to the Constitution)",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q004",
+   "n": 4
+  },
+  {
+   "type": "short",
+   "prompt": "What do we call the first ten amendments to the Constitution?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the Bill of Rights",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q005",
+   "n": 5
+  },
+  {
+   "type": "short",
+   "prompt": "What is one right or freedom from the First Amendment?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "speech; religion; assembly; press; petition the government",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q006",
+   "n": 6
+  },
+  {
+   "type": "short",
+   "prompt": "How many amendments does the Constitution have?",
+   "instructions": "",
+   "choices": [],
+   "answer": "twenty-seven (27)",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q007",
+   "n": 7
+  },
+  {
+   "type": "short",
+   "prompt": "What did the Declaration of Independence do?",
+   "instructions": "",
+   "choices": [],
+   "answer": "announced our independence (from Great Britain); declared our independence (from Great Britain); said that the United States is free (from Great Britain)",
+   "concept": "declaration-independence",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q008",
+   "n": 8
+  },
+  {
+   "type": "short",
+   "prompt": "What are two rights in the Declaration of Independence?",
+   "instructions": "",
+   "choices": [],
+   "answer": "life; liberty; pursuit of happiness",
+   "concept": "declaration-independence",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q009",
+   "n": 9
+  },
+  {
+   "type": "short",
+   "prompt": "What is freedom of religion?",
+   "instructions": "",
+   "choices": [],
+   "answer": "You can practice any religion, or not practice a religion.",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q010",
+   "n": 10
+  },
+  {
+   "type": "short",
+   "prompt": "What is the economic system in the United States?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "capitalist economy; market economy",
+   "concept": "principles-democracy",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q011",
+   "n": 11
+  },
+  {
+   "type": "short",
+   "prompt": "What is the \"rule of law\"?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Everyone must follow the law.; Leaders must obey the law.; Government must obey the law.; No one is above the law.",
+   "concept": "principles-democracy",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q012",
+   "n": 12
+  },
+  {
+   "type": "short",
+   "prompt": "Name one branch or part of the government.*",
+   "instructions": "",
+   "choices": [],
+   "answer": "Congress; legislative; President; executive; the courts; judicial",
+   "concept": "separation-powers",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q013",
+   "n": 13
+  },
+  {
+   "type": "short",
+   "prompt": "What stops one branch of government from becoming too powerful?",
+   "instructions": "",
+   "choices": [],
+   "answer": "checks and balances; separation of powers",
+   "concept": "separation-powers",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q014",
+   "n": 14
+  },
+  {
+   "type": "short",
+   "prompt": "Who is in charge of the executive branch?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the President",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q015",
+   "n": 15
+  },
+  {
+   "type": "short",
+   "prompt": "Who makes federal laws?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Congress; Senate and House (of Representatives); (U.S. or national) legislature",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q016",
+   "n": 16
+  },
+  {
+   "type": "short",
+   "prompt": "What are the two parts of the U.S. Congress?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "the Senate and House (of Representatives)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q017",
+   "n": 17
+  },
+  {
+   "type": "short",
+   "prompt": "How many U.S. Senators are there?",
+   "instructions": "",
+   "choices": [],
+   "answer": "one hundred (100)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q018",
+   "n": 18
+  },
+  {
+   "type": "short",
+   "prompt": "We elect a U.S. Senator for how many years?",
+   "instructions": "",
+   "choices": [],
+   "answer": "six (6)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q019",
+   "n": 19
+  },
+  {
+   "type": "short",
+   "prompt": "Who is one of your state's U.S. Senators now?*",
+   "instructions": "[District of Columbia residents and residents of U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S. Senators.]",
+   "choices": [],
+   "answer": "Answers will vary.",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q020",
+   "n": 20
+  },
+  {
+   "type": "short",
+   "prompt": "The House of Representatives has how many voting members?",
+   "instructions": "",
+   "choices": [],
+   "answer": "four hundred thirty-five (435)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q021",
+   "n": 21
+  },
+  {
+   "type": "short",
+   "prompt": "We elect a U.S. Representative for how many years?",
+   "instructions": "",
+   "choices": [],
+   "answer": "two (2)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q022",
+   "n": 22
+  },
+  {
+   "type": "short",
+   "prompt": "Name your U.S. Representative.",
+   "instructions": "[Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no (voting) Representatives in Congress.]",
+   "choices": [],
+   "answer": "Answers will vary.",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q023",
+   "n": 23
+  },
+  {
+   "type": "short",
+   "prompt": "Who does a U.S. Senator represent?",
+   "instructions": "",
+   "choices": [],
+   "answer": "all people of the state",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q024",
+   "n": 24
+  },
+  {
+   "type": "short",
+   "prompt": "Why do some states have more Representatives than other states?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(because of) the state's population; (because) they have more people; (because) some states have more people",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q025",
+   "n": 25
+  },
+  {
+   "type": "short",
+   "prompt": "We elect a President for how many years?",
+   "instructions": "",
+   "choices": [],
+   "answer": "four (4)",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q026",
+   "n": 26
+  },
+  {
+   "type": "short",
+   "prompt": "In what month do we vote for President?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "November",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q027",
+   "n": 27
+  },
+  {
+   "type": "short",
+   "prompt": "What is the name of the President of the United States now?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "Visit uscis.gov/citizenship/testupdates for the name of the President of the United States.",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q028",
+   "n": 28
+  },
+  {
+   "type": "short",
+   "prompt": "What is the name of the Vice President of the United States now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States.",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q029",
+   "n": 29
+  },
+  {
+   "type": "short",
+   "prompt": "If the President can no longer serve, who becomes President?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the Vice President",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q030",
+   "n": 30
+  },
+  {
+   "type": "short",
+   "prompt": "If both the President and the Vice President can no longer serve, who becomes President?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the Speaker of the House",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q031",
+   "n": 31
+  },
+  {
+   "type": "short",
+   "prompt": "Who is the Commander in Chief of the military?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the President",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q032",
+   "n": 32
+  },
+  {
+   "type": "short",
+   "prompt": "Who signs bills to become laws?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the President",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q033",
+   "n": 33
+  },
+  {
+   "type": "short",
+   "prompt": "Who vetoes bills?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the President",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q034",
+   "n": 34
+  },
+  {
+   "type": "short",
+   "prompt": "What does the President's Cabinet do?",
+   "instructions": "",
+   "choices": [],
+   "answer": "advises the President",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q035",
+   "n": 35
+  },
+  {
+   "type": "short",
+   "prompt": "What are two Cabinet-level positions?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Secretary of Agriculture; Secretary of Commerce; Secretary of Defense; Secretary of Education; Secretary of Energy; Secretary of Health and Human Services; Secretary of Homeland Security; Secretary of Housing and Urban Development; Secretary of the Interior; Secretary of Labor; Secretary of State; Secretary of Transportation; Secretary of the Treasury; Secretary of Veterans Affairs; Attorney Gener",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q036",
+   "n": 36
+  },
+  {
+   "type": "short",
+   "prompt": "What does the judicial branch do?",
+   "instructions": "",
+   "choices": [],
+   "answer": "reviews laws; explains laws; resolves disputes (disagreements); decides if a law goes against the Constitution",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q037",
+   "n": 37
+  },
+  {
+   "type": "short",
+   "prompt": "What is the highest court in the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the Supreme Court",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q038",
+   "n": 38
+  },
+  {
+   "type": "short",
+   "prompt": "How many justices are on the Supreme Court?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Visit uscis.gov/citizenship/testupdates for the number of justices on the Supreme Court.",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q039",
+   "n": 39
+  },
+  {
+   "type": "short",
+   "prompt": "Who is the Chief Justice of the United States now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Visit uscis.gov/citizenship/testupdates for the name of the Chief Justice of the United States.",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q040",
+   "n": 40
+  },
+  {
+   "type": "short",
+   "prompt": "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?",
+   "instructions": "",
+   "choices": [],
+   "answer": "to print money; to declare war; to create an army; to make treaties",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q041",
+   "n": 41
+  },
+  {
+   "type": "short",
+   "prompt": "Under our Constitution, some powers belong to the states. What is one power of the states?",
+   "instructions": "",
+   "choices": [],
+   "answer": "provide schooling and education; provide protection (police); provide safety (fire departments); give a driver's license; approve zoning and land use",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q042",
+   "n": 42
+  },
+  {
+   "type": "short",
+   "prompt": "Who is the Governor of your state now?",
+   "instructions": "[District of Columbia residents should answer that D.C. does not have a Governor.]",
+   "choices": [],
+   "answer": "Answers will vary.",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q043",
+   "n": 43
+  },
+  {
+   "type": "short",
+   "prompt": "What is the capital of your state?*",
+   "instructions": "[District of Columbia residents should answer that D.C. is not a state and does not have a capital. Residents of U.S. territories should name the capital of the territory.]",
+   "choices": [],
+   "answer": "Answers will vary.",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q044",
+   "n": 44
+  },
+  {
+   "type": "short",
+   "prompt": "What are the two major political parties in the United States?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "Democratic and Republican",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q045",
+   "n": 45
+  },
+  {
+   "type": "short",
+   "prompt": "What is the political party of the President now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Visit uscis.gov/citizenship/testupdates for the political party of the President.",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q046",
+   "n": 46
+  },
+  {
+   "type": "short",
+   "prompt": "What is the name of the Speaker of the House of Representatives now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Visit uscis.gov/citizenship/testupdates for the name of the Speaker of the House of Representatives.",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q047",
+   "n": 47
+  },
+  {
+   "type": "short",
+   "prompt": "There are four amendments to the Constitution about who can vote. Describe one of them.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Citizens eighteen (18) and older (can vote).; You don't have to pay (a poll tax) to vote.; Any citizen can vote. (Women and men can vote.); A male citizen of any race (can vote).",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q048",
+   "n": 48
+  },
+  {
+   "type": "short",
+   "prompt": "What is one responsibility that is only for United States citizens?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "serve on a jury; vote in a federal election",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q049",
+   "n": 49
+  },
+  {
+   "type": "short",
+   "prompt": "Name one right only for United States citizens.",
+   "instructions": "",
+   "choices": [],
+   "answer": "vote in a federal election; run for federal office",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q050",
+   "n": 50
+  },
+  {
+   "type": "short",
+   "prompt": "What are two rights of everyone living in the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "freedom of expression; freedom of speech; freedom of assembly; freedom to petition the government; freedom of religion; the right to bear arms",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q051",
+   "n": 51
+  },
+  {
+   "type": "short",
+   "prompt": "What do we show loyalty to when we say the Pledge of Allegiance?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the United States; the flag",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q052",
+   "n": 52
+  },
+  {
+   "type": "short",
+   "prompt": "What is one promise you make when you become a United States citizen?",
+   "instructions": "",
+   "choices": [],
+   "answer": "give up loyalty to other countries; defend the Constitution and laws of the United States; obey the laws of the United States; serve in the U.S. military (if needed); serve (do important work for) the nation (if needed); be loyal to the United States",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q053",
+   "n": 53
+  },
+  {
+   "type": "short",
+   "prompt": "How old do citizens have to be to vote for President?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "eighteen (18) and older",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q054",
+   "n": 54
+  },
+  {
+   "type": "short",
+   "prompt": "What are two ways that Americans can participate in their democracy?",
+   "instructions": "",
+   "choices": [],
+   "answer": "vote; join a political party; help with a campaign; join a civic group; join a community group; give an elected official your opinion on an issue; call Senators and Representatives; publicly support or oppose an issue or policy; run for office; write to a newspaper",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q055",
+   "n": 55
+  },
+  {
+   "type": "short",
+   "prompt": "When is the last day you can send in federal income tax forms?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "April 15",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q056",
+   "n": 56
+  },
+  {
+   "type": "short",
+   "prompt": "When must all men register for the Selective Service?",
+   "instructions": "",
+   "choices": [],
+   "answer": "at age eighteen (18); between eighteen (18) and twenty-six (26)",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q057",
+   "n": 57
+  },
+  {
+   "type": "short",
+   "prompt": "What is one reason colonists came to America?",
+   "instructions": "",
+   "choices": [],
+   "answer": "freedom; political liberty; religious freedom; economic opportunity; practice their religion; escape persecution",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q058",
+   "n": 58
+  },
+  {
+   "type": "short",
+   "prompt": "Who lived in America before the Europeans arrived?",
+   "instructions": "",
+   "choices": [],
+   "answer": "American Indians; Native Americans",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q059",
+   "n": 59
+  },
+  {
+   "type": "short",
+   "prompt": "What group of people was taken to America and sold as slaves?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Africans; people from Africa",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q060",
+   "n": 60
+  },
+  {
+   "type": "short",
+   "prompt": "Why did the colonists fight the British?",
+   "instructions": "",
+   "choices": [],
+   "answer": "because of high taxes (taxation without representation); because the British army stayed in their houses (boarding, quartering); because they didn't have self-government",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q061",
+   "n": 61
+  },
+  {
+   "type": "short",
+   "prompt": "Who wrote the Declaration of Independence?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(Thomas) Jefferson",
+   "concept": "declaration-independence",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q062",
+   "n": 62
+  },
+  {
+   "type": "short",
+   "prompt": "When was the Declaration of Independence adopted?",
+   "instructions": "",
+   "choices": [],
+   "answer": "July 4, 1776",
+   "concept": "declaration-independence",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q063",
+   "n": 63
+  },
+  {
+   "type": "short",
+   "prompt": "There were 13 original states. Name three.",
+   "instructions": "",
+   "choices": [],
+   "answer": "New Hampshire; Massachusetts; Rhode Island; Connecticut; New York; New Jersey; Pennsylvania; Delaware; Maryland; Virginia; North Carolina; South Carolina; Georgia",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q064",
+   "n": 64
+  },
+  {
+   "type": "short",
+   "prompt": "What happened at the Constitutional Convention?",
+   "instructions": "",
+   "choices": [],
+   "answer": "The Constitution was written.; The Founding Fathers wrote the Constitution.",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q065",
+   "n": 65
+  },
+  {
+   "type": "short",
+   "prompt": "When was the Constitution written?",
+   "instructions": "",
+   "choices": [],
+   "answer": "1787",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q066",
+   "n": 66
+  },
+  {
+   "type": "short",
+   "prompt": "The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.",
+   "instructions": "",
+   "choices": [],
+   "answer": "(James) Madison; (Alexander) Hamilton; (John) Jay; Publius",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q067",
+   "n": 67
+  },
+  {
+   "type": "short",
+   "prompt": "What is one thing Benjamin Franklin is famous for?",
+   "instructions": "",
+   "choices": [],
+   "answer": "U.S. diplomat; oldest member of the Constitutional Convention; first Postmaster General of the United States; writer of \"Poor Richard's Almanac\"; started the first free libraries",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q068",
+   "n": 68
+  },
+  {
+   "type": "short",
+   "prompt": "Who is the \"Father of Our Country\"?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(George) Washington",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q069",
+   "n": 69
+  },
+  {
+   "type": "short",
+   "prompt": "Who was the first President?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "(George) Washington",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q070",
+   "n": 70
+  },
+  {
+   "type": "short",
+   "prompt": "What territory did the United States buy from France in 1803?",
+   "instructions": "",
+   "choices": [],
+   "answer": "the Louisiana Territory; Louisiana",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q071",
+   "n": 71
+  },
+  {
+   "type": "short",
+   "prompt": "Name one war fought by the United States in the 1800s.",
+   "instructions": "",
+   "choices": [],
+   "answer": "War of 1812; Mexican-American War; Civil War; Spanish-American War",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q072",
+   "n": 72
+  },
+  {
+   "type": "short",
+   "prompt": "Name the U.S. war between the North and the South.",
+   "instructions": "",
+   "choices": [],
+   "answer": "the Civil War; the War between the States",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q073",
+   "n": 73
+  },
+  {
+   "type": "short",
+   "prompt": "Name one problem that led to the Civil War.",
+   "instructions": "",
+   "choices": [],
+   "answer": "slavery; economic reasons; states' rights",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q074",
+   "n": 74
+  },
+  {
+   "type": "short",
+   "prompt": "What was one important thing that Abraham Lincoln did?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "freed the slaves (Emancipation Proclamation); saved (or preserved) the Union; led the United States during the Civil War",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q075",
+   "n": 75
+  },
+  {
+   "type": "short",
+   "prompt": "What did the Emancipation Proclamation do?",
+   "instructions": "",
+   "choices": [],
+   "answer": "freed the slaves; freed slaves in the Confederacy",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q076",
+   "n": 76
+  },
+  {
+   "type": "short",
+   "prompt": "What did Susan B. Anthony do?",
+   "instructions": "",
+   "choices": [],
+   "answer": "fought for women's rights; fought for civil rights",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q077",
+   "n": 77
+  },
+  {
+   "type": "short",
+   "prompt": "Name one war fought by the United States in the 1900s.*",
+   "instructions": "",
+   "choices": [],
+   "answer": "World War I; World War II; Korean War; Vietnam War; (Persian) Gulf War",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q078",
+   "n": 78
+  },
+  {
+   "type": "short",
+   "prompt": "Who was President during World War I?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(Woodrow) Wilson",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q079",
+   "n": 79
+  },
+  {
+   "type": "short",
+   "prompt": "Who was President during the Great Depression and World War II?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(Franklin) Roosevelt",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q080",
+   "n": 80
+  },
+  {
+   "type": "short",
+   "prompt": "Who did the United States fight in World War II?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Japan, Germany, and Italy",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q081",
+   "n": 81
+  },
+  {
+   "type": "short",
+   "prompt": "Before he was President, Eisenhower was a general. What war was he in?",
+   "instructions": "",
+   "choices": [],
+   "answer": "World War II",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q082",
+   "n": 82
+  },
+  {
+   "type": "short",
+   "prompt": "During the Cold War, what was the main concern of the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Communism",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q083",
+   "n": 83
+  },
+  {
+   "type": "short",
+   "prompt": "What movement tried to end racial discrimination?",
+   "instructions": "",
+   "choices": [],
+   "answer": "civil rights (movement)",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q084",
+   "n": 84
+  },
+  {
+   "type": "short",
+   "prompt": "What did Martin Luther King, Jr. do?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "fought for civil rights; worked for equality for all Americans",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q085",
+   "n": 85
+  },
+  {
+   "type": "short",
+   "prompt": "What major event happened on September 11, 2001, in the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Terrorists attacked the United States.",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q086",
+   "n": 86
+  },
+  {
+   "type": "short",
+   "prompt": "Name one American Indian tribe in the United States.",
+   "instructions": "[USCIS Officers will be supplied with a list of federally recognized American Indian tribes.]",
+   "choices": [],
+   "answer": "Cherokee; Navajo; Sioux; Chippewa; Choctaw; Pueblo; Apache; Iroquois; Creek; Blackfeet; Seminole; Cheyenne; Arawak; Shawnee; Mohegan; Huron; Oneida; Lakota; Crow; Teton; Hopi; Inuit",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q087",
+   "n": 87
+  },
+  {
+   "type": "short",
+   "prompt": "Name one of the two longest rivers in the United States.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Missouri (River); Mississippi (River)",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q088",
+   "n": 88
+  },
+  {
+   "type": "short",
+   "prompt": "What ocean is on the West Coast of the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Pacific (Ocean)",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q089",
+   "n": 89
+  },
+  {
+   "type": "short",
+   "prompt": "What ocean is on the East Coast of the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Atlantic (Ocean)",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q090",
+   "n": 90
+  },
+  {
+   "type": "short",
+   "prompt": "Name one U.S. territory.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Puerto Rico; U.S. Virgin Islands; American Samoa; Northern Mariana Islands; Guam",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q091",
+   "n": 91
+  },
+  {
+   "type": "short",
+   "prompt": "Name one state that borders Canada.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Maine; New Hampshire; Vermont; New York; Pennsylvania; Ohio; Michigan; Minnesota; North Dakota; Montana; Idaho; Washington; Alaska",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q092",
+   "n": 92
+  },
+  {
+   "type": "short",
+   "prompt": "Name one state that borders Mexico.",
+   "instructions": "",
+   "choices": [],
+   "answer": "California; Arizona; New Mexico; Texas",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q093",
+   "n": 93
+  },
+  {
+   "type": "short",
+   "prompt": "What is the capital of the United States?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "Washington, D.C.",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q094",
+   "n": 94
+  },
+  {
+   "type": "short",
+   "prompt": "Where is the Statue of Liberty?*",
+   "instructions": "[Also acceptable are New Jersey, near New York City, and on the Hudson (River).]",
+   "choices": [],
+   "answer": "New York (Harbor); Liberty Island",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q095",
+   "n": 95
+  },
+  {
+   "type": "short",
+   "prompt": "Why does the flag have 13 stripes?",
+   "instructions": "",
+   "choices": [],
+   "answer": "because there were 13 original colonies; because the stripes represent the original colonies",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q096",
+   "n": 96
+  },
+  {
+   "type": "short",
+   "prompt": "Why does the flag have 50 stars?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "because there is one star for each state; because each star represents a state; because there are 50 states",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q097",
+   "n": 97
+  },
+  {
+   "type": "short",
+   "prompt": "What is the name of the national anthem?",
+   "instructions": "",
+   "choices": [],
+   "answer": "The Star-Spangled Banner",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q098",
+   "n": 98
+  },
+  {
+   "type": "short",
+   "prompt": "When do we celebrate Independence Day?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "July 4",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q099",
+   "n": 99
+  },
+  {
+   "type": "short",
+   "prompt": "Name two national U.S. holidays.",
+   "instructions": "",
+   "choices": [],
+   "answer": "New Year's Day; Martin Luther King, Jr. Day; Presidents' Day; Memorial Day; Independence Day; Labor Day; Columbus Day; Veterans Day; Thanksgiving; Christmas",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/100q.txt",
+   "id": "q100",
+   "n": 100
+  },
+  {
+   "type": "short",
+   "prompt": "20. Who is one of your state's U.S. Senators now?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S. Senators.] Visit senate.gov to find your state’s U.S. Senators.",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q101",
+   "n": 101
+  },
+  {
+   "type": "short",
+   "prompt": "23. Name your U.S. Representative.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no (voting) Representatives in Congress.] Visit house.gov to find your U.S. Representative.",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q102",
+   "n": 102
+  },
+  {
+   "type": "short",
+   "prompt": "28. What is the name of the President of the United States now?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "Donald J. Trump\nDonald Trump\nTrump",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q103",
+   "n": 103
+  },
+  {
+   "type": "short",
+   "prompt": "29. What is the name of the Vice President of the United States now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "JD Vance\nVance",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q104",
+   "n": 104
+  },
+  {
+   "type": "short",
+   "prompt": "39. How many justices are on the Supreme Court?",
+   "instructions": "",
+   "choices": [],
+   "answer": "nine (9)",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q105",
+   "n": 105
+  },
+  {
+   "type": "short",
+   "prompt": "40. Who is the Chief Justice of the United States now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "John Roberts\nJohn G. Roberts, Jr.",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q106",
+   "n": 106
+  },
+  {
+   "type": "short",
+   "prompt": "43. Who is the Governor of your state now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.] Visit usa.gov/states-and-territories to find the Governor of your state.",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q107",
+   "n": 107
+  },
+  {
+   "type": "short",
+   "prompt": "46. What is the political party of the President now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Republican (Party)",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q108",
+   "n": 108
+  },
+  {
+   "type": "short",
+   "prompt": "47. What is the name of the Speaker of the House of Representatives now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Mike Johnson\nJohnson\nJames Michael Johnson (birth name)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q109",
+   "n": 109
+  },
+  {
+   "type": "short",
+   "prompt": "23. Who is one of your state's U.S. Senators now?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S. Senators.] Visit senate.gov to find your state’s U.S. Senators.",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q110",
+   "n": 110
+  },
+  {
+   "type": "short",
+   "prompt": "29. Name your U.S. Representative.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no (voting) Representatives in Congress.] Visit house.gov to find your U.S. Representative.",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q111",
+   "n": 111
+  },
+  {
+   "type": "short",
+   "prompt": "30. What is the name of the Speaker of the House of Representatives now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Mike Johnson\nJohnson\nJames Michael Johnson (birth name)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q112",
+   "n": 112
+  },
+  {
+   "type": "short",
+   "prompt": "38. What is the name of the President of the United States now?*",
+   "instructions": "",
+   "choices": [],
+   "answer": "Donald J. Trump\nDonald Trump\nTrump",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q113",
+   "n": 113
+  },
+  {
+   "type": "short",
+   "prompt": "39. What is the name of the Vice President of the United States now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "JD Vance\nVance",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q114",
+   "n": 114
+  },
+  {
+   "type": "short",
+   "prompt": "57. Who is the Chief Justice of the United States now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "John Roberts\nJohn G. Roberts, Jr.\nRoberts",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q115",
+   "n": 115
+  },
+  {
+   "type": "short",
+   "prompt": "61. Who is the Governor of your state now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.] Visit usa.gov/states-and-territories to find the Governor of your state.",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/node/70983",
+   "id": "q116",
+   "n": 116
+  },
+  {
+   "type": "short",
+   "prompt": "What is the form of government of the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Republic; Constitution-based federal republic; Representative democracy",
+   "concept": "principles-democracy",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q117",
+   "n": 117
+  },
+  {
+   "type": "short",
+   "prompt": "Name one thing the U.S. Constitution does.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Forms the government; Defines powers of government; Defines the parts of government; Protects the rights of the people",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q118",
+   "n": 118
+  },
+  {
+   "type": "short",
+   "prompt": "The U.S. Constitution starts with the words “We the People.” What does “We the People” mean?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Self-government; Popular sovereignty; Consent of the governed; People should govern themselves; (Example of) social contract",
+   "concept": "principles-democracy",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q119",
+   "n": 119
+  },
+  {
+   "type": "short",
+   "prompt": "How are changes made to the U.S. Constitution?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Amendments; The amendment process",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q120",
+   "n": 120
+  },
+  {
+   "type": "short",
+   "prompt": "What does the Bill of Rights protect?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(The basic) rights of Americans; (The basic) rights of people living in the United States",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q121",
+   "n": 121
+  },
+  {
+   "type": "short",
+   "prompt": "How many amendments does the U.S. Constitution have?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Twenty-seven (27)",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q122",
+   "n": 122
+  },
+  {
+   "type": "short",
+   "prompt": "Why is the Declaration of Independence important?",
+   "instructions": "",
+   "choices": [],
+   "answer": "It says America is free from British control.; It says all people are created equal.; It identifies inherent rights.; It identifies individual freedoms.",
+   "concept": "declaration-independence",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q123",
+   "n": 123
+  },
+  {
+   "type": "short",
+   "prompt": "What founding document said the American colonies were free from Britain?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Declaration of Independence",
+   "concept": "declaration-independence",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q124",
+   "n": 124
+  },
+  {
+   "type": "short",
+   "prompt": "Name two important ideas from the Declaration of Independence and the U.S. Constitution.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Equality; Liberty; Social contract; Natural rights; Limited government; Self-government",
+   "concept": "declaration-independence",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q125",
+   "n": 125
+  },
+  {
+   "type": "short",
+   "prompt": "The words “Life, Liberty, and the pursuit of Happiness” are in what founding document?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Declaration of Independence",
+   "concept": "declaration-independence",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q126",
+   "n": 126
+  },
+  {
+   "type": "short",
+   "prompt": "What is the economic system of the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Capitalism; Free market economy",
+   "concept": "principles-democracy",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q127",
+   "n": 127
+  },
+  {
+   "type": "short",
+   "prompt": "Many documents influenced the U.S. Constitution. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Declaration of Independence; Articles of Confederation; Federalist Papers; Anti-Federalist Papers; Virginia Declaration of Rights; Fundamental Orders of Connecticut; Mayflower Compact; Iroquois Great Law of Peace",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q128",
+   "n": 128
+  },
+  {
+   "type": "short",
+   "prompt": "There are three branches of government. Why?",
+   "instructions": "",
+   "choices": [],
+   "answer": "So one part does not become too powerful; Checks and balances; Separation of powers",
+   "concept": "separation-powers",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q129",
+   "n": 129
+  },
+  {
+   "type": "short",
+   "prompt": "Name the three branches of government.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Legislative, executive, and judicial; Congress, president, and the courts",
+   "concept": "separation-powers",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q130",
+   "n": 130
+  },
+  {
+   "type": "short",
+   "prompt": "The President of the United States is in charge of which branch of government?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Executive branch",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q131",
+   "n": 131
+  },
+  {
+   "type": "short",
+   "prompt": "What part of the federal government writes laws?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(U.S.) Congress; (U.S. or national) legislature; Legislative branch",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q132",
+   "n": 132
+  },
+  {
+   "type": "short",
+   "prompt": "Name one power of the U.S. Congress.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Writes laws; Declares war; Makes the federal budget",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q133",
+   "n": 133
+  },
+  {
+   "type": "short",
+   "prompt": "How long is a term for a U.S. senator?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Six (6) years",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q134",
+   "n": 134
+  },
+  {
+   "type": "short",
+   "prompt": "How many voting members are in the House of Representatives?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Four hundred thirty-five (435)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q135",
+   "n": 135
+  },
+  {
+   "type": "short",
+   "prompt": "How long is a term for a member of the House of Representatives?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Two (2) years",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q136",
+   "n": 136
+  },
+  {
+   "type": "short",
+   "prompt": "Why do U.S. representatives serve shorter terms than U.S. senators?",
+   "instructions": "",
+   "choices": [],
+   "answer": "To more closely follow public opinion",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q137",
+   "n": 137
+  },
+  {
+   "type": "short",
+   "prompt": "How many senators does each state have?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Two (2)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q138",
+   "n": 138
+  },
+  {
+   "type": "short",
+   "prompt": "Why does each state have two senators?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Equal representation (for small states); The Great Compromise (Connecticut Compromise)",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q139",
+   "n": 139
+  },
+  {
+   "type": "short",
+   "prompt": "Who elects U.S. senators?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Citizens from their state",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q140",
+   "n": 140
+  },
+  {
+   "type": "short",
+   "prompt": "Who does a member of the House of Representatives represent?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Citizens in their (congressional) district; Citizens in their district; People from their (congressional) district; People in their district",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q141",
+   "n": 141
+  },
+  {
+   "type": "short",
+   "prompt": "Who elects members of the House of Representatives?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Citizens from their (congressional) district",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q142",
+   "n": 142
+  },
+  {
+   "type": "short",
+   "prompt": "Some states have more representatives than other states. Why?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(Because of) the state’s population; (Because) they have more people; (Because) some states have more people",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q143",
+   "n": 143
+  },
+  {
+   "type": "short",
+   "prompt": "The President of the United States is elected for how many years?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Four (4) years",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q144",
+   "n": 144
+  },
+  {
+   "type": "short",
+   "prompt": "The President of the United States can serve only two terms. Why?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(Because of) the 22nd Amendment; To keep the president from becoming too powerful",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q145",
+   "n": 145
+  },
+  {
+   "type": "short",
+   "prompt": "Name one power of the president.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Signs bills into law; Vetoes bills; Enforces laws; Commander in Chief (of the military); Chief diplomat",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q146",
+   "n": 146
+  },
+  {
+   "type": "short",
+   "prompt": "Who is Commander in Chief of the U.S. military?",
+   "instructions": "",
+   "choices": [],
+   "answer": "The President (of the United States)",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q147",
+   "n": 147
+  },
+  {
+   "type": "short",
+   "prompt": "Who appoints federal judges?",
+   "instructions": "",
+   "choices": [],
+   "answer": "The President (of the United States)",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q148",
+   "n": 148
+  },
+  {
+   "type": "short",
+   "prompt": "The executive branch has many parts. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "President (of the United States); Cabinet; Federal departments and agencies",
+   "concept": "presidency-executive",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q149",
+   "n": 149
+  },
+  {
+   "type": "short",
+   "prompt": "Why is the Electoral College important?",
+   "instructions": "",
+   "choices": [],
+   "answer": "It decides who is elected president.; It provides a compromise between the popular election of the president and congressional selection.",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q150",
+   "n": 150
+  },
+  {
+   "type": "short",
+   "prompt": "What is one part of the judicial branch?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Supreme Court; Federal Courts",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q151",
+   "n": 151
+  },
+  {
+   "type": "short",
+   "prompt": "How many seats are on the Supreme Court?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Nine (9)",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q152",
+   "n": 152
+  },
+  {
+   "type": "short",
+   "prompt": "How many Supreme Court justices are usually needed to decide a case?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Five (5)",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q153",
+   "n": 153
+  },
+  {
+   "type": "short",
+   "prompt": "How long do Supreme Court justices serve?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(For) life; Lifetime appointment; (Until) retirement",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q154",
+   "n": 154
+  },
+  {
+   "type": "short",
+   "prompt": "Supreme Court justices serve for life. Why?",
+   "instructions": "",
+   "choices": [],
+   "answer": "To be independent (of politics); To limit outside (political) influence",
+   "concept": "courts-judicial",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q155",
+   "n": 155
+  },
+  {
+   "type": "short",
+   "prompt": "Name one power that is only for the federal government.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Print paper money; Mint coins; Declare war; Create an army; Make treaties; Set foreign policy",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q156",
+   "n": 156
+  },
+  {
+   "type": "short",
+   "prompt": "Name one power that is only for the states.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Provide schooling and education; Provide protection (police); Provide safety (fire departments); Give a driver’s license; Approve zoning and land use",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q157",
+   "n": 157
+  },
+  {
+   "type": "short",
+   "prompt": "What is the purpose of the 10th Amendment?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(It states that the) powers not given to the federal government belong to the states or to the people.",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q158",
+   "n": 158
+  },
+  {
+   "type": "short",
+   "prompt": "There are four amendments to the U.S. Constitution about who can vote. Describe one of them.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Citizens eighteen (18) and older (can vote).; You don’t have to pay (a poll tax) to vote.; Any citizen can vote. (Women and men can vote.); A male citizen of any race (can vote).",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q159",
+   "n": 159
+  },
+  {
+   "type": "short",
+   "prompt": "Who can vote in federal elections, run for federal office, and serve on a jury in the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Citizens; Citizens of the United States; U.S. citizens",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q160",
+   "n": 160
+  },
+  {
+   "type": "short",
+   "prompt": "What are three rights of everyone living in the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Freedom of expression; Freedom of speech; Freedom of assembly; Freedom to petition the government; Freedom of religion; The right to bear arms",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q161",
+   "n": 161
+  },
+  {
+   "type": "short",
+   "prompt": "Name two promises that new citizens make in the Oath of Allegiance.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Give up loyalty to other countries; Defend the (U.S.) Constitution; Obey the laws of the United States; Serve in the military (if needed); Serve (help, do important work for) the nation (if needed); Be loyal to the United States",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q162",
+   "n": 162
+  },
+  {
+   "type": "short",
+   "prompt": "How can people become United States citizens?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Naturalize; Derive citizenship; Be born in the United States",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q163",
+   "n": 163
+  },
+  {
+   "type": "short",
+   "prompt": "What are two examples of civic participation in the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Vote; Run for office; Join a political party; Help with a campaign; Join a civic group; Join a community group; Give an elected official your opinion (on an issue); Contact elected officials; Support or oppose an issue or policy; Write to a newspaper",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q164",
+   "n": 164
+  },
+  {
+   "type": "short",
+   "prompt": "What is one way Americans can serve their country?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Vote; Pay taxes; Obey the law; Serve in the military; Run for office; Work for local, state, or federal government",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q165",
+   "n": 165
+  },
+  {
+   "type": "short",
+   "prompt": "Why is it important to pay federal taxes?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Required by law; All people pay to fund the federal government; Required by the (U.S.) Constitution (16th Amendment); Civic duty",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q166",
+   "n": 166
+  },
+  {
+   "type": "short",
+   "prompt": "It is important for all men age 18 through 25 to register for the Selective Service. Name one reason why.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Required by law; Civic duty; Makes the draft fair, if needed",
+   "concept": "rights-responsibilities",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q167",
+   "n": 167
+  },
+  {
+   "type": "short",
+   "prompt": "The colonists came to America for many reasons. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Freedom; Political liberty; Religious freedom; Economic opportunity; Escape persecution",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q168",
+   "n": 168
+  },
+  {
+   "type": "short",
+   "prompt": "What group of people was taken and sold as slaves?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Africans; People from Africa",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q169",
+   "n": 169
+  },
+  {
+   "type": "short",
+   "prompt": "What war did the Americans fight to win independence from Britain?",
+   "instructions": "",
+   "choices": [],
+   "answer": "American Revolution; The (American) Revolutionary War; War for (American) Independence",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q170",
+   "n": 170
+  },
+  {
+   "type": "short",
+   "prompt": "Name one reason why the Americans declared independence from Britain.",
+   "instructions": "",
+   "choices": [],
+   "answer": "High taxes; Taxation without representation; British soldiers stayed in Americans’ houses (boarding, quartering); They did not have self-government; Boston Massacre; Boston Tea Party (Tea Act); Stamp Act; Sugar Act; Townshend Acts; Intolerable (Coercive) Acts",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q171",
+   "n": 171
+  },
+  {
+   "type": "short",
+   "prompt": "The American Revolution had many important events. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "(Battle of) Bunker Hill; Declaration of Independence; Washington Crossing the Delaware (Battle of Trenton); (Battle of) Saratoga; Valley Forge (Encampment); (Battle of) Yorktown (British surrender at Yorktown)",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q172",
+   "n": 172
+  },
+  {
+   "type": "short",
+   "prompt": "There were 13 original states. Name five.",
+   "instructions": "",
+   "choices": [],
+   "answer": "New Hampshire; Massachusetts; Rhode Island; Connecticut; New York; New Jersey; Pennsylvania; Delaware; Maryland; Virginia; North Carolina; South Carolina; Georgia",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q173",
+   "n": 173
+  },
+  {
+   "type": "short",
+   "prompt": "What founding document was written in 1787?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(U.S.) Constitution",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q174",
+   "n": 174
+  },
+  {
+   "type": "short",
+   "prompt": "Why were the Federalist Papers important?",
+   "instructions": "",
+   "choices": [],
+   "answer": "They helped people understand the (U.S.) Constitution.; They supported passing the (U.S.) Constitution.",
+   "concept": "constitution-bill-rights",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q175",
+   "n": 175
+  },
+  {
+   "type": "short",
+   "prompt": "Benjamin Franklin is famous for many things. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Founded the first free public libraries; First Postmaster General of the United States; Helped write the Declaration of Independence; Inventor; U.S. diplomat",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q176",
+   "n": 176
+  },
+  {
+   "type": "short",
+   "prompt": "George Washington is famous for many things. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "“Father of Our Country”; First president of the United States; General of the Continental Army; President of the Constitutional Convention",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q177",
+   "n": 177
+  },
+  {
+   "type": "short",
+   "prompt": "Thomas Jefferson is famous for many things. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Writer of the Declaration of Independence; Third president of the United States; Doubled the size of the United States (Louisiana Purchase); First Secretary of State; Founded the University of Virginia; Writer of the Virginia Statute on Religious Freedom",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q178",
+   "n": 178
+  },
+  {
+   "type": "short",
+   "prompt": "James Madison is famous for many things. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "“Father of the Constitution”; Fourth president of the United States; President during the War of 1812; One of the writers of the Federalist Papers",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q179",
+   "n": 179
+  },
+  {
+   "type": "short",
+   "prompt": "Alexander Hamilton is famous for many things. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "First Secretary of the Treasury; One of the writers of the Federalist Papers; Helped establish the First Bank of the United States; Aide to General George Washington; Member of the Continental Congress",
+   "concept": "colonial-independence-era",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q180",
+   "n": 180
+  },
+  {
+   "type": "short",
+   "prompt": "The Civil War had many important events. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "(Battle of) Fort Sumter; Emancipation Proclamation; (Battle of) Vicksburg; (Battle of) Gettysburg; Sherman’s March; (Surrender at) Appomattox; (Battle of) Antietam/Sharpsburg; Lincoln was assassinated.",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q181",
+   "n": 181
+  },
+  {
+   "type": "short",
+   "prompt": "Abraham Lincoln is famous for many things. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Freed the slaves (Emancipation Proclamation); Saved (or preserved) the Union; Led the United States during the Civil War; 16th president of the United States; Delivered the Gettysburg Address",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q182",
+   "n": 182
+  },
+  {
+   "type": "short",
+   "prompt": "What U.S. war ended slavery?",
+   "instructions": "",
+   "choices": [],
+   "answer": "The Civil War",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q183",
+   "n": 183
+  },
+  {
+   "type": "short",
+   "prompt": "What amendment gives citizenship to all persons born in the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "14th Amendment",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q184",
+   "n": 184
+  },
+  {
+   "type": "short",
+   "prompt": "When did all men get the right to vote?",
+   "instructions": "",
+   "choices": [],
+   "answer": "After the Civil War; During Reconstruction; (With the) 15th Amendment; 1870",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q185",
+   "n": 185
+  },
+  {
+   "type": "short",
+   "prompt": "Name one leader of the women’s rights movement in the 1800s.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Susan B. Anthony; Elizabeth Cady Stanton; Sojourner Truth; Harriet Tubman; Lucretia Mott; Lucy Stone",
+   "concept": "1800s-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q186",
+   "n": 186
+  },
+  {
+   "type": "short",
+   "prompt": "Why did the United States enter World War I?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Because Germany attacked U.S. (civilian) ships; To support the Allied Powers (England, France, Italy, and Russia); To oppose the Central Powers (Germany, Austria-Hungary, the Ottoman Empire, and Bulgaria)",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q187",
+   "n": 187
+  },
+  {
+   "type": "short",
+   "prompt": "When did all women get the right to vote?",
+   "instructions": "",
+   "choices": [],
+   "answer": "1920; After World War I; (With the) 19th Amendment",
+   "concept": "elections-voting",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q188",
+   "n": 188
+  },
+  {
+   "type": "short",
+   "prompt": "What was the Great Depression?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Longest economic recession in modern history",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q189",
+   "n": 189
+  },
+  {
+   "type": "short",
+   "prompt": "When did the Great Depression start?",
+   "instructions": "",
+   "choices": [],
+   "answer": "The Great Crash (1929); Stock market crash of 1929",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q190",
+   "n": 190
+  },
+  {
+   "type": "short",
+   "prompt": "Why did the United States enter World War II?",
+   "instructions": "",
+   "choices": [],
+   "answer": "(Bombing of) Pearl Harbor; Japanese attacked Pearl Harbor; To support the Allied Powers (England, France, and Russia); To oppose the Axis Powers (Germany, Italy, and Japan)",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q191",
+   "n": 191
+  },
+  {
+   "type": "short",
+   "prompt": "Dwight Eisenhower is famous for many things. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "General during World War II; President at the end of (during) the Korean War; 34th president of the United States; Signed the Federal-Aid Highway Act of 1956 (Created the Interstate System)",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q192",
+   "n": 192
+  },
+  {
+   "type": "short",
+   "prompt": "Who was the United States’ main rival during the Cold War?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Soviet Union; USSR; Russia",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q193",
+   "n": 193
+  },
+  {
+   "type": "short",
+   "prompt": "During the Cold War, what was one main concern of the United States?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Communism; Nuclear war",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q194",
+   "n": 194
+  },
+  {
+   "type": "short",
+   "prompt": "Why did the United States enter the Korean War?",
+   "instructions": "",
+   "choices": [],
+   "answer": "To stop the spread of communism",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q195",
+   "n": 195
+  },
+  {
+   "type": "short",
+   "prompt": "Why did the United States enter the Vietnam War?",
+   "instructions": "",
+   "choices": [],
+   "answer": "To stop the spread of communism",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q196",
+   "n": 196
+  },
+  {
+   "type": "short",
+   "prompt": "What did the civil rights movement do?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Fought to end racial discrimination",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q197",
+   "n": 197
+  },
+  {
+   "type": "short",
+   "prompt": "Martin Luther King, Jr. is famous for many things. Name one.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Fought for civil rights; Worked for equality for all Americans; Worked to ensure that people would “not be judged by the color of their skin, but by the content of their character”",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q198",
+   "n": 198
+  },
+  {
+   "type": "short",
+   "prompt": "Why did the United States enter the Persian Gulf War?",
+   "instructions": "",
+   "choices": [],
+   "answer": "To force the Iraqi military from Kuwait",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q199",
+   "n": 199
+  },
+  {
+   "type": "short",
+   "prompt": "Name one U.S. military conflict after the September 11, 2001 attacks.",
+   "instructions": "",
+   "choices": [],
+   "answer": "(Global) War on Terror; War in Afghanistan; War in Iraq",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q200",
+   "n": 200
+  },
+  {
+   "type": "short",
+   "prompt": "Name one American Indian tribe in the United States.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Apache; Blackfeet; Cayuga; Cherokee; Cheyenne; Chippewa; Choctaw; Creek; Crow; Hopi; Huron; Inupiat; Lakota; Mohawk; Mohegan; Navajo; Oneida; Onondaga; Pueblo; Seminole; Seneca; Shawnee; Sioux; Teton; Tuscarora",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q201",
+   "n": 201
+  },
+  {
+   "type": "short",
+   "prompt": "Name one example of an American innovation.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Light bulb; Automobile (cars, internal combustion engine); Skyscrapers; Airplane; Assembly line; Landing on the moon; Integrated circuit (IC)",
+   "concept": "1900s-modern-history",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q202",
+   "n": 202
+  },
+  {
+   "type": "short",
+   "prompt": "Where is the Statue of Liberty?",
+   "instructions": "",
+   "choices": [],
+   "answer": "New York (Harbor); Liberty Island [Also acceptable are New Jersey, near New York City, and on the Hudson (River).]",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q203",
+   "n": 203
+  },
+  {
+   "type": "short",
+   "prompt": "The Nation’s first motto was “E Pluribus Unum.” What does that mean?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Out of many, one; We all become one",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q204",
+   "n": 204
+  },
+  {
+   "type": "short",
+   "prompt": "What is Independence Day?",
+   "instructions": "",
+   "choices": [],
+   "answer": "A holiday to celebrate U.S. independence (from Britain); The country’s birthday",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q205",
+   "n": 205
+  },
+  {
+   "type": "short",
+   "prompt": "Name three national U.S. holidays.",
+   "instructions": "",
+   "choices": [],
+   "answer": "New Year’s Day; Martin Luther King, Jr. Day; Presidents Day (Washington’s Birthday); Memorial Day; Independence Day; Labor Day; Columbus Day; Veterans Day; Thanksgiving Day; Christmas Day",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q206",
+   "n": 206
+  },
+  {
+   "type": "short",
+   "prompt": "What is Memorial Day?",
+   "instructions": "",
+   "choices": [],
+   "answer": "A holiday to honor soldiers who died in military service",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q207",
+   "n": 207
+  },
+  {
+   "type": "short",
+   "prompt": "What is Veterans Day?",
+   "instructions": "",
+   "choices": [],
+   "answer": "A holiday to honor people in the (U.S.) military; A holiday to honor people who have served (in the U.S. military)",
+   "concept": "symbols-holidays",
+   "source": "https://www.uscis.gov/sites/default/files/document/crc/M_1778LG.pdf",
+   "id": "q208",
+   "n": 208
+  },
+  {
+   "type": "short",
+   "prompt": "Who is one of your state’s U.S. Senators now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S. Senators.]",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/OoC_100_Questions_2008_Civics_Test_V1.pdf",
+   "id": "q209",
+   "n": 209
+  },
+  {
+   "type": "short",
+   "prompt": "Name your U.S. Representative.",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no (voting) Representatives in Congress.]",
+   "concept": "congress-legislative",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/OoC_100_Questions_2008_Civics_Test_V1.pdf",
+   "id": "q210",
+   "n": 210
+  },
+  {
+   "type": "short",
+   "prompt": "Who is the Governor of your state now?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.]",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/OoC_100_Questions_2008_Civics_Test_V1.pdf",
+   "id": "q211",
+   "n": 211
+  },
+  {
+   "type": "short",
+   "prompt": "What is the capital of your state?",
+   "instructions": "",
+   "choices": [],
+   "answer": "Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a capital. Residents of U.S. territories should name the capital of the territory.]",
+   "concept": "geography-government",
+   "source": "https://www.uscis.gov/sites/default/files/document/questions-and-answers/OoC_100_Questions_2008_Civics_Test_V1.pdf",
+   "id": "q212",
+   "n": 212
+  }
+ ],
+ "builtAt": "2026-11-04T16:39:54.069Z",
+ "builtWith": "saved example"
+}

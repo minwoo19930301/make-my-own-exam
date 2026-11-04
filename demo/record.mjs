@@ -25,7 +25,15 @@ if (!muxOnly) {
   const browser = await chromium.launch({ channel: "chrome", headless: false }) // headless Chrome screencasts only 713 of 800 rows;
   const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1, recordVideo: { dir: `${out}raw`, size: { width: 1280, height: 800 } }, colorScheme: "light" });
   const t0 = Date.now();
-  await ctx.addInitScript(() => { if (!sessionStorage.getItem("demo")) { sessionStorage.setItem("demo", "1"); localStorage.clear(); } });
+  // Start clean, with the other exams built earlier by tools/try-exam.mjs already in the list.
+  const others = readdirSync(new URL("../public/data/examples/", import.meta.url)).filter((f) => f.endsWith(".json"))
+    .map((f, i) => ({ ...JSON.parse(readFileSync(new URL(`../public/data/examples/${f}`, import.meta.url), "utf8")), id: `example-${f.replace(".json", "")}`, builtAt: `2026-11-04T0${i}:00:00.000Z`, builtWith: "live" }));
+  await ctx.addInitScript((seed) => {
+    if (sessionStorage.getItem("demo")) return;
+    sessionStorage.setItem("demo", "1");
+    localStorage.clear();
+    localStorage.setItem("mmoe.exams", JSON.stringify(Object.fromEntries(seed.map((e) => [e.id, e]))));
+  }, others);
   const page = await ctx.newPage();
   const at = () => (Date.now() - t0) / 1000;
   const sleep = (s) => page.waitForTimeout(Math.max(0, s) * 1000);
@@ -116,6 +124,15 @@ if (!muxOnly) {
   await unzoom();
   await sleep(0.4);
 
+  marks.others = at();
+  await say(caption.others);
+  await page.evaluate(() => { const c = [...document.querySelectorAll(".card")].find((x) => x.textContent.startsWith("Your exams")); c.id = "demo-exams"; c.scrollIntoView({ behavior: "smooth", block: "center" }); });
+  await sleep(1);
+  await zoom("#demo-exams", 1.35);
+  await sleep(dur.others - 0.6);
+  await unzoom();
+  await sleep(0.3);
+
   marks.write = at();
   await say(caption.write);
   await page.getByRole("button", { name: "Start practicing" }).click();
@@ -166,9 +183,26 @@ if (!muxOnly) {
   await page.evaluate(() => window.scrollTo({ top: 420, behavior: "smooth" }));
   await sleep(dur.insights * 0.55 + 0.3);
 
+  marks.agent = at();
+  await say(caption.agent);
+  await page.getByRole("button", { name: "Build" }).click();
+  await sleep(0.4);
+  await page.evaluate(() => { const c = [...document.querySelectorAll(".card")].find((x) => x.textContent.startsWith("Or collect it with your own agent")); c.id = "demo-agent"; c.querySelector("button").click(); });
+  await sleep(0.4);
+  await scrollTo("#demo-agent", "start");
+  await sleep(0.9);
+  await zoom("#demo-agent .code", 1.3);
+  await sleep(dur.agent - 1.4);
+  await unzoom();
+  await sleep(0.3);
+
   marks.close = at();
   await say(caption.close);
-  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+  await page.locator(".round[aria-label=Settings]").click();
+  await sleep(1.4);
+  await page.locator("#provider").selectOption("custom");
+  await sleep(dur.close * 0.35 - 1);
+  await page.keyboard.press("Escape");
   await sleep(dur.close * 0.35);
   await page.evaluate(() => {
     const t = document.createElement("div");

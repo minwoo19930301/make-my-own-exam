@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { AGENT_PROMPT, buildExam, finalize, importExam } from "./build.js";
+import { buildExam, finalize, importExam } from "./build.js";
 import { providerLabel } from "./store.js";
+import { collectPrompt, MCP_URL } from "./agent.js";
 
 export const GRE_EXAMPLE = "GRE Analytical Writing, the \"Analyze an Issue\" essay. I want to practice timed essays scored on the official 0-6 scale.";
 
@@ -100,16 +101,17 @@ export function Build({ exams, exam, onSave, onOpen, onRemove, onPractice, healt
 
       <section className="card">
         <div className="card-head">
-          <h2 className="card-title">Build it with your own agent</h2>
+          <h2 className="card-title">Or collect it with your own agent (MCP)</h2>
           <button type="button" className="btn btn-secondary" onClick={() => setAgentOpen(!agentOpen)}>{agentOpen ? "Hide" : "Show"}</button>
         </div>
-        <p className="sub" style={{ marginTop: 0 }}>Prefer an agent with web search or MCP tools? Give it this prompt, then paste the JSON it returns.</p>
+        <p className="sub" style={{ marginTop: 0 }}>Muse is the default. If you'd rather use your own agent, this prompt has it install Chrome DevTools MCP (driving Chrome Canary) and this site's MCP server ({MCP_URL}). The agent then collects, analyzes and saves the exam, and gives you a link back here.</p>
         {agentOpen && (
           <>
-            <pre className="code">{AGENT_PROMPT}{prompt || "<describe the exam>"}</pre>
+            <pre className="code">{collectPrompt(prompt)}</pre>
             <div className="row">
-              <button type="button" className="btn btn-secondary" onClick={() => navigator.clipboard?.writeText(AGENT_PROMPT + (prompt || ""))}>Copy prompt</button>
+              <button type="button" className="btn btn-secondary" onClick={() => navigator.clipboard?.writeText(collectPrompt(prompt))}>Copy prompt</button>
             </div>
+            <div className="sub" style={{ marginTop: 10 }}>Or paste a knowledge base JSON your agent produced:</div>
             <textarea className="field area" aria-label="Paste knowledge base JSON" placeholder="Paste the JSON here" value={paste} onChange={(e) => setPaste(e.target.value)} style={{ marginTop: 8 }} />
             <div className="row" style={{ marginTop: 8 }}>
               <span className="grow" />

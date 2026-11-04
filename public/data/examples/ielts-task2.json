@@ -1,0 +1,499 @@
+{
+ "name": "IELTS Academic Writing Task 2",
+ "description": "IELTS Academic Writing Task 2 essays requiring a 250+ word position essay in response to a point of view, argument or problem, scored on the official IELTS band descriptors.",
+ "timeLimitMinutes": 40,
+ "questionTypes": [
+  "essay"
+ ],
+ "concepts": [
+  {
+   "key": "work-and-employment",
+   "label": "Work and Employment",
+   "description": "Jobs, careers, workplace change, unemployment and work-life balance",
+   "count": 6
+  },
+  {
+   "key": "economy-and-consumerism",
+   "label": "Economy and Consumerism",
+   "description": "Shopping, consumer society, wealth, inequality and economic development",
+   "count": 3
+  },
+  {
+   "key": "education-and-learning",
+   "label": "Education and Learning",
+   "description": "Schooling, higher education, teaching methods, lifelong learning and student life",
+   "count": 2
+  },
+  {
+   "key": "culture-and-globalisation",
+   "label": "Culture and Globalisation",
+   "description": "Cultural identity, traditions, migration and global interconnectedness",
+   "count": 2
+  },
+  {
+   "key": "technology-and-innovation",
+   "label": "Technology and Innovation",
+   "description": "Computers, internet, automation, artificial intelligence and digital daily life",
+   "count": 1
+  },
+  {
+   "key": "environment-and-sustainability",
+   "label": "Environment and Sustainability",
+   "description": "Pollution, climate, conservation, resources and human impact on nature",
+   "count": 1
+  },
+  {
+   "key": "tourism-travel-and-mobility",
+   "label": "Tourism, Travel and Mobility",
+   "description": "International tourism, transport modes, benefits and impacts on locals and environment",
+   "count": 1
+  },
+  {
+   "key": "ageing-and-social-care",
+   "label": "Ageing and Social Care",
+   "description": "Older people, elder care homes, family vs state responsibility for care",
+   "count": 1
+  },
+  {
+   "key": "government-and-public-policy",
+   "label": "Government and Public Policy",
+   "description": "Role of government, public spending, regulation and social problems and solutions",
+   "count": 1
+  },
+  {
+   "key": "health-and-wellbeing",
+   "label": "Health and Wellbeing",
+   "description": "Public health, healthcare systems, diet, exercise and lifestyle",
+   "count": 0
+  },
+  {
+   "key": "cities-and-urban-life",
+   "label": "Cities and Urban Life",
+   "description": "Urbanisation, housing, traffic, public services and community life",
+   "count": 0
+  },
+  {
+   "key": "family-and-relationships",
+   "label": "Family and Relationships",
+   "description": "Family structures, parenting, children, youth and intergenerational roles",
+   "count": 0
+  },
+  {
+   "key": "crime-and-justice",
+   "label": "Crime and Justice",
+   "description": "Causes of crime, punishment, safety and law enforcement",
+   "count": 0
+  },
+  {
+   "key": "media-and-communication",
+   "label": "Media and Communication",
+   "description": "News, social media, advertising and influence on opinions and behaviour",
+   "count": 0
+  }
+ ],
+ "rubric": {
+  "min": 0,
+  "max": 9,
+  "fromSource": true,
+  "levels": [
+   {
+    "score": 9,
+    "descriptor": "Expert: fully satisfies all demands with precise, sophisticated and effortless control; extremely rare minor slips only."
+   },
+   {
+    "score": 8,
+    "descriptor": "Very good: covers all demands well with wide, flexible and precise control; only occasional unsystematic slips."
+   },
+   {
+    "score": 7,
+    "descriptor": "Good: covers demands with clear logic and varied control; some awareness of sophisticated language despite occasional inappropriacy."
+   },
+   {
+    "score": 6,
+    "descriptor": "Competent: generally addresses demands with adequate range but limited flexibility; errors and mechanical linking do not block meaning."
+   },
+   {
+    "score": 5,
+    "descriptor": "Modest: partly addresses demands with limited range and frequent errors in organisation, vocabulary and grammar; meaning often strained."
+   },
+   {
+    "score": 4,
+    "descriptor": "Limited: minimal response with poor organisation, very restricted vocabulary and grammar; frequent misunderstanding and difficulty following."
+   },
+   {
+    "score": 3,
+    "descriptor": "Extremely limited: barely conveys ideas with little organisation and severe language control problems."
+   },
+   {
+    "score": 2,
+    "descriptor": "Intermittent: isolated words or memorised phrases with almost no coherent communication."
+   },
+   {
+    "score": 1,
+    "descriptor": "Non-user: essentially no language beyond a few isolated words."
+   },
+   {
+    "score": 0,
+    "descriptor": "No assessable response: blank, wholly copied/plagiarised, or unrelated to any prompt."
+   }
+  ],
+  "dimensions": [
+   {
+    "id": "task-response",
+    "label": "Task Response",
+    "ask": "Does the essay fully answer all parts of the prompt with a clear position, well-extended relevant ideas and supported evidence in 250+ words of connected essay form?"
+   },
+   {
+    "id": "coherence-cohesion",
+    "label": "Coherence and Cohesion",
+    "ask": "Is the essay logically organised with clear progression, effective paragraphing, sequencing and varied appropriate linking and referencing?"
+   },
+   {
+    "id": "lexical-resource",
+    "label": "Lexical Resource",
+    "ask": "Is vocabulary wide, precise and appropriate with good collocation and spelling, including less common and idiomatic use where suitable?"
+   },
+   {
+    "id": "grammatical-range-accuracy",
+    "label": "Grammatical Range and Accuracy",
+    "ask": "Is there a wide flexible range of sentence structures with accurate grammar and punctuation and frequent error-free sentences?"
+   }
+  ],
+  "notes": "Restated from IELTS Writing key assessment criteria and Task 2 band descriptors (May 2023). Each of the four criteria is weighted equally for Task 2. Penalise memorised/formulaic responses, bullet points or note form, off-topic irrelevance, underlength below 250 words, and partly or wholly plagiarised text."
+ },
+ "references": [
+  {
+   "title": "The IELTS writing assessment revision project: Towards a revised rating scale",
+   "authors": "Stuart Shaw and Peter Falvey",
+   "year": "2008",
+   "kind": "report",
+   "venue": "IELTS Research Reports Volume 1",
+   "why": "Official IELTS-funded revision of the Writing rating scale and band descriptors for Task 1 and Task 2.",
+   "foundUrl": "https://www.cambridgeesol.org/assets/pdf/research_reports_01.pdf",
+   "verified": false,
+   "url": "https://www.cambridgeesol.org/assets/pdf/research_reports_01.pdf"
+  },
+  {
+   "title": "A critical review of the IELTS writing test",
+   "authors": "Hacer Hande Uysal",
+   "year": "2009",
+   "kind": "paper",
+   "venue": "ELT Journal 64(3)",
+   "why": "Critical review of reliability and validity issues in IELTS Writing including single marking, prompt readability and construct definition.",
+   "foundUrl": "https://doi.org/10.1093/elt/ccp026",
+   "verified": true,
+   "url": "https://doi.org/10.1093/elt/ccp026",
+   "foundTitle": "A critical review of the IELTS writing test"
+  },
+  {
+   "title": "Dimensions of difference: a comparison of university writing and IELTS writing",
+   "authors": "Tim Moore and Janne Morton",
+   "year": "2005",
+   "kind": "paper",
+   "venue": "Journal of English for Academic Purposes 4(1)",
+   "why": "Compares IELTS Academic Writing Task 2 with university writing assignments on genre, function and authenticity.",
+   "foundUrl": "https://doi.org/10.1016/j.jeap.2004.02.001",
+   "verified": true,
+   "url": "https://doi.org/10.1016/j.jeap.2004.02.001",
+   "foundTitle": "Dimensions of difference: a comparison of university writing and IELTS writing"
+  },
+  {
+   "title": "An investigation of examiner rating of coherence and cohesion in the IELTS Academic Writing Task 2",
+   "authors": "Fiona Cotton and Kate Wilson",
+   "year": "2011",
+   "kind": "report",
+   "venue": "IELTS Research Reports Vol 12",
+   "why": "IELTS-funded study of examiner difficulty and reliability in rating coherence and cohesion in Academic Writing Task 2.",
+   "foundUrl": "https://www.ielts.org/for-researchers/research-reports/an-investigation-of-examiner-rating-of-coherence-and-cohesion-in-the-ielts-academic-writing-task-2",
+   "verified": false,
+   "url": "https://www.ielts.org/for-researchers/research-reports/an-investigation-of-examiner-rating-of-coherence-and-cohesion-in-the-ielts-academic-writing-task-2"
+  },
+  {
+   "title": "Study of response validity of the IELTS writing subtest",
+   "authors": "Peter Mickan, Stephen Slater and Carol Gibson",
+   "year": "2000",
+   "kind": "report",
+   "venue": "IELTS Research Reports Vol 3",
+   "why": "IELTS-funded response-validity study of how test-takers interpret Writing prompts and produce Task 2 texts.",
+   "foundUrl": "https://researchers.adelaide.edu.au/profile/peter.mickan",
+   "verified": false,
+   "url": "https://researchers.adelaide.edu.au/profile/peter.mickan"
+  },
+  {
+   "title": "From Prompting to Preference Optimization: A Comparative Study of LLM-based Automated Essay Scoring",
+   "authors": "Minh Hoang Nguyen, Vu Hoang Pham, Xuan Thanh Huynh, Phuc Hong Mai, Vinh The Nguyen, Quang Nhut Huynh, Huy Tien Nguyen, Tung Le",
+   "year": "2026",
+   "kind": "paper",
+   "venue": "arXiv",
+   "why": "Compares LLM automated essay scoring paradigms benchmarked on IELTS Writing Task 2.",
+   "foundUrl": "https://arxiv.org/abs/2603.06424",
+   "verified": false,
+   "url": "https://arxiv.org/abs/2603.06424"
+  }
+ ],
+ "prompt": "IELTS Academic Writing Task 2 essays, scored on the official IELTS band descriptors.",
+ "sources": [
+  {
+   "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-key-assessment-criteria.pdf",
+   "title": "IELTS Writing key assessment criteria",
+   "kind": "pdf",
+   "chars": 5751
+  },
+  {
+   "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-writing/ielts-academic-writing-example-responses-to-parts-1-and-2-with-band-scores-and-examiner-comments.pdf",
+   "title": "IELTS Academic Writing - Sample candidate responses to parts 1 and 2 with band scores and examiner comments",
+   "kind": "pdf",
+   "chars": 12640
+  },
+  {
+   "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf",
+   "title": "IELTS Writing Band Descriptors",
+   "kind": "pdf",
+   "chars": 23945
+  },
+  {
+   "url": "https://www.ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+   "title": "IELTS | IELTS Academic sample test questions",
+   "kind": "web",
+   "chars": 21609
+  },
+  {
+   "url": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources",
+   "title": "IELTS | IELTS Writing test preparation resources",
+   "kind": "web",
+   "chars": 30869
+  },
+  {
+   "url": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "title": "IELTS | News and Insights - IELTS Writing Task 2: How to understand…",
+   "kind": "web",
+   "chars": 7221
+  },
+  {
+   "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+   "title": "IELTS | IELTS Academic: Writing test format",
+   "kind": "web",
+   "chars": 5825
+  },
+  {
+   "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-one-answer-transcript.pdf",
+   "title": "IELTS Listening Computer-delivered Multiple Choice (one answer) Transcript",
+   "kind": "pdf",
+   "chars": 1476
+  },
+  {
+   "url": "https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail",
+   "title": "IELTS | IELTS scoring in detail: band scores explained",
+   "kind": "web",
+   "chars": 9737
+  },
+  {
+   "url": "https://ielts.org/organisations/ielts-for-organisations/understanding-ielts-scoring",
+   "title": "IELTS | Organisations - Understanding and setting IELTS scores",
+   "kind": "web",
+   "chars": 13639
+  }
+ ],
+ "questions": [
+  {
+   "type": "essay",
+   "prompt": "many people believe that these advertisements have a bad effect on children and their families. Do you agree or disagree?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "economy-and-consumerism",
+   "source": "https://ielts.org/take-a-test/preparation-resources/writing-test-resources",
+   "id": "q001",
+   "n": 1
+  },
+  {
+   "type": "essay",
+   "prompt": "To what extent do you agree or disagree with the statement/opinion?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "culture-and-globalisation",
+   "source": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "id": "q002",
+   "n": 2
+  },
+  {
+   "type": "essay",
+   "prompt": "Discuss both views and give your own opinion.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "culture-and-globalisation",
+   "source": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "id": "q003",
+   "n": 3
+  },
+  {
+   "type": "essay",
+   "prompt": "Why is shopping so popular? What effects does its increase in popularity have on individuals and society?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "economy-and-consumerism",
+   "source": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "id": "q004",
+   "n": 4
+  },
+  {
+   "type": "essay",
+   "prompt": "What form do these problems take? Do the problems outweigh the benefits?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "government-and-public-policy",
+   "source": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "id": "q005",
+   "n": 5
+  },
+  {
+   "type": "essay",
+   "prompt": "What are the advantages and disadvantages of...?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "economy-and-consumerism",
+   "source": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "id": "q006",
+   "n": 6
+  },
+  {
+   "type": "essay",
+   "prompt": "Is this a positive or negative development?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "technology-and-innovation",
+   "source": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "id": "q007",
+   "n": 7
+  },
+  {
+   "type": "essay",
+   "prompt": "What are the causes of these problems and suggest solutions?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "environment-and-sustainability",
+   "source": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "id": "q008",
+   "n": 8
+  },
+  {
+   "type": "essay",
+   "prompt": "International tourism has brought enormous benefit to many places. At the same time, there is concern about its impact on local inhabitants and the environment. Do the disadvantages of international tourism outweigh the advantages?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "tourism-travel-and-mobility",
+   "source": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "id": "q009",
+   "n": 9
+  },
+  {
+   "type": "essay",
+   "prompt": "In Britain, when someone gets old they often go to live in a home with other old people where there are nurses to look after them. Sometimes the government has to pay for this care. Who do you think should pay for this care, the government or the family?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "ageing-and-social-care",
+   "source": "https://ielts.org/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts",
+   "id": "q010",
+   "n": 10
+  },
+  {
+   "type": "short",
+   "prompt": "How important is English language ability for success at our organisation?",
+   "instructions": "Bring your group together to agree on your English language proficiency requirements by discussing these key questions:",
+   "choices": [],
+   "answer": "",
+   "concept": "work-and-employment",
+   "source": "https://ielts.org/organisations/ielts-for-organisations/understanding-ielts-scoring",
+   "id": "q011",
+   "n": 11
+  },
+  {
+   "type": "short",
+   "prompt": "Are we getting enough good applicants with our current requirements?",
+   "instructions": "Bring your group together to agree on your English language proficiency requirements by discussing these key questions:",
+   "choices": [],
+   "answer": "",
+   "concept": "work-and-employment",
+   "source": "https://ielts.org/organisations/ielts-for-organisations/understanding-ielts-scoring",
+   "id": "q012",
+   "n": 12
+  },
+  {
+   "type": "short",
+   "prompt": "What level of English do applicants actually need for different tasks?",
+   "instructions": "Bring your group together to agree on your English language proficiency requirements by discussing these key questions:",
+   "choices": [],
+   "answer": "",
+   "concept": "work-and-employment",
+   "source": "https://ielts.org/organisations/ielts-for-organisations/understanding-ielts-scoring",
+   "id": "q013",
+   "n": 13
+  },
+  {
+   "type": "short",
+   "prompt": "Do applicants with higher English scores perform better at our organisation?",
+   "instructions": "Bring your group together to agree on your English language proficiency requirements by discussing these key questions:",
+   "choices": [],
+   "answer": "",
+   "concept": "work-and-employment",
+   "source": "https://ielts.org/organisations/ielts-for-organisations/understanding-ielts-scoring",
+   "id": "q014",
+   "n": 14
+  },
+  {
+   "type": "short",
+   "prompt": "Will our requirements prepare applicants well for their future jobs?",
+   "instructions": "Bring your group together to agree on your English language proficiency requirements by discussing these key questions:",
+   "choices": [],
+   "answer": "",
+   "concept": "work-and-employment",
+   "source": "https://ielts.org/organisations/ielts-for-organisations/understanding-ielts-scoring",
+   "id": "q015",
+   "n": 15
+  },
+  {
+   "type": "short",
+   "prompt": "Are our requirements fair and inclusive?",
+   "instructions": "Bring your group together to agree on your English language proficiency requirements by discussing these key questions:",
+   "choices": [],
+   "answer": "",
+   "concept": "work-and-employment",
+   "source": "https://ielts.org/organisations/ielts-for-organisations/understanding-ielts-scoring",
+   "id": "q016",
+   "n": 16
+  },
+  {
+   "type": "short",
+   "prompt": "How long are IELTS scores valid for?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "education-and-learning",
+   "source": "https://ielts.org/organisations/ielts-for-organisations/understanding-ielts-scoring",
+   "id": "q017",
+   "n": 17
+  },
+  {
+   "type": "short",
+   "prompt": "Looking for further guidance?",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "education-and-learning",
+   "source": "https://ielts.org/organisations/ielts-for-organisations/understanding-ielts-scoring",
+   "id": "q018",
+   "n": 18
+  }
+ ],
+ "builtAt": "2026-11-04T16:28:39.997Z",
+ "builtWith": "saved example"
+}

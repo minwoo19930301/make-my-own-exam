@@ -15,6 +15,11 @@
   "text": "It collected every official GRE topic and the zero to six rubric. It also found research by the test makers, and checked each paper against Crossref."
  },
  {
+  "id": "others",
+  "caption": "Any exam: AP · IELTS · US civics · …",
+  "text": "The same pipeline works for other exams. AP U.S. History, IELTS writing, and the U.S. citizenship test were each built from one sentence."
+ },
+ {
   "id": "write",
   "caption": "Step 2 · Practice",
   "text": "Then you practice. Pick a question, start the timer, and write."
@@ -35,8 +40,13 @@
   "text": "Nobody can predict your exact question. Insights shows where the pool's weight sits, and what to practice next."
  },
  {
+  "id": "agent",
+  "caption": "Or bring your own agent over MCP",
+  "text": "Prefer your own agent? One prompt installs Chrome DevTools on Chrome Canary and this site's MCP server, so your agent collects the exam. Another lets it grade your answer."
+ },
+ {
   "id": "close",
-  "caption": "Muse by default · any provider · your own agent",
-  "text": "Muse is the default. You can plug in another provider, or build the knowledge base with your own agent. Make My Own Exam. Bring any exam."
+  "caption": "Muse by default · your own key · your own agent",
+  "text": "Muse is the default, or plug in your own API key. Make My Own Exam. Bring any exam."
  }
 ]

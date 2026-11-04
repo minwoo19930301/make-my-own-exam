@@ -30,6 +30,7 @@ Rate a timed first draft: do not penalize minor typos the way you would in a pol
 Official raters are generous at the top. A top score is not a flawless answer: it is a well-reasoned, well-developed, well-organized draft that may still have small lapses. Use the full scale.
 Also rate these dimensions on the same scale: ${rubric.dimensions.map((d) => `${d.id} (${d.ask})`).join(" ")}
 For each dimension give one sentence of reasoning and quote one short phrase copied EXACTLY from the answer (or "" if nothing applies).
+If an officialAnswer is given, judge correctness against it first: an answer that matches one of the acceptable answers in meaning is correct.
 Say whether the answer does what this specific question asks ("met", "partly", "missed"). A "partly" lowers the score by at most one level.
 Give 2-3 concrete revisions, each pairing an exact quote from the answer with a rewrite or an addition.
 Return only JSON: {"score":int,"summary":string,"dimensions":[{"id":string,"score":int,"reason":string,"quote":string}],"task":{"status":"met"|"partly"|"missed","reason":string},"revisions":[{"quote":string,"suggestion":string}]}`;
@@ -73,6 +74,6 @@ export async function gradeAnswer({ exam, question, rubric, answer, ...key }) {
   if (answer.length > 15000) throw new HttpError(400, "Answers are limited to 15,000 characters.");
   if (!question?.prompt) throw new HttpError(400, "Missing question.");
   const r = cleanRubric(rubric);
-  const user = JSON.stringify({ exam: cap(exam, 200), question: cap(question.prompt, 3000), instructions: cap(question.instructions, 1500), answer });
+  const user = JSON.stringify({ exam: cap(exam, 200), question: cap(question.prompt, 3000), instructions: cap(question.instructions, 1500), ...(question.answer ? { officialAnswer: cap(question.answer, 600) } : {}), answer });
   return finalizeGrade(answer, await chatJSON({ ...key, system: gradeSystem(r), user, maxTokens: 3500 }), r);
 }

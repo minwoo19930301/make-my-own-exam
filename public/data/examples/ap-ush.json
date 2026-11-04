@@ -1,0 +1,859 @@
+{
+ "name": "AP United States History Free-Response Questions",
+ "description": "Study knowledge base of AP U.S. History short-answer questions, document-based questions, and long essay questions from 1491 to 2001, scored with official College Board scoring guidelines, sample responses, and chief reader reports.",
+ "timeLimitMinutes": 140,
+ "questionTypes": [
+  "short",
+  "essay"
+ ],
+ "concepts": [
+  {
+   "key": "market-reform-antebellum",
+   "label": "Market Revolution and Antebellum Reform",
+   "description": "Transportation, market revolution, Second Great Awakening, abolitionism, women's rights, and other reform movements 1800 to 1848.",
+   "count": 8
+  },
+  {
+   "key": "revolution-independence",
+   "label": "Revolution and Independence",
+   "description": "Patriot movement, American Revolution, ideals of liberty and republicanism 1765 to 1783.",
+   "count": 7
+  },
+  {
+   "key": "native-encounters",
+   "label": "Native American and European Encounters",
+   "description": "Indigenous societies, European colonization, diplomacy, trade, and conflict from 1491 through the Seven Years War era.",
+   "count": 6
+  },
+  {
+   "key": "civil-war-reconstruction",
+   "label": "Civil War and Reconstruction",
+   "description": "Civil War, emancipation, Reconstruction Amendments, successes and failures of Reconstruction, and the New South 1861 to 1900.",
+   "count": 6
+  },
+  {
+   "key": "civil-rights-movements",
+   "label": "Civil Rights Movements",
+   "description": "African American, women's, Latino, Native American, and other movements for equality and reform 1945 to 1970.",
+   "count": 5
+  },
+  {
+   "key": "early-republic",
+   "label": "Early Republic and Democracy",
+   "description": "Constitution, Federalists, Jeffersonian and Jacksonian democracy, expansion of suffrage, and early politics 1783 to 1820s.",
+   "count": 4
+  },
+  {
+   "key": "interwar-great-depression",
+   "label": "Interwar Years and Great Depression",
+   "description": "1920s culture and economy, stock market crash, Great Depression, and New Deal debates over role of government.",
+   "count": 4
+  },
+  {
+   "key": "world-war-ii-cold-war",
+   "label": "World War II and Cold War",
+   "description": "World War II mobilization, Cold War foreign policy, postwar economic growth, and domestic anticommunism 1941 to 1960.",
+   "count": 4
+  },
+  {
+   "key": "colonial-america",
+   "label": "Colonial America",
+   "description": "British colonial development, labor systems, regional economies, culture, and imperial relations 1607 to 1765.",
+   "count": 3
+  },
+  {
+   "key": "slavery-sectionalism",
+   "label": "Slavery and Sectionalism",
+   "description": "Institution of slavery, its expansion west, sectional debates, and its shaping of economy, politics, and society 1783 to 1860.",
+   "count": 2
+  },
+  {
+   "key": "westward-expansion",
+   "label": "Westward Expansion and Migration",
+   "description": "Territorial expansion, frontier settlement, Native American removal and resistance, and immigration through the 19th century.",
+   "count": 2
+  },
+  {
+   "key": "progressivism-imperialism",
+   "label": "Progressivism and Imperialism",
+   "description": "Progressive reforms, expanded federal power, overseas expansion, and World War I 1890 to 1920.",
+   "count": 1
+  },
+  {
+   "key": "modern-america",
+   "label": "Modern America Since 1970",
+   "description": "Political realignment, economic change, globalization, conservatism, and continuing influence of civil rights ideas 1970 to 2001.",
+   "count": 1
+  },
+  {
+   "key": "industrialization-gilded-age",
+   "label": "Industrialization and Gilded Age",
+   "description": "Industrial growth, big business, labor, urbanization, Jim Crow, sharecropping, and laissez-faire government 1877 to 1900.",
+   "count": 0
+  }
+ ],
+ "rubric": {
+  "min": 0,
+  "max": 7,
+  "fromSource": true,
+  "levels": [
+   {
+    "score": 7,
+    "descriptor": "Outstanding document-based argument with thesis, context, rich document and outside evidence, sourcing analysis, and complex understanding."
+   },
+   {
+    "score": 6,
+    "descriptor": "Excellent long essay or strong DBQ; sustained argument, contextualization, substantial evidence, and historical reasoning."
+   },
+   {
+    "score": 5,
+    "descriptor": "Strong essay with clear line of reasoning, multiple pieces of evidence, and some sourcing or complexity."
+   },
+   {
+    "score": 4,
+    "descriptor": "Competent essay with thesis, context, and supporting evidence from documents or content knowledge."
+   },
+   {
+    "score": 3,
+    "descriptor": "Adequate response at short-answer full-credit level; addresses topic with accurate description and explanation."
+   },
+   {
+    "score": 2,
+    "descriptor": "Developing response with thesis and some relevant context or evidence but argument is incomplete."
+   },
+   {
+    "score": 1,
+    "descriptor": "Minimal response with a defensible thesis or limited use of evidence or context."
+   },
+   {
+    "score": 0,
+    "descriptor": "Response does not meet criteria for any points; restates prompt, is historically indefensible, or lacks reasoning."
+   }
+  ],
+  "dimensions": [
+   {
+    "id": "thesis-claim",
+    "label": "Thesis and Claim",
+    "ask": "Does the response present a historically defensible thesis or claim that establishes a line of reasoning in introduction or conclusion? "
+   },
+   {
+    "id": "contextualization",
+    "label": "Contextualization",
+    "ask": "Does the response describe broader historical events, developments, or processes before, during, or after the time frame relevant to the prompt? "
+   },
+   {
+    "id": "evidence",
+    "label": "Evidence",
+    "ask": "Does the response use document content and specific outside historical evidence to support the argument, with at least three to four documents for DBQ and specific examples for SAQ and LEQ? "
+   },
+   {
+    "id": "analysis-reasoning",
+    "label": "Analysis and Reasoning",
+    "ask": "Does the response explain source point of view, purpose, audience, or context for documents, and demonstrate complex understanding through nuance, qualification, or multiple perspectives?"
+   }
+  ],
+  "notes": "Restated in own words from official College Board AP U.S. History Scoring Guidelines: SAQ scored 0-3 with each point earned independently for describe and explain; DBQ scored 0-7 as Thesis 0-1, Contextualization 0-1, Evidence 0-3, Analysis and Reasoning 0-2; LEQ scored 0-6 as Thesis 0-1, Contextualization 0-1, Evidence 0-2, Analysis and Reasoning 0-2. Accuracy requires historically defensible content; clarity judged as first draft."
+ },
+ "references": [
+  {
+   "title": "Validating the Use of AP Exam Scores for College Course Placement",
+   "authors": "Brian F. Patterson and Maureen Ewing",
+   "year": "2013",
+   "kind": "report",
+   "venue": "College Board Research Report 2013-2",
+   "why": "Validity study evaluating whether AP U.S. History and 9 other AP exam scores are valid for placement into higher-level college courses.",
+   "foundUrl": "https://eric.ed.gov/?id=ED558108",
+   "verified": false,
+   "url": "https://eric.ed.gov/?id=ED558108"
+  },
+  {
+   "title": "The Relationship Between AP Exam Performance and College Outcomes",
+   "authors": "Krista D. Mattern, Emily J. Shaw, and Xinhui Xiong",
+   "year": "2009",
+   "kind": "report",
+   "venue": "College Board Research Report No. 2009-4",
+   "why": "Predictive-validity study focused on AP U.S. History, English Language, Biology and Calculus performance and subsequent college GPA, retention and success.",
+   "foundUrl": "https://eric.ed.gov/?id=ED561021",
+   "verified": false,
+   "url": "https://eric.ed.gov/?id=ED561021"
+  },
+  {
+   "title": "A Study of Gender and Performance on Advanced Placement History Examinations",
+   "authors": "Hunter M. Breland et al.",
+   "year": "1991",
+   "kind": "report",
+   "venue": "College Board Report No. 91-4 / ETS Research Report RR-91-61",
+   "why": "Direct study of AP U.S. History and European History multiple-choice vs free-response scoring, rescoring booklets analytically for historical content.",
+   "foundUrl": "https://eric.ed.gov/?id=ED342808",
+   "verified": true,
+   "url": "https://doi.org/10.1002/j.2333-8504.1991.tb01428.x",
+   "foundTitle": "A STUDY OF GENDER AND PERFORMANCE ON ADVANCED PLACEMENT HISTORY EXAMINATIONS"
+  },
+  {
+   "title": "Examining the Relationship of Content to Gender-Based Performance Differences in Advanced Placement Exams",
+   "authors": "Gary Buck, Irene Kostin, and Rick Morgan",
+   "year": "2002",
+   "kind": "report",
+   "venue": "College Board Research Report No. 2002-12 / ETS RR-02-25",
+   "why": "Analyzes AP exam question content related to gender performance differences, including AP History free-response items.",
+   "foundUrl": "https://eric.ed.gov/?id=ED561047",
+   "verified": false,
+   "url": "https://eric.ed.gov/?id=ED561047"
+  },
+  {
+   "title": "College Outcomes Comparisons by AP and Non-AP High School Experiences",
+   "authors": "Linda Hargrove, Donn Godin, and Barbara Dodd",
+   "year": "2008",
+   "kind": "report",
+   "venue": "College Board Research Report No. 2008-3",
+   "why": "Compares college outcomes for AP vs non-AP students, used as core validity evidence for AP program including AP History.",
+   "foundUrl": "https://eric.ed.gov/?id=ED561030",
+   "verified": false,
+   "url": "https://eric.ed.gov/?id=ED561030"
+  },
+  {
+   "title": "Studying the Relationships Between the Number of APs, AP Performance, and College Outcomes",
+   "authors": "Jonathan J. Beard, Julian Hsu, Maureen Ewing, and Kelly E. Godfrey",
+   "year": "2019",
+   "kind": "paper",
+   "venue": "Educational Measurement: Issues and Practice",
+   "why": "College Board validity study on how number of AP exams taken and AP scores predict first-year grades and degree completion.",
+   "foundUrl": "https://eric.ed.gov/?id=EJ1236466",
+   "verified": true,
+   "url": "https://doi.org/10.1111/emip.12295",
+   "foundTitle": "Studying the Relationships Between the Number of APs, AP Performance, and College Outcomes"
+  }
+ ],
+ "prompt": "AP United States History free-response questions (short answer, DBQ and long essay) scored with the official College Board scoring guidelines.",
+ "sources": [
+  {
+   "url": "https://apcentral.collegeboard.org/courses/ap-united-states-history/exam/past-exam-questions",
+   "title": "AP United States History Exam Questions – AP Central | College Board",
+   "kind": "web",
+   "chars": 5369
+  },
+  {
+   "url": "https://apcentral.collegeboard.org/courses/ap-united-states-history/exam?course=ap-united-states-history",
+   "title": "AP United States History Exam – AP Central | College Board",
+   "kind": "web",
+   "chars": 3925
+  },
+  {
+   "url": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "title": "2026 Scoring Guidelines: AP® United States History ",
+   "kind": "pdf",
+   "chars": 86857
+  },
+  {
+   "url": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+   "title": "2026 AP® United States History Free-Response Questions",
+   "kind": "pdf",
+   "chars": 17551
+  },
+  {
+   "url": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "title": "2024 Scoring Guidelines - AP United States History: Set 1",
+   "kind": "pdf",
+   "chars": 81656
+  },
+  {
+   "url": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "title": "AP® United States History - 2025 Scoring Guidelines: Set 1",
+   "kind": "pdf",
+   "chars": 79002
+  },
+  {
+   "url": "http://apcentral.collegeboard.org/media/pdf/ap24-apc-us-history-dbq-set-1.pdf",
+   "title": "2024 Student Samples and Commentaries: AP U.S. History - Document-Based Question, Set 1",
+   "kind": "pdf",
+   "chars": 34990
+  }
+ ],
+ "questions": [
+  {
+   "type": "short",
+   "prompt": "Briefly describe one major difference between Ferrell’s and Summers’s historical interpretations of Reconstruction.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-war-reconstruction",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q001",
+   "n": 1
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how one event or development from 1861 to 1900 not directly mentioned in the excerpts could be used to support Ferrell’s argument about Reconstruction.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-war-reconstruction",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q002",
+   "n": 2
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how one event or development from 1861 to 1900 not directly mentioned in the excerpts could be used to support Summers’s argument about Reconstruction.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-war-reconstruction",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q003",
+   "n": 3
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one likely purpose of Minweweh in giving the speech.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "native-encounters",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q004",
+   "n": 4
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how one development contributed to the circumstance discussed in the excerpt.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "native-encounters",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q005",
+   "n": 5
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how one development between 1761 and 1840 resulted from the circumstance discussed in the excerpt.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "native-encounters",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q006",
+   "n": 6
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one idea advocated by the Patriot movement from 1765 to 1783.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "revolution-independence",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q007",
+   "n": 7
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one development from 1607 to 1765 that contributed to the rise of the Patriot movement.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "revolution-independence",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q008",
+   "n": 8
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how the ideas of the Patriot movement continued to influence United States society from 1783 to 1830.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "early-republic",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q009",
+   "n": 9
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one reform advocated by civil rights movements from 1945 to 1970.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-rights-movements",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q010",
+   "n": 10
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one development from 1890 to 1945 that contributed to the rise of civil rights movements.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-rights-movements",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q011",
+   "n": 11
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how the ideas of civil rights movements continued to influence United States society from 1970 to 2000.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-rights-movements",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q012",
+   "n": 12
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate the extent to which women’s participation in public life in the United States changed from 1783 to 1855.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "market-reform-antebellum",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q013",
+   "n": 13
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate how geography influenced European colonization in the Americas from 1500 to 1754.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "native-encounters",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q014",
+   "n": 14
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate how westward expansion influenced United States society from 1865 to 1898.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "westward-expansion",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q015",
+   "n": 15
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate how politics influenced United States society from 1945 to 2000.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "world-war-ii-cold-war",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-sg-us-history.pdf",
+   "id": "q016",
+   "n": 16
+  },
+  {
+   "type": "short",
+   "prompt": "A. Briefly describe one major difference between Ferrell’s and Summers’s historical interpretations of Reconstruction. B. Briefly explain how one event or development from 1861 to 1900 not directly mentioned in the excerpts could be used to support Ferrell’s argument about Reconstruction. C. Briefly explain how one event or development from 1861 to 1900 not directly mentioned in the excerpts could be used to support Summers’s argument about Reconstruction.",
+   "instructions": "Respond to parts A, B, and C.",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-war-reconstruction",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+   "id": "q017",
+   "n": 17
+  },
+  {
+   "type": "short",
+   "prompt": "A. Briefly describe one likely purpose of Minweweh in giving the speech. B. Briefly explain how one development contributed to the circumstance discussed in the excerpt. C. Briefly explain how one development between 1761 and 1840 resulted from the circumstance discussed in the excerpt.",
+   "instructions": "Respond to parts A, B, and C.",
+   "choices": [],
+   "answer": "",
+   "concept": "native-encounters",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+   "id": "q018",
+   "n": 18
+  },
+  {
+   "type": "short",
+   "prompt": "A. Briefly describe one idea advocated by the Patriot movement from 1765 to 1783. B. Briefly describe one development from 1607 to 1765 that contributed to the rise of the Patriot movement. C. Briefly explain how the ideas of the Patriot movement continued to influence United States society from 1783 to 1830.",
+   "instructions": "Respond to parts A, B, and C.",
+   "choices": [],
+   "answer": "",
+   "concept": "revolution-independence",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+   "id": "q019",
+   "n": 19
+  },
+  {
+   "type": "short",
+   "prompt": "A. Briefly describe one reform advocated by civil rights movements from 1945 to 1970. B. Briefly describe one development from 1890 to 1945 that contributed to the rise of civil rights movements. C. Briefly explain how the ideas of civil rights movements continued to influence United States society from 1970 to 2000.",
+   "instructions": "Respond to parts A, B, and C.",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-rights-movements",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+   "id": "q020",
+   "n": 20
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate the extent to which women’s participation in public life in the United States changed from 1783 to 1855.",
+   "instructions": "Respond to the prompt with a historically defensible thesis or claim that establishes a line of reasoning. Describe a broader historical context relevant to the prompt. Support an argument in response to the prompt using at least four documents. Use at least one additional piece of specific historical evidence (beyond that found in the documents) relevant to an argument about the prompt. For at least two documents, explain how or why the document’s point of view, purpose, historical situation, and/or audience is relevant to an argument. Demonstrate a complex understanding of a historical development related to the prompt through sophisticated argumentation and/or effective use of evidence.",
+   "choices": [],
+   "answer": "",
+   "concept": "market-reform-antebellum",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+   "id": "q021",
+   "n": 21
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate how geography influenced European colonization in the Americas from 1500 to 1754.",
+   "instructions": "Answer Question 2 or Question 3 or Question 4. In your response you should do the following: • Respond to the prompt with a historically defensible thesis or claim that establishes a line of reasoning. • Describe a broader historical context relevant to the prompt. • Support an argument in response to the prompt using at least two pieces of specific and relevant evidence. • Use historical reasoning (e.g., comparison, causation, continuity or change over time) to frame or structure an argument that addresses the prompt. • Demonstrate a complex understanding of a historical development related to the prompt through sophisticated argumentation and/or effective use of evidence.",
+   "choices": [],
+   "answer": "",
+   "concept": "colonial-america",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+   "id": "q022",
+   "n": 22
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate how westward expansion influenced United States society from 1865 to 1898.",
+   "instructions": "Answer Question 2 or Question 3 or Question 4. In your response you should do the following: • Respond to the prompt with a historically defensible thesis or claim that establishes a line of reasoning. • Describe a broader historical context relevant to the prompt. • Support an argument in response to the prompt using at least two pieces of specific and relevant evidence. • Use historical reasoning (e.g., comparison, causation, continuity or change over time) to frame or structure an argument that addresses the prompt. • Demonstrate a complex understanding of a historical development related to the prompt through sophisticated argumentation and/or effective use of evidence.",
+   "choices": [],
+   "answer": "",
+   "concept": "westward-expansion",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+   "id": "q023",
+   "n": 23
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate how politics influenced United States society from 1945 to 2000.",
+   "instructions": "Answer Question 2 or Question 3 or Question 4. In your response you should do the following: • Respond to the prompt with a historically defensible thesis or claim that establishes a line of reasoning. • Describe a broader historical context relevant to the prompt. • Support an argument in response to the prompt using at least two pieces of specific and relevant evidence. • Use historical reasoning (e.g., comparison, causation, continuity or change over time) to frame or structure an argument that addresses the prompt. • Demonstrate a complex understanding of a historical development related to the prompt through sophisticated argumentation and/or effective use of evidence.",
+   "choices": [],
+   "answer": "",
+   "concept": "modern-america",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap26-frq-us-history.pdf",
+   "id": "q024",
+   "n": 24
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one major difference between Melder’s and Lerner’s interpretations of the origins of the women’s rights movement in the early nineteenth century.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "market-reform-antebellum",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q025",
+   "n": 25
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how one historical event or development from 1800 to 1848 not directly mentioned in the excerpts could be used to support Melder’s interpretation.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "market-reform-antebellum",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q026",
+   "n": 26
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how one historical event or development from 1800 to 1848 not directly mentioned in the excerpts could be used to support Lerner’s interpretation.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "market-reform-antebellum",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q027",
+   "n": 27
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one historical situation in which the image was created.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "interwar-great-depression",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q028",
+   "n": 28
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how the image reflected a change in ideas about the role of government from 1877 to 1936.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "interwar-great-depression",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q029",
+   "n": 29
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how beliefs about the role of government such as the one reflected by the image continued after 1945.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "interwar-great-depression",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q030",
+   "n": 30
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one British government policy enacted in colonial North America from 1763 to 1776.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "revolution-independence",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q031",
+   "n": 31
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain one similarity OR difference in how TWO groups in North America responded to a British policy from 1763 to 1783.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "revolution-independence",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q032",
+   "n": 32
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how one specific historical development contributed to the American colonists’ victory over Great Britain from 1775 to 1783.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "revolution-independence",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q033",
+   "n": 33
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one United States Cold War policy from 1945 to 1991.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "world-war-ii-cold-war",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q034",
+   "n": 34
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain one similarity OR difference in how TWO groups in the United States responded to a Cold War policy from 1945 to 1991.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "world-war-ii-cold-war",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q035",
+   "n": 35
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how one specific historical development after 1980 contributed to the end of the Cold War.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "world-war-ii-cold-war",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q036",
+   "n": 36
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate the extent to which the institution of slavery shaped United States society between 1783 and 1840.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "slavery-sectionalism",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q037",
+   "n": 37
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate the relative importance of the causes of conflict among Europeans and Native Americans from 1500 to 1763.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "native-encounters",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q038",
+   "n": 38
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate the relative importance of the causes of the growth of a national culture in the United States from 1800 to 1848.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "market-reform-antebellum",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q039",
+   "n": 39
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate the relative importance of the effects of movements for social change from 1945 to 1980.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-rights-movements",
+   "source": "http://apcentral.collegeboard.org/media/pdf/ap24-sg-us-history-set-1.pdf",
+   "id": "q040",
+   "n": 40
+  },
+  {
+   "type": "short",
+   "prompt": "A Briefly describe one major difference between Wilentz’s and Bouton’s historical interpretations of early United States politics.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "early-republic",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q041",
+   "n": 41
+  },
+  {
+   "type": "short",
+   "prompt": "B Briefly explain how one event or development from 1789 to 1820 not directly mentioned in the excerpts could be used to support Wilentz’s argument about early United States politics.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "early-republic",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q042",
+   "n": 42
+  },
+  {
+   "type": "short",
+   "prompt": "C Briefly explain how one event or development from 1789 to 1820 not directly mentioned in the excerpts could be used to support Bouton’s argument about early United States politics.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "early-republic",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q043",
+   "n": 43
+  },
+  {
+   "type": "short",
+   "prompt": "A Briefly describe one purpose of political leaders in promoting ideas such as Webster’s.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "market-reform-antebellum",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q044",
+   "n": 44
+  },
+  {
+   "type": "short",
+   "prompt": "B Briefly explain one development from 1820 to 1848 that contributed to the political ideas debated in the speech.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "market-reform-antebellum",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q045",
+   "n": 45
+  },
+  {
+   "type": "short",
+   "prompt": "C Briefly explain how one political debate between 1848 and 1865 was similar to the debate in the speech.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "slavery-sectionalism",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q046",
+   "n": 46
+  },
+  {
+   "type": "short",
+   "prompt": "A Briefly describe one political development in British North America from 1607 to 1753.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "colonial-america",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q047",
+   "n": 47
+  },
+  {
+   "type": "short",
+   "prompt": "B Briefly describe one effect of the Seven Years’ War from 1754 to 1765.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "colonial-america",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q048",
+   "n": 48
+  },
+  {
+   "type": "short",
+   "prompt": "C Briefly explain how one group responded to debates about the rights of British colonists from 1765 to 1783.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "revolution-independence",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q049",
+   "n": 49
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one political development during Reconstruction from 1865 to 1877.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-war-reconstruction",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q050",
+   "n": 50
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly describe one effect of the end of Reconstruction from 1877 to 1900.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "civil-war-reconstruction",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q051",
+   "n": 51
+  },
+  {
+   "type": "short",
+   "prompt": "Briefly explain how one group responded to debates about the federal government from 1900 to 1945.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "progressivism-imperialism",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q052",
+   "n": 52
+  },
+  {
+   "type": "essay",
+   "prompt": "Evaluate the extent to which the role of the federal government in the United States economy changed from 1932 to 1980.",
+   "instructions": "",
+   "choices": [],
+   "answer": "",
+   "concept": "interwar-great-depression",
+   "source": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-us-history-set-1.pdf",
+   "id": "q053",
+   "n": 53
+  }
+ ],
+ "builtAt": "2026-11-04T16:28:12.646Z",
+ "builtWith": "saved example"
+}
