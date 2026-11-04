@@ -40,9 +40,24 @@
   "text": "Nobody can predict your exact question. Insights shows where the pool's weight sits, and what to practice next."
  },
  {
+  "id": "civics",
+  "caption": "Short answers, checked against the official answer",
+  "text": "It works for short answers too. On the U.S. citizenship test, every answer is checked against the official answer from USCIS."
+ },
+ {
+  "id": "ielts",
+  "caption": "IELTS · official band descriptors, 0 to 9",
+  "text": "For IELTS, it restated the official band descriptors, so essays are scored on bands zero to nine, with the same kind of feedback."
+ },
+ {
   "id": "agent",
   "caption": "Or bring your own agent over MCP",
   "text": "Prefer your own agent? One prompt installs Chrome DevTools on Chrome Canary and this site's MCP server, so your agent collects the exam. Another lets it grade your answer."
+ },
+ {
+  "id": "agentResult",
+  "caption": "Collected and graded by a Claude agent over MCP",
+  "text": "This exam was collected from u s c i s dot gov by a Claude agent driving Chrome Canary, and saved through MCP. And this essay was graded by the agent with its own model, then saved back the same way."
  },
  {
   "id": "close",

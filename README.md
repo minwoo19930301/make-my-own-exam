@@ -3,7 +3,7 @@
 Name any exam in one sentence. Meta Muse searches the web for the test maker's official materials and builds a knowledge base from them: the questions, the scoring rules, and research on the exam. Then it serves questions and scores your answers on that exam's own rubric.
 
 - Live: https://make-my-own-exam.pages.dev
-- Demo video (88 s): [GitHub release v1.0](https://github.com/minwoo19930301/make-my-own-exam/releases/tag/v1.0), also in [demo/make-my-own-exam-demo.mp4](demo/make-my-own-exam-demo.mp4)
+- Demo video (2 min): [GitHub release v1.0](https://github.com/minwoo19930301/make-my-own-exam/releases/tag/v1.0), also in [demo/make-my-own-exam-demo.mp4](demo/make-my-own-exam-demo.mp4)
 
 [![Demo](demo/preview.gif)](demo/make-my-own-exam-demo.mp4)
 
@@ -103,6 +103,10 @@ npm run deploy
 Set the server key with `npx wrangler pages secret put MODEL_API_KEY --project-name make-my-own-exam`.
 
 The demo video is scripted. `node demo/record.mjs` drives the live site in Chrome, adds the title card, captions and zooms in the page, fast-forwards the live build, and muxes narration from `demo/audio/` (`demo/tts-elevenlabs.mjs` makes the narration).
+
+## License
+
+MIT, see [LICENSE](LICENSE). The license covers this code only. Exam questions and scoring guides belong to their publishers, and saved examples quote them for study.
 
 ## Notes
 

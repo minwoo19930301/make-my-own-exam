@@ -184,9 +184,47 @@ if (!muxOnly) {
   await page.evaluate(() => window.scrollTo({ top: 420, behavior: "smooth" }));
   await sleep(dur.insights * 0.55 + 0.3);
 
+  marks.civics = at(); console.log("scene civics");
+  await say(caption.civics);
+  const openExam = async (word) => {
+    await page.getByRole("button", { name: "Build", exact: true }).click();
+    await sleep(0.4);
+    await page.evaluate((w) => { const row = [...document.querySelectorAll(".list-row.static")].find((r) => r.textContent.includes(w)); [...row.querySelectorAll("button")].find((b) => /Switch|Open/.test(b.textContent)).click(); }, word);
+    await sleep(0.6);
+  };
+  await openExam("Citizenship");
+  await page.getByRole("button", { name: "Start practicing" }).click();
+  await page.locator("#question").selectOption({ label: (await page.locator("#question option").allInnerTexts()).find((t) => t.includes("supreme law of the land")) });
+  await sleep(0.5);
+  await zoom(".prompt", 1.4);
+  await page.locator("textarea.essay").pressSequentially("The Constitution is the supreme law.", { delay: 40 });
+  await sleep(0.6);
+  await unzoom();
+  marks.civicsClick = at();
+  await page.getByRole("button", { name: "Score my answer" }).click();
+  await page.locator("#result").waitFor({ timeout: 120000 });
+  marks.civicsShown = at();
+  await sleep(0.5);
+  await scrollTo("#result");
+  await sleep(0.9);
+  await zoom("#result", 1.15);
+  await sleep(Math.max(2.5, dur.civics - 1.2 - (at() - marks.civicsShown) - (marks.civicsClick - marks.civics)));
+  await unzoom();
+  await sleep(0.3);
+
+  marks.ielts = at(); console.log("scene ielts");
+  await say(caption.ielts);
+  await openExam("IELTS");
+  await page.evaluate(() => { const c = [...document.querySelectorAll(".card")].find((x) => x.textContent.startsWith("2 · Scoring rules")); c.id = "demo-rubric"; c.scrollIntoView({ behavior: "smooth", block: "start" }); });
+  await sleep(1);
+  await zoom("#demo-rubric", 1.2);
+  await sleep(dur.ielts - 1.4);
+  await unzoom();
+  await sleep(0.3);
+
   marks.agent = at(); console.log("scene agent", marks.agent.toFixed(1));
   await say(caption.agent);
-  await page.getByRole("button", { name: "Build" }).click();
+  await page.getByRole("button", { name: "Build", exact: true }).click();
   await sleep(0.4);
   await page.evaluate(() => { const c = [...document.querySelectorAll(".card")].find((x) => x.textContent.startsWith("Or collect it with your own agent")); c.id = "demo-agent"; c.querySelector("button").click(); });
   await sleep(0.4);
@@ -194,6 +232,27 @@ if (!muxOnly) {
   await sleep(0.9);
   await zoom("#demo-agent .code", 1.3);
   await sleep(dur.agent - 1.4);
+  await unzoom();
+  await sleep(0.3);
+
+  marks.agentResult = at(); console.log("scene agentResult");
+  // Real results from a Claude Code agent that used the MCP server (links last 30 days).
+  await page.goto(`${site}/?exam=ed0070ffc6f1`, { waitUntil: "networkidle" });
+  await overlay();
+  await say(caption.agentResult);
+  await page.locator(".stats").waitFor();
+  await sleep(0.6);
+  await zoom(".stats", 1.35);
+  await sleep(dur.agentResult * 0.45);
+  await unzoom();
+  await page.goto(`${site}/?grade=b1af819b541f`, { waitUntil: "networkidle" });
+  await overlay();
+  await page.evaluate((t) => { const c = document.getElementById("demo-cap"); c.textContent = t; c.classList.add("on"); }, caption.agentResult);
+  await page.locator("#result").waitFor();
+  await scrollTo("#result");
+  await sleep(0.8);
+  await zoom(".score-head", 1.4);
+  await sleep(dur.agentResult * 0.55 - 1);
   await unzoom();
   await sleep(0.3);
 
@@ -235,14 +294,14 @@ const lead = Math.max(0, marks.title - 0.1);
 const fastFrom = marks.buildClick + 1.5;
 const buildShown = Math.max(2, marks.build + dur.build + 0.6 - fastFrom);
 const fastSpeed = Math.max(1, (marks.buildDone - fastFrom) / buildShown);
-const cutFrom = marks.score + 1.2, cutTo = marks.resultShown - 0.2;
-const segs = [
-  { a: lead, b: fastFrom, s: 1 },
-  { a: fastFrom, b: marks.buildDone, s: fastSpeed },
-  { a: marks.buildDone, b: cutTo > cutFrom ? cutFrom : marks.end, s: 1 },
-  ...(cutTo > cutFrom ? [{ a: cutTo, b: marks.end, s: 1 }] : []),
-];
-const map = (t) => { let acc = 0; for (const g of segs) { if (t <= g.b) return acc + Math.max(0, t - g.a) / g.s; acc += (g.b - g.a) / g.s; } return acc; };
+// Cut the waits while Muse scores (the GRE essay and the civics answer).
+const cuts = [[marks.score + 1.2, marks.resultShown - 0.2], [marks.civicsClick + 1.0, marks.civicsShown - 0.2]].filter(([a, b]) => b > a);
+const segs = [{ a: lead, b: fastFrom, s: 1 }, { a: fastFrom, b: marks.buildDone, s: fastSpeed }];
+let from = marks.buildDone;
+for (const [a, b] of cuts) { segs.push({ a: from, b: a, s: 1 }); from = b; }
+segs.push({ a: from, b: marks.end, s: 1 });
+const cutFrom = cuts[0]?.[0] || 0, cutTo = cuts[0]?.[1] || 0;
+const map = (t) => { let acc = 0; for (const g of segs) { if (t < g.a) return acc; if (t <= g.b) return acc + (t - g.a) / g.s; acc += (g.b - g.a) / g.s; } return acc; };
 const vf = segs.map((g, i) => `[0:v]trim=${g.a}:${g.b},setpts=(PTS-STARTPTS)/${g.s}[v${i}]`).join(";") + `;${segs.map((_, i) => `[v${i}]`).join("")}concat=n=${segs.length}:v=1[v]`;
 const inputs = scenes.flatMap((id) => ["-i", `${dir}audio/${id}.wav`]);
 // The score narration starts at the click, so it is placed before the cut and plays over the result.
@@ -251,4 +310,4 @@ const mix = `${scenes.map((_, i) => `[s${i}]`).join("")}amix=inputs=${scenes.len
 const file = `${out}make-my-own-exam-demo.mp4`;
 execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-i", raw, ...inputs, "-filter_complex", [vf, ...delays, mix].join(";"),
   "-map", "[v]", "-map", "[aout]", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-r", "30", "-c:a", "aac", "-b:a", "160k", file]);
-console.log({ clockShift: Number(shiftBy.toFixed(2)), length: Number(probe(file).toFixed(1)), buildSpeedup: Number(fastSpeed.toFixed(1)), scoringCut: Number(Math.max(0, cutTo - cutFrom).toFixed(1)), file });
+console.log({ clockShift: Number(shiftBy.toFixed(2)), length: Number(probe(file).toFixed(1)), buildSpeedup: Number(fastSpeed.toFixed(1)), scoringCut: Number(cuts.reduce((x, [a, b]) => x + b - a, 0).toFixed(1)), file });
