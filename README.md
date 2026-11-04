@@ -3,7 +3,7 @@
 Name any exam in one sentence. Meta Muse searches the web for the test maker's official materials and builds a knowledge base from them: the questions, the scoring rules, and research on the exam. Then it serves questions and scores your answers on that exam's own rubric.
 
 - Live: https://make-my-own-exam.pages.dev
-- Demo video (88 s): [demo/make-my-own-exam-demo.mp4](demo/make-my-own-exam-demo.mp4)
+- Demo video (88 s): [GitHub release v1.0](https://github.com/minwoo19930301/make-my-own-exam/releases/tag/v1.0), also in [demo/make-my-own-exam-demo.mp4](demo/make-my-own-exam-demo.mp4)
 
 [![Demo](demo/preview.gif)](demo/make-my-own-exam-demo.mp4)
 
